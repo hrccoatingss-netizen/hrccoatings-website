@@ -155,6 +155,13 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        {/* GHL Live Chat Widget */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69ae98ee0eb1991fac0e9b59"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

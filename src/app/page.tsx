@@ -201,7 +201,8 @@ export default function Home() {
   return (
     <>
       {/* ────────── 1. HERO ────────── */}
-      <section className="relative flex min-h-[90vh] items-center overflow-hidden">
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+        {/* Background image */}
         <Image
           src="/images/hero-painting.jpg"
           alt="Professional painting by HRCCoatings LLC"
@@ -210,65 +211,86 @@ export default function Home() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B2C75]/85 via-[#0B2C75]/60 to-[#0B2C75]/40" />
+        {/* Navy overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B2C75]/80 via-[#0B2C75]/70 to-[#0B2C75]/90" />
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            {/* Offer banner */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#DB143C] to-[#FF6933] px-5 py-2 text-sm font-bold text-white shadow-lg">
-              <span className="text-lg">$500 OFF</span>
-              <span className="font-normal opacity-90">your first project &mdash; limited spots this month</span>
-            </div>
+        <div className="relative z-10 mx-auto max-w-4xl px-4 py-32 text-center sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Transform Your Space with San Diego&apos;s Trusted Painting Experts
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">
+            Family-run, faith-based painting company serving San Diego County
+            for over 20 years
+          </p>
 
-            <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-sm">
-              San Diego&apos;s Trusted Painting Experts
-            </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/90">
-              Father &amp; son team with 20+ years of experience. Premium
-              paints, clean work, honest pricing. Rated 5.0 on Google.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-lg bg-[#DB143C] px-8 py-4 text-base font-bold text-white shadow-lg transition hover:bg-[#B8102F] active:scale-[0.98]"
+          {/* CTA Buttons */}
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="#contact"
+              className="inline-flex items-center rounded-lg bg-red px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-[#B8102F] active:scale-[0.98]"
+            >
+              Get Free Estimate
+            </Link>
+            <a
+              href="tel:+16192893908"
+              className="inline-flex items-center rounded-lg border-2 border-white px-8 py-4 text-base font-semibold text-white transition hover:bg-white/10 active:scale-[0.98]"
+            >
+              <svg
+                className="mr-2 h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
               >
-                Get Your Free Estimate
-              </Link>
-              <a
-                href="tel:+16192893908"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/20 active:scale-[0.98]"
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              Call (619) 289-3908
+            </a>
+          </div>
+
+          {/* Trust badges */}
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            {[
+              { label: "5.0 Google Rating", icon: "star" },
+              { label: "15+ Reviews", icon: "chat" },
+              { label: "Free Estimates", icon: "check" },
+              { label: "$500 Off First Project", icon: "tag" },
+            ].map((badge) => (
+              <div
+                key={badge.label}
+                className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium backdrop-blur-sm ${
+                  badge.icon === "tag"
+                    ? "bg-orange/20 text-orange"
+                    : "bg-white/10 text-white"
+                }`}
               >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                (619) 289-3908
-              </a>
-            </div>
-
-            <p className="mt-4 text-sm text-white/60">
-              Free estimates within 24 hours &middot; No obligation
-            </p>
-
-            {/* Social proof bar */}
-            <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-white/20 pt-8">
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-0.5">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <svg key={i} className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-sm font-semibold text-white">5.0</span>
-                <span className="text-sm text-white/70">on Google</span>
+                {badge.icon === "star" && (
+                  <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                )}
+                {badge.icon === "chat" && (
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                )}
+                {badge.icon === "check" && (
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                {badge.icon === "tag" && (
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                  </svg>
+                )}
+                {badge.label}
               </div>
-              <div className="h-4 w-px bg-white/30" />
-              <span className="text-sm text-white/70"><strong className="text-white">600+</strong> projects completed</span>
-              <div className="h-4 w-px bg-white/30 hidden sm:block" />
-              <span className="hidden text-sm text-white/70 sm:inline"><strong className="text-white">20+ years</strong> in business</span>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -458,74 +480,72 @@ export default function Home() {
       </section>
 
       {/* ────────── 7. WHY CHOOSE US ────────── */}
-      <section className="bg-navy py-20 px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-light py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Why San Diego Trusts HRCCoatings
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+            Why Choose Us
           </h2>
-          <p className="mx-auto mb-14 max-w-xl text-center text-white/60">
-            We&apos;re not a franchise. We&apos;re not a lead gen company. We&apos;re the ones actually doing the work.
-          </p>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {/* 20+ Years */}
-            <div className="group flex gap-6 rounded-xl bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#DB143C] to-[#FF6933] text-2xl font-extrabold text-white shadow-lg">
-                20+
+            <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition hover:shadow-md">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy/10">
+                <svg className="h-7 w-7 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-              <div>
-                <h3 className="text-lg font-bold text-white">
-                  Years in the Game
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-white/60">
-                  Two decades of painting homes and businesses across San Diego County. We&apos;ve seen every wall, surface, and situation.
-                </p>
-              </div>
+              <h3 className="mt-5 text-lg font-bold text-navy">
+                20+ Years Experience
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                Over two decades of professional painting and coating expertise
+              </p>
             </div>
 
-            {/* Father & Son */}
-            <div className="group flex gap-6 rounded-xl bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#0B2C75] to-[#1E5FE0] shadow-lg ring-1 ring-white/20">
-                <span className="text-2xl">&#128170;</span>
+            {/* Family-Run */}
+            <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition hover:shadow-md">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy/10">
+                <svg className="h-7 w-7 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
               </div>
-              <div>
-                <h3 className="text-lg font-bold text-white">
-                  Father &amp; Son Owned
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-white/60">
-                  Hector and Junior run every project personally. No subcontractors, no middlemen. You deal directly with the owners.
-                </p>
-              </div>
+              <h3 className="mt-5 text-lg font-bold text-navy">
+                Family-Run Business
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                Father-son team committed to quality and personal service
+              </p>
             </div>
 
-            {/* Premium Paint */}
-            <div className="group flex gap-6 rounded-xl bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#FF6933] to-[#DB143C] shadow-lg">
-                <span className="text-2xl">&#127912;</span>
+            {/* Premium Materials */}
+            <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition hover:shadow-md">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy/10">
+                <svg className="h-7 w-7 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+                </svg>
               </div>
-              <div>
-                <h3 className="text-lg font-bold text-white">
-                  Premium Paint Only
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-white/60">
-                  Benjamin Moore, Sherwin Williams, Dunn-Edwards. No cheap paint, no shortcuts. Your walls deserve the best.
-                </p>
-              </div>
+              <h3 className="mt-5 text-lg font-bold text-navy">
+                Premium Materials
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                We use only top-quality paints from Benjamin Moore, Sherwin
+                Williams, and Dunn-Edwards
+              </p>
             </div>
 
-            {/* Guarantee */}
-            <div className="group flex gap-6 rounded-xl bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#DB143C] to-[#FF6933] text-lg font-extrabold text-white shadow-lg">
-                100%
+            {/* 100% Satisfaction */}
+            <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition hover:shadow-md">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy/10">
+                <svg className="h-7 w-7 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                </svg>
               </div>
-              <div>
-                <h3 className="text-lg font-bold text-white">
-                  We Make It Right
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-white/60">
-                  Not happy? We come back and fix it. Period. Every project backed by our satisfaction guarantee.
-                </p>
-              </div>
+              <h3 className="mt-5 text-lg font-bold text-navy">
+                100% Satisfaction
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                We stand behind every project with our quality guarantee
+              </p>
             </div>
           </div>
         </div>

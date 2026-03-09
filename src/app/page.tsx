@@ -200,6 +200,25 @@ function Stars({ count }: { count: number }) {
 export default function Home() {
   return (
     <>
+      {/* FAQPage structured data for Google rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqItems.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       {/* ────────── 1. HERO ────────── */}
       <section className="relative flex min-h-[90vh] items-center overflow-hidden">
         <Image

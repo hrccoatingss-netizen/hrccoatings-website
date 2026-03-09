@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -110,11 +111,47 @@ export default function RootLayout({
                 "@type": "Person",
                 name: "Hector Rivera",
               },
+              review: [
+                {
+                  "@type": "Review",
+                  reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+                  author: { "@type": "Person", name: "Sandra Sandra" },
+                  reviewBody:
+                    "Our experience with Hrccoatings was exceptional! We are very satisfied with the outcome of our project. Hector and Jr. delivered outstanding results on our interior painting.",
+                },
+                {
+                  "@type": "Review",
+                  reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+                  author: { "@type": "Person", name: "Elio Espinosa" },
+                  reviewBody:
+                    "They painted our home last year and they were professional, efficient, and did an excellent job!",
+                },
+                {
+                  "@type": "Review",
+                  reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+                  author: { "@type": "Person", name: "Jessica Aliano" },
+                  reviewBody:
+                    "I've hired Hector and Junior multiple times, and they always deliver top-notch results. Their work is clean, detailed, and professional every time. This hardworking father-son team is punctual, tidy, and fast.",
+                },
+              ],
             }),
           }}
         />
       </head>
       <body className={`${inter.variable} antialiased`}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2Q1EKNERW2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2Q1EKNERW2');
+          `}
+        </Script>
         <Header />
         <main>{children}</main>
         <Footer />

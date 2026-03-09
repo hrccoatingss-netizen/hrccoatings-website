@@ -123,6 +123,53 @@ export default function ServicePageLayout({
 }: ServicePageProps) {
   return (
     <>
+      {/* Service + FAQ structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: `${heroTitle} in San Diego`,
+            description: overview.split("\n\n")[0],
+            provider: {
+              "@type": "LocalBusiness",
+              name: "HRCCoatings LLC",
+              url: "https://hrccoatingsco.com",
+              telephone: "+16192893908",
+            },
+            areaServed: {
+              "@type": "City",
+              name: "San Diego",
+              containedInPlace: { "@type": "State", name: "California" },
+            },
+            offers: {
+              "@type": "Offer",
+              description: "Free estimates with no obligation",
+              price: "0",
+              priceCurrency: "USD",
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       {/* ====== 1. HERO ====== */}
       <section className="relative flex min-h-[420px] items-center justify-center overflow-hidden sm:min-h-[500px]">
         <Image

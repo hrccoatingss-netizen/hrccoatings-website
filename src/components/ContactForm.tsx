@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
+import { submitEstimateForm } from "@/app/actions/submit-form";
 
 const SERVICE_OPTIONS = [
   "Epoxy Flake",
@@ -18,8 +19,6 @@ const SERVICE_OPTIONS = [
   "Other",
 ] as const;
 
-const WHATSAPP_NUMBER = "16192893908";
-
 export default function ContactForm() {
   const [form, setForm] = useState({
     firstName: "",
@@ -31,6 +30,8 @@ export default function ContactForm() {
     consentTransactional: false,
     consentMarketing: false,
   });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
   function handleChange(
     e: React.ChangeEvent<
@@ -45,21 +46,36 @@ export default function ContactForm() {
     }));
   }
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    setStatus("submitting");
+    setErrorMsg("");
 
-    const text = [
-      "New Estimate Request",
-      "",
-      `Name: ${form.firstName} ${form.lastName}`,
-      `Phone: ${form.phone}`,
-      `Email: ${form.email}`,
-      `Service: ${form.service}`,
-      `Message: ${form.message}`,
-    ].join("\n");
+    const result = await submitEstimateForm({
+      firstName: form.firstName,
+      lastName: form.lastName,
+      phone: form.phone,
+      email: form.email,
+      service: form.service,
+      message: form.message,
+    });
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    if (result.success) {
+      setStatus("success");
+      setForm({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        service: "",
+        message: "",
+        consentTransactional: false,
+        consentMarketing: false,
+      });
+    } else {
+      setStatus("error");
+      setErrorMsg(result.error || "Something went wrong. Please try again.");
+    }
   }
 
   return (
@@ -76,199 +92,228 @@ export default function ContactForm() {
           </p>
         </div>
 
+        {/* Success Message */}
+        {status === "success" && (
+          <div className="mb-8 rounded-xl bg-green-50 border border-green-200 p-6 text-center">
+            <svg className="mx-auto mb-3 h-12 w-12 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3 className="text-xl font-bold text-green-800">Thank You!</h3>
+            <p className="mt-2 text-green-700">
+              Your estimate request has been submitted. We&apos;ll get back to you within 24 hours.
+            </p>
+            <button
+              onClick={() => setStatus("idle")}
+              className="mt-4 text-sm font-medium text-green-700 underline hover:text-green-900"
+            >
+              Submit another request
+            </button>
+          </div>
+        )}
+
         {/* Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="rounded-2xl bg-white p-6 shadow-lg sm:p-10"
-        >
-          {/* Name row */}
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <div>
-              <label
-                htmlFor="firstName"
-                className="mb-1 block text-sm font-medium text-navy"
-              >
-                First Name <span className="text-red">*</span>
-              </label>
-              <input
-                id="firstName"
-                name="firstName"
-                type="text"
-                required
-                value={form.firstName}
-                onChange={handleChange}
-                placeholder="John"
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="lastName"
-                className="mb-1 block text-sm font-medium text-navy"
-              >
-                Last Name <span className="text-red">*</span>
-              </label>
-              <input
-                id="lastName"
-                name="lastName"
-                type="text"
-                required
-                value={form.lastName}
-                onChange={handleChange}
-                placeholder="Doe"
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
-              />
-            </div>
-          </div>
-
-          {/* Phone / Email row */}
-          <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <div>
-              <label
-                htmlFor="phone"
-                className="mb-1 block text-sm font-medium text-navy"
-              >
-                Phone <span className="text-red">*</span>
-              </label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                required
-                value={form.phone}
-                onChange={handleChange}
-                placeholder="(619) 555-1234"
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="email"
-                className="mb-1 block text-sm font-medium text-navy"
-              >
-                Email <span className="text-red">*</span>
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                value={form.email}
-                onChange={handleChange}
-                placeholder="john@example.com"
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
-              />
-            </div>
-          </div>
-
-          {/* Service dropdown */}
-          <div className="mt-5">
-            <label
-              htmlFor="service"
-              className="mb-1 block text-sm font-medium text-navy"
-            >
-              Service Needed <span className="text-red">*</span>
-            </label>
-            <select
-              id="service"
-              name="service"
-              required
-              value={form.service}
-              onChange={handleChange}
-              className="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
-            >
-              <option value="" disabled>
-                Select a service...
-              </option>
-              {SERVICE_OPTIONS.map((s) => (
-                <option key={s} value={s}>
-                  {s}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Message */}
-          <div className="mt-5">
-            <label
-              htmlFor="message"
-              className="mb-1 block text-sm font-medium text-navy"
-            >
-              Message / Project Details
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Tell us about your project..."
-              className="w-full resize-y rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
-            />
-          </div>
-
-          {/* SMS Consent Checkboxes */}
-          <div className="mt-6 space-y-4">
-            <label className="flex items-start gap-3 cursor-pointer">
-              <input
-                type="checkbox"
-                name="consentTransactional"
-                checked={form.consentTransactional}
-                onChange={handleChange}
-                className="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-red"
-              />
-              <span className="text-xs leading-relaxed text-gray-600">
-                I consent to receive transactional SMS messages (e.g.,
-                appointment confirmations, project updates) from HRCCoatings
-                LLC.
-              </span>
-            </label>
-
-            <label className="flex items-start gap-3 cursor-pointer">
-              <input
-                type="checkbox"
-                name="consentMarketing"
-                checked={form.consentMarketing}
-                onChange={handleChange}
-                className="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-red"
-              />
-              <span className="text-xs leading-relaxed text-gray-600">
-                I consent to receive marketing SMS messages (e.g., promotions,
-                special offers) from HRCCoatings LLC. Message frequency varies.
-                Msg &amp; data rates may apply. Reply STOP to unsubscribe.
-              </span>
-            </label>
-          </div>
-
-          {/* Submit */}
-          <button
-            type="submit"
-            className="mt-8 w-full rounded-lg bg-red px-6 py-4 text-base font-semibold text-white transition hover:bg-[#B8102F] active:scale-[0.98]"
+        {status !== "success" && (
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-2xl bg-white p-6 shadow-lg sm:p-10"
           >
-            Request Free Estimate
-          </button>
+            {/* Error message */}
+            {status === "error" && (
+              <div className="mb-6 rounded-lg bg-red-50 border border-red-200 p-4 text-sm text-red-700">
+                {errorMsg}
+              </div>
+            )}
 
-          {/* Legal links */}
-          <p className="mt-4 text-center text-xs text-gray-500">
-            By submitting, you agree to our{" "}
-            <Link
-              href="/privacy-policy"
-              className="underline hover:text-navy"
+            {/* Name row */}
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div>
+                <label
+                  htmlFor="firstName"
+                  className="mb-1 block text-sm font-medium text-navy"
+                >
+                  First Name <span className="text-red">*</span>
+                </label>
+                <input
+                  id="firstName"
+                  name="firstName"
+                  type="text"
+                  required
+                  value={form.firstName}
+                  onChange={handleChange}
+                  placeholder="John"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="lastName"
+                  className="mb-1 block text-sm font-medium text-navy"
+                >
+                  Last Name <span className="text-red">*</span>
+                </label>
+                <input
+                  id="lastName"
+                  name="lastName"
+                  type="text"
+                  required
+                  value={form.lastName}
+                  onChange={handleChange}
+                  placeholder="Doe"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
+                />
+              </div>
+            </div>
+
+            {/* Phone / Email row */}
+            <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="mb-1 block text-sm font-medium text-navy"
+                >
+                  Phone <span className="text-red">*</span>
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="(619) 555-1234"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="mb-1 block text-sm font-medium text-navy"
+                >
+                  Email <span className="text-red">*</span>
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="john@example.com"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
+                />
+              </div>
+            </div>
+
+            {/* Service dropdown */}
+            <div className="mt-5">
+              <label
+                htmlFor="service"
+                className="mb-1 block text-sm font-medium text-navy"
+              >
+                Service Needed <span className="text-red">*</span>
+              </label>
+              <select
+                id="service"
+                name="service"
+                required
+                value={form.service}
+                onChange={handleChange}
+                className="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
+              >
+                <option value="" disabled>
+                  Select a service...
+                </option>
+                {SERVICE_OPTIONS.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Message */}
+            <div className="mt-5">
+              <label
+                htmlFor="message"
+                className="mb-1 block text-sm font-medium text-navy"
+              >
+                Message / Project Details
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                value={form.message}
+                onChange={handleChange}
+                placeholder="Tell us about your project..."
+                className="w-full resize-y rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20"
+              />
+            </div>
+
+            {/* SMS Consent Checkboxes */}
+            <div className="mt-6 space-y-4">
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="consentTransactional"
+                  checked={form.consentTransactional}
+                  onChange={handleChange}
+                  className="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-red"
+                />
+                <span className="text-xs leading-relaxed text-gray-600">
+                  I consent to receive transactional SMS messages (e.g.,
+                  appointment confirmations, project updates) from HRCCoatings
+                  LLC.
+                </span>
+              </label>
+
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="consentMarketing"
+                  checked={form.consentMarketing}
+                  onChange={handleChange}
+                  className="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-red"
+                />
+                <span className="text-xs leading-relaxed text-gray-600">
+                  I consent to receive marketing SMS messages (e.g., promotions,
+                  special offers) from HRCCoatings LLC. Message frequency varies.
+                  Msg &amp; data rates may apply. Reply STOP to unsubscribe.
+                </span>
+              </label>
+            </div>
+
+            {/* Submit */}
+            <button
+              type="submit"
+              disabled={status === "submitting"}
+              className="mt-8 w-full rounded-lg bg-red px-6 py-4 text-base font-semibold text-white transition hover:bg-[#B8102F] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Privacy Policy
-            </Link>{" "}
-            and{" "}
-            <Link
-              href="/terms-of-service"
-              className="underline hover:text-navy"
-            >
-              Terms of Service
-            </Link>
-            .
-          </p>
-        </form>
+              {status === "submitting" ? "Submitting..." : "Request Free Estimate"}
+            </button>
+
+            {/* Legal links */}
+            <p className="mt-4 text-center text-xs text-gray-500">
+              By submitting, you agree to our{" "}
+              <Link
+                href="/privacy-policy"
+                className="underline hover:text-navy"
+              >
+                Privacy Policy
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/terms-of-service"
+                className="underline hover:text-navy"
+              >
+                Terms of Service
+              </Link>
+              .
+            </p>
+          </form>
+        )}
       </div>
     </section>
   );

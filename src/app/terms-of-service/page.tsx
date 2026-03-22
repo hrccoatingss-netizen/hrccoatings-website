@@ -27,7 +27,7 @@ export default function TermsOfServicePage() {
           <aside className="mb-10 rounded-xl border border-gray-100 bg-gray-light px-6 py-4">
             <p className="text-sm text-gray-500">
               <span className="font-semibold text-navy">Last Updated:</span>{" "}
-              January 26, 2026
+              March 22, 2026
             </p>
           </aside>
 
@@ -190,7 +190,39 @@ export default function TermsOfServicePage() {
             {/* 10 */}
             <div>
               <h2 className="text-xl font-bold text-navy">
-                10. Governing Law
+                10. Carrier Liability Disclaimer
+              </h2>
+              <p className="mt-3 text-gray-600 leading-relaxed">
+                HRCCoatings LLC is not liable for any delays, failures, or
+                errors in SMS message delivery. Wireless carriers are not
+                responsible for delayed or undelivered messages. Message
+                delivery is subject to your wireless carrier&apos;s network
+                coverage and terms of service. We make no guarantees regarding
+                the timeliness or delivery of any SMS communications, including
+                appointment confirmations, project updates, or promotional
+                messages.
+              </p>
+            </div>
+
+            {/* 11 */}
+            <div>
+              <h2 className="text-xl font-bold text-navy">
+                11. Age Restriction
+              </h2>
+              <p className="mt-3 text-gray-600 leading-relaxed">
+                You must be at least 18 years of age to use our website,
+                request estimates, enter into service agreements, or opt in to
+                SMS messaging. By using our services, you represent and warrant
+                that you are at least 18 years old. If we learn that we have
+                collected information from a person under 18, we will delete
+                that information promptly.
+              </p>
+            </div>
+
+            {/* 12 */}
+            <div>
+              <h2 className="text-xl font-bold text-navy">
+                12. Governing Law
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 These terms are governed by the laws of the State of California.
@@ -199,10 +231,10 @@ export default function TermsOfServicePage() {
               </p>
             </div>
 
-            {/* 11 */}
+            {/* 13 */}
             <div>
               <h2 className="text-xl font-bold text-navy">
-                11. Severability
+                13. Severability
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 If any provision of these terms is found to be unenforceable, the
@@ -210,10 +242,10 @@ export default function TermsOfServicePage() {
               </p>
             </div>
 
-            {/* 12 */}
+            {/* 14 */}
             <div>
               <h2 className="text-xl font-bold text-navy">
-                12. Contact Information
+                14. Contact Information
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 For questions about these Terms of Service:

@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
           <aside className="mb-10 rounded-xl border border-gray-100 bg-gray-light px-6 py-4">
             <p className="text-sm text-gray-500">
               <span className="font-semibold text-navy">Last Updated:</span>{" "}
-              January 26, 2026
+              March 22, 2026
             </p>
           </aside>
 
@@ -129,7 +129,72 @@ export default function PrivacyPolicyPage() {
             {/* 4 */}
             <div>
               <h2 className="text-xl font-bold text-navy">
-                4. SMS Messaging Disclosure
+                4. Cookies &amp; Tracking Technologies
+              </h2>
+              <p className="mt-3 text-gray-600 leading-relaxed">
+                We use cookies and similar tracking technologies to improve your
+                experience on our website and analyze site traffic.
+              </p>
+              <ul className="mt-3 space-y-2 text-gray-600">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
+                  <span>
+                    <strong className="text-navy">
+                      Essential Cookies:
+                    </strong>{" "}
+                    Required for the website to function properly, such as
+                    session management and security features
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
+                  <span>
+                    <strong className="text-navy">
+                      Analytics Cookies:
+                    </strong>{" "}
+                    We use Google Analytics to understand how visitors interact
+                    with our website, including pages visited, time spent, and
+                    referral sources. This data is collected anonymously and
+                    helps us improve our services
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
+                  <span>
+                    <strong className="text-navy">
+                      Third-Party Tools:
+                    </strong>{" "}
+                    Our website may use third-party services such as Google
+                    reCAPTCHA for fraud prevention, which may collect usage data
+                    subject to{" "}
+                    <a
+                      href="https://policies.google.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-navy underline underline-offset-2"
+                    >
+                      Google&apos;s Privacy Policy
+                    </a>
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
+                  <span>
+                    <strong className="text-navy">
+                      Managing Cookies:
+                    </strong>{" "}
+                    You can control or disable cookies through your browser
+                    settings. Disabling certain cookies may limit your ability
+                    to use some features of our website
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 5 */}
+            <div>
+              <h2 className="text-xl font-bold text-navy">
+                5. SMS Messaging Disclosure
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 By opting in to SMS messaging:
@@ -176,10 +241,10 @@ export default function PrivacyPolicyPage() {
               </ul>
             </div>
 
-            {/* 5 */}
+            {/* 6 */}
             <div>
               <h2 className="text-xl font-bold text-navy">
-                5. Data Security
+                6. Data Security
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 We implement appropriate security measures to protect your
@@ -188,10 +253,10 @@ export default function PrivacyPolicyPage() {
               </p>
             </div>
 
-            {/* 6 */}
+            {/* 7 */}
             <div>
               <h2 className="text-xl font-bold text-navy">
-                6. Data Retention
+                7. Data Retention
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 We retain your information for as long as necessary to fulfill
@@ -199,10 +264,10 @@ export default function PrivacyPolicyPage() {
               </p>
             </div>
 
-            {/* 7 */}
+            {/* 8 */}
             <div>
               <h2 className="text-xl font-bold text-navy">
-                7. Sharing Your Information
+                8. Sharing Your Information
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 We may share your information with:
@@ -223,9 +288,9 @@ export default function PrivacyPolicyPage() {
               </ul>
             </div>
 
-            {/* 8 */}
+            {/* 9 */}
             <div>
-              <h2 className="text-xl font-bold text-navy">8. Your Rights</h2>
+              <h2 className="text-xl font-bold text-navy">9. Your Rights</h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 You have the right to:
               </p>
@@ -249,10 +314,10 @@ export default function PrivacyPolicyPage() {
               </ul>
             </div>
 
-            {/* 9 */}
+            {/* 10 */}
             <div>
               <h2 className="text-xl font-bold text-navy">
-                9. Children&apos;s Privacy
+                10. Children&apos;s Privacy
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 Our services are not intended for individuals under 18 years of
@@ -260,10 +325,10 @@ export default function PrivacyPolicyPage() {
               </p>
             </div>
 
-            {/* 10 */}
+            {/* 11 */}
             <div>
               <h2 className="text-xl font-bold text-navy">
-                10. Changes to This Policy
+                11. Changes to This Policy
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 We may update this Privacy Policy from time to time. Changes will
@@ -271,9 +336,9 @@ export default function PrivacyPolicyPage() {
               </p>
             </div>
 
-            {/* 11 */}
+            {/* 12 */}
             <div>
-              <h2 className="text-xl font-bold text-navy">11. Contact Us</h2>
+              <h2 className="text-xl font-bold text-navy">12. Contact Us</h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 If you have questions about this Privacy Policy, contact us:
               </p>

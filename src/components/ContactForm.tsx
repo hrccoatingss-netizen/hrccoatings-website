@@ -265,7 +265,8 @@ export default function ContactForm() {
                 <span className="text-xs leading-relaxed text-gray-600">
                   I consent to receive transactional SMS messages (e.g.,
                   appointment confirmations, project updates) from HRCCoatings
-                  LLC.
+                  LLC. Message frequency varies. Msg &amp; data rates may apply.
+                  Reply STOP to unsubscribe.
                 </span>
               </label>
 

@@ -27,7 +27,7 @@ export default function TermsOfServicePage() {
           <aside className="mb-10 rounded-xl border border-gray-100 bg-gray-light px-6 py-4">
             <p className="text-sm text-gray-500">
               <span className="font-semibold text-navy">Last Updated:</span>{" "}
-              March 22, 2026
+              April 6, 2026
             </p>
           </aside>
 
@@ -83,38 +83,61 @@ export default function TermsOfServicePage() {
                 3. SMS Messaging Terms
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
-                By providing your phone number and opting in:
+                By providing your phone number and opting in, you consent to
+                receive SMS messages from HRCCoatings LLC. Messages may include
+                appointment confirmations, project updates, estimates,
+                scheduling reminders, and promotional offers related to our
+                painting and coating services. Consent is not a condition of
+                purchasing any goods or services.
               </p>
               <ul className="mt-3 space-y-2 text-gray-600">
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
-                  You consent to receive SMS messages from HRCCoatings LLC
+                  You can cancel the SMS service at any time. Simply text
+                  &ldquo;STOP&rdquo; to the shortcode. Upon sending
+                  &ldquo;STOP,&rdquo; we will confirm your unsubscribe status
+                  via SMS. Following this confirmation, you will no longer
+                  receive SMS messages from us. To rejoin, sign up as you did
+                  initially, and we will resume sending SMS messages to you.
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
-                  Messages may include appointment confirmations, project
-                  updates, estimates, and promotional offers
+                  <span>
+                    For privacy-related inquiries, please refer to our{" "}
+                    <Link
+                      href="/privacy-policy"
+                      className="font-medium text-navy underline underline-offset-2"
+                    >
+                      privacy policy
+                    </Link>
+                    .
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
-                  Message frequency varies
+                  As always, message and data rates may apply for messages sent
+                  to you from us and to us from you. Message frequency varies.
+                  For questions about your text plan or data plan, contact your
+                  wireless provider.
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
-                  Message and data rates may apply
+                  Carriers are not liable for delayed or undelivered messages.
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
-                  Reply STOP to opt out, HELP for assistance
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
-                  Your phone number will not be shared with third parties for
-                  their marketing purposes
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
-                  Consent is not a condition of purchasing any goods or services
+                  <span>
+                    If you experience issues with the messaging program, reply
+                    with the keyword HELP for more assistance, or reach out
+                    directly to{" "}
+                    <a
+                      href="tel:+16192893908"
+                      className="font-medium text-navy underline underline-offset-2"
+                    >
+                      (619) 289-3908
+                    </a>
+                    .
+                  </span>
                 </li>
               </ul>
             </div>

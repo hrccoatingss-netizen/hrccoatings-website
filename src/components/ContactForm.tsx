@@ -263,10 +263,12 @@ export default function ContactForm() {
                   className="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-red"
                 />
                 <span className="text-xs leading-relaxed text-gray-600">
-                  I consent to receive transactional SMS messages (e.g.,
-                  appointment confirmations, project updates) from HRCCoatings
-                  LLC. Message frequency varies. Msg &amp; data rates may apply.
-                  Reply STOP to unsubscribe.
+                  By checking this box, I consent to receive transactional
+                  messages related to my account, orders, or services I have
+                  requested to HRCCoatings. These messages may include
+                  appointment reminders, order confirmations, and account
+                  notifications. Message frequency may vary. Message &amp; Data
+                  rates may apply. Reply HELP for help or STOP to opt-out.
                 </span>
               </label>
 
@@ -279,9 +281,11 @@ export default function ContactForm() {
                   className="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 accent-red"
                 />
                 <span className="text-xs leading-relaxed text-gray-600">
-                  I consent to receive marketing SMS messages (e.g., promotions,
-                  special offers) from HRCCoatings LLC. Message frequency varies.
-                  Msg &amp; data rates may apply. Reply STOP to unsubscribe.
+                  By checking this box, I consent to receive marketing and
+                  promotional messages, including special offers, discounts, new
+                  product updates from HRCCoatings. Message frequency may vary.
+                  Message &amp; Data rates may apply. Reply HELP for help or
+                  STOP to opt-out.
                 </span>
               </label>
             </div>
@@ -295,24 +299,6 @@ export default function ContactForm() {
               {status === "submitting" ? "Submitting..." : "Request Free Estimate"}
             </button>
 
-            {/* Legal links */}
-            <p className="mt-4 text-center text-xs text-gray-500">
-              By submitting, you agree to our{" "}
-              <Link
-                href="/privacy-policy"
-                className="underline hover:text-navy"
-              >
-                Privacy Policy
-              </Link>{" "}
-              and{" "}
-              <Link
-                href="/terms-of-service"
-                className="underline hover:text-navy"
-              >
-                Terms of Service
-              </Link>
-              .
-            </p>
           </form>
         )}
       </div>

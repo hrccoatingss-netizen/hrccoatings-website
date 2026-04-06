@@ -299,6 +299,23 @@ export default function ContactForm() {
               {status === "submitting" ? "Submitting..." : "Request Free Estimate"}
             </button>
 
+            {/* Legal links */}
+            <p className="mt-4 text-center text-xs text-gray-500">
+              <Link
+                href="/privacy-policy"
+                className="underline hover:text-navy"
+              >
+                Privacy Policy
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/terms-of-service"
+                className="underline hover:text-navy"
+              >
+                Terms of Service
+              </Link>
+            </p>
+
           </form>
         )}
       </div>

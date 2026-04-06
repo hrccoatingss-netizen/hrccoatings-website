@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
           <aside className="mb-10 rounded-xl border border-gray-100 bg-gray-light px-6 py-4">
             <p className="text-sm text-gray-500">
               <span className="font-semibold text-navy">Last Updated:</span>{" "}
-              March 22, 2026
+              April 6, 2026
             </p>
           </aside>
 
@@ -237,6 +237,16 @@ export default function PrivacyPolicyPage() {
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
                   Your phone number will not be shared with third parties for
                   marketing purposes
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
+                  No mobile information will be shared with third
+                  parties/affiliates for marketing/promotional purposes.
+                  Information sharing to subcontractors in support services,
+                  such as customer service is permitted. All other use case
+                  categories exclude text messaging originator opt-in data and
+                  consent; this information will not be shared with any third
+                  parties.
                 </li>
               </ul>
             </div>

@@ -36,11 +36,11 @@ export async function submitEstimateForm(data: FormData) {
     });
 
     return { success: true };
-  } catch (error) {
-    console.error("Form submission error:", error);
+  } catch (err) {
+    console.error("Form submission error:", err);
     return {
       success: false,
-      error: error instanceof Error ? error.message : "Something went wrong",
+      error: err instanceof Error ? err.message : "Something went wrong",
     };
   }
 }

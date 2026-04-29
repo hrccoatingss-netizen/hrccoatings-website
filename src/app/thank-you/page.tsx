@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function ThankYouPage() {
-  const PHONE_DISPLAY = "(619) 289-3908";
-  const PHONE_TEL = "+16192893908";
+  const PHONE_DISPLAY = "(619) 304-1289";
+  const PHONE_TEL = "+16193041289";
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-white via-gray-light to-white">
@@ -102,7 +102,7 @@ export default function ThankYouPage() {
               {
                 num: "01",
                 title: "We'll call you",
-                body: "A team member calls you from (619) 289-3908 within one business day. We confirm what you're looking for and lock in a time that works.",
+                body: "A team member calls you from (619) 304-1289 within one business day. We confirm what you're looking for and lock in a time that works.",
               },
               {
                 num: "02",

@@ -10,12 +10,13 @@ export const metadata: Metadata = {
 export default function ExteriorPaintingPage() {
   return (
     <ServicePageLayout
+      slug="exterior-painting"
       heroTitle="Exterior Painting"
       heroSubtitle="Enhance Curb Appeal with Professional Exterior Painting"
       heroImage="/images/exterior/front-home.jpg"
       overview={`Your home's exterior is its first impression and its primary defense against San Diego's sun, coastal air, and weather. Professional exterior painting not only enhances curb appeal but protects your investment for years to come.
 
-At HRCCoatings, we specialize in comprehensive exterior painting services for all surface types including wood siding, stucco, trim, doors, shutters, and more. We use weather-resistant, premium exterior coatings designed to withstand Southern California's unique climate.
+At HRCCoatings Inc, we specialize in comprehensive exterior painting services for all surface types including wood siding, stucco, trim, doors, shutters, and more. We use weather-resistant, premium exterior coatings designed to withstand Southern California's unique climate.
 
 Our process begins with thorough surface preparation—the key to long-lasting results. We pressure wash, scrape, sand, repair damaged areas, and apply quality primers before the final coats. The result? A beautiful, durable finish that protects and enhances your home's exterior.`}
       processSteps={[

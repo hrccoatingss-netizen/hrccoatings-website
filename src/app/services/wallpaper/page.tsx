@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function WallpaperPage() {
   return (
     <ServicePageLayout
+      slug="wallpaper"
       heroTitle="Wallpaper Installation"
       heroSubtitle="Transform Your Space with Professional Wallpaper"
       heroImage="/images/interior/living-room-1.jpg"

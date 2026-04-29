@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import ServiceSchema from "@/components/ServiceSchema";
 
 export const metadata: Metadata = {
   title: "Stucco Repair Services in San Diego",
@@ -13,6 +14,19 @@ export const metadata: Metadata = {
 export default function StuccoRepairPage() {
   return (
     <>
+      <ServiceSchema
+        slug="stucco-repair"
+        name="Stucco Repair"
+        description="Expert stucco repair services in San Diego. Crack repair, texture matching, hole patching, and protective coatings for residential and commercial properties."
+        image="/images/stucco-services.jpg"
+        steps={[
+          { title: "Inspection & Diagnosis", description: "We identify the type and extent of damage and determine the root cause." },
+          { title: "Surface Prep", description: "We clean and prepare the area, removing loose stucco and stabilizing the substrate." },
+          { title: "Base Coat Application", description: "We apply a fresh scratch and brown coat to rebuild the wall's structural integrity." },
+          { title: "Texture Matching", description: "Skilled texture matching to blend the repair invisibly with the existing surface." },
+          { title: "Final Coat & Sealing", description: "Finish coat and protective sealer for long-lasting weather resistance." },
+        ]}
+      />
       {/* Hero */}
       <section className="relative flex items-center justify-center overflow-hidden bg-navy py-24 sm:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/95 to-navy/80" />

@@ -1,13 +1,29 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* Brand colors */
   --color-navy: #0B2C75;
+  --color-navy-deep: #061A4A;
   --color-red: #DB143C;
+  --color-red-deep: #B0102F;
   --color-orange: #FF6933;
   --color-blue: #1E5FE0;
+
+  /* Neutral palette - warmer cream tones replace cold grays */
+  --color-cream: #FAF7F2;
+  --color-cream-dark: #F1ECE2;
+  --color-ink: #0A0A0A;
+  --color-ink-soft: #1F1F1F;
+  --color-stone: #6B6B6B;
+  --color-stone-light: #9E9E9E;
+
+  /* Legacy holdover (still referenced elsewhere) */
   --color-gray-light: #F4F5F7;
-  --color-foreground: #1F2937;
-  --color-background: #ffffff;
+
+  --color-foreground: #0A0A0A;
+  --color-background: #FAF7F2;
+
+  /* Fonts */
   --font-sans: var(--font-inter);
 }
 
@@ -15,8 +31,23 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Big number utility */
+.editorial-num {
+  font-feature-settings: "tnum";
+  letter-spacing: -0.04em;
+}
+
+/* Custom selection */
+::selection {
+  background-color: var(--color-navy);
+  color: white;
 }

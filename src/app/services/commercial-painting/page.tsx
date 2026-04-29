@@ -10,10 +10,11 @@ export const metadata: Metadata = {
 export default function CommercialPaintingPage() {
   return (
     <ServicePageLayout
+      slug="commercial-painting"
       heroTitle="Commercial Painting"
       heroSubtitle="Professional Commercial Painting for San Diego Businesses"
       heroImage="/images/commercial/building-front.jpg"
-      overview={`Your commercial space represents your brand, and its appearance matters to customers, clients, and employees. HRCCoatings delivers professional commercial painting services that minimize business disruption while maximizing results.
+      overview={`Your commercial space represents your brand, and its appearance matters to customers, clients, and employees. HRCCoatings Inc delivers professional commercial painting services that minimize business disruption while maximizing results.
 
 We serve offices, retail spaces, warehouses, restaurants, medical facilities, and commercial properties throughout San Diego County. Our experience includes tenant improvements, complete building repaints, and ongoing maintenance programs.
 

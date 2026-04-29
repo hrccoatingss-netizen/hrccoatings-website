@@ -10,10 +10,11 @@ export const metadata: Metadata = {
 export default function EpoxyFlooringPage() {
   return (
     <ServicePageLayout
+      slug="epoxy-flooring"
       heroTitle="Epoxy Flooring"
       heroSubtitle="Transform Floors with Durable Epoxy Coatings"
       heroImage="/images/epoxy/application-hero.jpg"
-      overview={`Epoxy flooring combines unmatched durability with stunning aesthetics, making it the premium choice for garages, basements, workshops, and commercial spaces. At HRCCoatings, we specialize in professional epoxy floor installations that protect surfaces and elevate spaces.
+      overview={`Epoxy flooring combines unmatched durability with stunning aesthetics, making it the premium choice for garages, basements, workshops, and commercial spaces. At HRCCoatings Inc, we specialize in professional epoxy floor installations that protect surfaces and elevate spaces.
 
 Our high-quality epoxy coatings create a seamless, attractive finish that resists stains, impacts, chemicals, and moisture. Available in multiple colors and finishes—including solid colors, metallic effects, and decorative flake systems—epoxy flooring transforms ordinary concrete into a showroom-worthy surface.
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ArticleSchema from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
   title: "Epoxy Flooring vs. Traditional Garage Floors",
@@ -25,6 +26,15 @@ const relatedPosts = [
 export default function EpoxyVsTraditionalPage() {
   return (
     <>
+      <ArticleSchema
+        slug="epoxy-vs-traditional"
+        title="Epoxy Flooring vs. Traditional Garage Floors"
+        description="Compare epoxy flooring vs traditional garage floors. Learn about costs, durability, maintenance, and which option is best for your San Diego garage."
+        image="/images/blog/epoxy-vs-traditional.jpg"
+        datePublished="2024-11-28"
+        category="Materials"
+      />
+
       {/* Breadcrumb */}
       <nav className="bg-gray-light px-4 py-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-3xl items-center gap-2 text-sm text-gray-500">
@@ -401,13 +411,13 @@ export default function EpoxyVsTraditionalPage() {
               </h3>
               <p className="mx-auto mt-3 max-w-lg text-white/90 leading-relaxed">
                 Ready to upgrade from boring concrete to a stunning, durable
-                epoxy floor? Contact HRCCoatings for a free estimate. First-time
+                epoxy floor? Contact HRCCoatings Inc for a free estimate. First-time
                 customers save $500! Call{" "}
                 <a
-                  href="tel:+16192893908"
+                  href="tel:+16193041289"
                   className="font-semibold underline underline-offset-2"
                 >
-                  (619) 289-3908
+                  (619) 304-1289
                 </a>
               </p>
               <Link

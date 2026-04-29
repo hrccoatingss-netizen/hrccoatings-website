@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "HRCCoatings LLC terms of service. Read our terms and conditions for using our services and website.",
+    "HRCCoatings Inc terms of service. Read our terms and conditions for using our services and website.",
   alternates: { canonical: "/terms-of-service" },
 };
 
@@ -50,7 +50,7 @@ export default function TermsOfServicePage() {
                 2. Description of Services
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
-                HRCCoatings LLC provides professional painting, coating, and
+                HRCCoatings Inc provides professional painting, coating, and
                 related services including but not limited to:
               </p>
               <ul className="mt-3 space-y-2 text-gray-600">
@@ -84,7 +84,7 @@ export default function TermsOfServicePage() {
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 By providing your phone number and opting in, you consent to
-                receive SMS messages from HRCCoatings LLC. Messages may include
+                receive SMS messages from HRCCoatings Inc. Messages may include
                 appointment confirmations, project updates, estimates,
                 scheduling reminders, and promotional offers related to our
                 painting and coating services. Consent is not a condition of
@@ -131,10 +131,10 @@ export default function TermsOfServicePage() {
                     with the keyword HELP for more assistance, or reach out
                     directly to{" "}
                     <a
-                      href="tel:+16192893908"
+                      href="tel:+16193041289"
                       className="font-medium text-navy underline underline-offset-2"
                     >
-                      (619) 289-3908
+                      (619) 304-1289
                     </a>
                     .
                   </span>
@@ -161,7 +161,7 @@ export default function TermsOfServicePage() {
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 All content on this website, including text, images, logos, and
-                design, is the property of HRCCoatings LLC and protected by
+                design, is the property of HRCCoatings Inc and protected by
                 applicable intellectual property laws.
               </p>
             </div>
@@ -172,7 +172,7 @@ export default function TermsOfServicePage() {
                 6. Limitation of Liability
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
-                HRCCoatings LLC shall not be liable for any indirect, incidental,
+                HRCCoatings Inc shall not be liable for any indirect, incidental,
                 special, or consequential damages arising from the use of our
                 website or services.
               </p>
@@ -195,7 +195,7 @@ export default function TermsOfServicePage() {
                 8. Indemnification
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
-                You agree to indemnify and hold harmless HRCCoatings LLC from any
+                You agree to indemnify and hold harmless HRCCoatings Inc from any
                 claims, damages, or expenses arising from your use of our
                 services or violation of these terms.
               </p>
@@ -216,7 +216,7 @@ export default function TermsOfServicePage() {
                 10. Carrier Liability Disclaimer
               </h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
-                HRCCoatings LLC is not liable for any delays, failures, or
+                HRCCoatings Inc is not liable for any delays, failures, or
                 errors in SMS message delivery. Wireless carriers are not
                 responsible for delayed or undelivered messages. Message
                 delivery is subject to your wireless carrier&apos;s network
@@ -279,10 +279,10 @@ export default function TermsOfServicePage() {
                   <span>
                     Phone:{" "}
                     <a
-                      href="tel:+16192893908"
+                      href="tel:+16193041289"
                       className="font-medium text-navy underline underline-offset-2"
                     >
-                      (619) 289-3908
+                      (619) 304-1289
                     </a>
                   </span>
                 </li>

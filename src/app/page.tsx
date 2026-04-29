@@ -10,35 +10,36 @@ const services = [
     name: "Interior Painting",
     image: "/images/interior/interior-services.jpg",
     description:
-      "Transform your indoor spaces with expert color consultations and flawless application.",
+      "Transform indoor spaces with expert color consultations and flawless application.",
     href: "/services/interior-painting",
+    tag: "Most Popular",
   },
   {
     name: "Exterior Painting",
     image: "/images/exterior/exterior-services.jpg",
     description:
-      "Enhance your home's curb appeal and protect it from the elements with durable coatings.",
+      "Curb appeal upgrades that protect your home from the elements with durable coatings.",
     href: "/services/exterior-painting",
   },
   {
     name: "Commercial Painting",
     image: "/images/commercial/commercial-services.jpg",
     description:
-      "Professional painting for offices, warehouses, retail spaces, and tenant improvements.",
+      "Professional finishes for offices, warehouses, retail, and tenant improvements.",
     href: "/services/commercial-painting",
   },
   {
     name: "Epoxy Flooring",
     image: "/images/epoxy/epoxy-services.jpg",
     description:
-      "Transform your floors with premium epoxy coatings. Ideal for garages, basements, and commercial spaces.",
+      "Premium epoxy coatings for garages, basements, and commercial spaces.",
     href: "/services/epoxy-flooring",
   },
   {
     name: "Concrete Polishing",
     image: "/images/concrete/polished-services.jpg",
     description:
-      "A budget-friendly alternative to epoxy with a sleek, polished finish for garage floors.",
+      "Sleek polished finish. A budget friendly alternative to epoxy for garage floors.",
     href: "/services/concrete-polishing",
   },
   {
@@ -66,29 +67,33 @@ const services = [
     name: "Popcorn Removal",
     image: "/images/popcorn-services.jpg",
     description:
-      "Say goodbye to outdated popcorn ceilings with our professional removal service.",
+      "Modernize your ceilings with our professional popcorn removal service.",
     href: "/services/specialty-services",
   },
 ];
 
 const reviews = [
   {
-    name: "Sandra Sandra",
+    name: "Jessica Aliano",
+    role: "Local Realtor, Carlsbad",
+    stars: 5,
+    time: "4 months ago",
+    text: "I've hired Hector and Junior multiple times and they always deliver top notch results. Most recently, a full beach themed remodel in Carlsbad with two accent walls in navy and light blue stripes that turned out absolutely stunning. As a local realtor, I now refer them to all of my real estate clients.",
+    featured: true,
+  },
+  {
+    name: "Sandra",
+    role: "Homeowner, San Diego",
     stars: 5,
     time: "2 months ago",
-    text: "Our experience with Hrccoatings was exceptional! We are very satisfied with the outcome of our project. Hector and Jr. delivered outstanding results on our interior painting.",
+    text: "Our experience was exceptional. We are very satisfied with the outcome of our project. Hector and Jr. delivered outstanding results on our interior painting.",
   },
   {
     name: "Elio Espinosa",
+    role: "Homeowner",
     stars: 5,
     time: "3 months ago",
     text: "They painted our home last year and they were professional, efficient, and did an excellent job!",
-  },
-  {
-    name: "Jessica Aliano, Local Realtor",
-    stars: 5,
-    time: "4 months ago",
-    text: "I've hired Hector and Junior multiple times, and they always deliver top-notch results. Most recently, they completed a full beach-themed remodel for me in Carlsbad\u2014including two accent walls with navy and light blue stripes that turned out absolutely stunning. Their work is clean, detailed, and professional every time. This hardworking father-son team is punctual, tidy, and fast. Their pricing is very reasonable, and they go above and beyond to make sure the job is done right. In addition to painting, they also do epoxy floors (perfect for garages) with several great finish options, popcorn removal, and their stucco work is excellent too. As a local realtor, I now refer Hector and Junior to all of my real estate clients. If you want high-quality work at a fair price, call Hector and Junior \u2014 you'll be glad you did!",
   },
 ];
 
@@ -101,7 +106,7 @@ const faqItems = [
   {
     question: "How long does a typical project take?",
     answer:
-      "Most residential projects are completed within 2-5 days, while commercial projects vary based on scope. We'll provide a clear timeline during your free estimate.",
+      "Most residential projects are completed within 2 to 5 days, while commercial projects vary based on scope. We'll provide a clear timeline during your free estimate.",
   },
   {
     question: "Do you offer free estimates?",
@@ -140,6 +145,7 @@ const blogPosts = [
     image: "/images/blog/paint-color-selection.jpg",
     title: "How to Choose the Perfect Paint Color",
     date: "Dec 10, 2024",
+    category: "Color Theory",
     excerpt:
       "Expert tips on choosing the perfect paint color for your San Diego home.",
     href: "/blog/paint-color-guide",
@@ -148,35 +154,49 @@ const blogPosts = [
     image: "/images/blog/home-needs-repainting.jpg",
     title: "5 Signs Your Home Needs Repainting",
     date: "Dec 5, 2024",
+    category: "Home Care",
     excerpt:
       "Discover the key signs that indicate your home needs repainting.",
     href: "/blog/signs-home-needs-repainting",
   },
   {
     image: "/images/blog/epoxy-vs-traditional.jpg",
-    title: "Epoxy Flooring vs. Traditional Garage Floors",
+    title: "Epoxy vs Traditional Garage Floors",
     date: "Nov 28, 2024",
+    category: "Materials",
     excerpt: "Compare epoxy flooring vs traditional garage floors.",
     href: "/blog/epoxy-vs-traditional",
   },
 ];
 
 const serviceAreas = [
-  "Clairemont",
-  "Carlsbad",
-  "La Jolla",
-  "Chula Vista",
-  "Pacific Beach",
-  "Mission Valley",
-  "Point Loma",
-  "North Park",
-  "Hillcrest",
-  "Del Mar",
-  "Encinitas",
-  "Oceanside",
+  "Clairemont", "Carlsbad", "La Jolla", "Chula Vista",
+  "Pacific Beach", "Mission Valley", "Point Loma", "North Park",
+  "Hillcrest", "Del Mar", "Encinitas", "Oceanside",
 ];
 
-/* ──────────────────────── star helper ─────────────────────────── */
+const process = [
+  {
+    num: "01",
+    title: "Free Estimate",
+    description:
+      "Tell us about your project. We meet on site, listen to your goals, and send a detailed quote within 24 hours. No pressure, no obligation.",
+  },
+  {
+    num: "02",
+    title: "Schedule & Prep",
+    description:
+      "Pick a date that works. We arrive on time, protect your furniture and floors, and prep every surface to professional spec before a single stroke.",
+  },
+  {
+    num: "03",
+    title: "Premium Finish",
+    description:
+      "Benjamin Moore, Sherwin Williams, and Dunn Edwards paints. Clean, detailed work. We don't leave until you're 100% happy with the result.",
+  },
+];
+
+/* ──────────────────────── helpers ─────────────────────────── */
 
 function Stars({ count }: { count: number }) {
   return (
@@ -184,7 +204,7 @@ function Stars({ count }: { count: number }) {
       {Array.from({ length: count }).map((_, i) => (
         <svg
           key={i}
-          className="h-5 w-5 text-yellow-400"
+          className="h-4 w-4 text-orange"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -195,12 +215,23 @@ function Stars({ count }: { count: number }) {
   );
 }
 
+function SectionLabel({ children, light }: { children: React.ReactNode; light?: boolean }) {
+  return (
+    <div className="inline-flex items-center gap-2.5 mb-6">
+      <span className={`h-px w-8 ${light ? "bg-white/40" : "bg-navy/40"}`} />
+      <span className={`text-[11px] font-bold uppercase tracking-[0.22em] ${light ? "text-white/70" : "text-navy"}`}>
+        {children}
+      </span>
+    </div>
+  );
+}
+
 /* ═══════════════════════════ PAGE ══════════════════════════════ */
 
 export default function Home() {
   return (
     <>
-      {/* FAQPage structured data for Google rich snippets */}
+      {/* FAQPage structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -219,442 +250,88 @@ export default function Home() {
         }}
       />
 
-      {/* ────────── 1. HERO ────────── */}
-      <section className="relative flex min-h-[90vh] items-center overflow-hidden">
-        <Image
-          src="/images/hero-painting.jpg"
-          alt="Professional painting by HRCCoatings LLC"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B2C75]/85 via-[#0B2C75]/60 to-[#0B2C75]/40" />
+      {/* ────────── HERO ────────── */}
+      <section className="relative overflow-hidden min-h-screen flex items-center bg-ink">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/exterior/modern-front.jpg"
+            alt="Modern San Diego home exterior painted by HRCCoatings Inc"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/70 to-ink/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent" />
+        </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            {/* Offer banner */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#DB143C] to-[#FF6933] px-5 py-2 text-sm font-bold text-white shadow-lg">
-              <span className="text-lg">$500 OFF</span>
-              <span className="font-normal opacity-90">your first project &mdash; limited spots this month</span>
+        <div className="relative z-10 mx-auto max-w-[1400px] w-full px-5 lg:px-10 pt-32 pb-20 lg:pt-36 lg:pb-24">
+          <div className="max-w-4xl">
+            {/* Trust pill */}
+            <div className="inline-flex items-center gap-3 rounded-full bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2 mb-8">
+              <Stars count={5} />
+              <span className="text-[12px] font-semibold text-white">
+                5.0 on Google · 600+ projects · Family run since 2003
+              </span>
             </div>
 
-            <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-sm">
-              San Diego&apos;s Trusted Painting Experts
+            {/* Headline */}
+            <h1 className="text-white font-black tracking-[-0.045em] leading-[0.92] text-6xl sm:text-7xl lg:text-8xl xl:text-[136px]">
+              SAN DIEGO&apos;S<br />
+              <span className="text-orange">MOST TRUSTED</span><br />
+              PAINTERS.
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/90">
-              Father &amp; son team with 20+ years of experience. Premium
-              paints, clean work, honest pricing. Rated 5.0 on Google.
+
+            <p className="mt-8 max-w-xl text-base sm:text-lg text-white/80 leading-relaxed font-medium">
+              Father and son. 20 plus years of experience. Premium paints, clean
+              job sites, and finishes that last. From single accent walls to full
+              commercial buildouts.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            {/* CTAs */}
+            <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-lg bg-[#DB143C] px-8 py-4 text-base font-bold text-white shadow-lg transition hover:bg-[#B8102F] active:scale-[0.98]"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-orange text-white px-8 py-4 text-[14px] font-extrabold tracking-wide uppercase transition-all hover:bg-red active:scale-[0.98]"
               >
-                Get Your Free Estimate
+                Get Free Estimate
+                <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
               <a
-                href="tel:+16192893908"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/20 active:scale-[0.98]"
+                href="tel:+16193041289"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 bg-white/5 backdrop-blur-md px-8 py-4 text-[14px] font-bold text-white transition-all hover:bg-white hover:text-ink"
               >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                (619) 289-3908
+                (619) 304-1289
               </a>
             </div>
 
-            <p className="mt-4 text-sm text-white/60">
-              Free estimates within 24 hours &middot; No obligation
-            </p>
-
-            {/* Social proof bar */}
-            <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-white/20 pt-8">
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-0.5">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <svg key={i} className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-sm font-semibold text-white">5.0</span>
-                <span className="text-sm text-white/70">on Google</span>
-              </div>
-              <div className="h-4 w-px bg-white/30" />
-              <span className="text-sm text-white/70"><strong className="text-white">600+</strong> projects completed</span>
-              <div className="h-4 w-px bg-white/30 hidden sm:block" />
-              <span className="hidden text-sm text-white/70 sm:inline"><strong className="text-white">20+ years</strong> in business</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ────────── 2. STATISTICS ────────── */}
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-3">
-          {[
-            { number: "600+", label: "Projects Completed" },
-            { number: "20+", label: "Years in Business" },
-            { number: "5.0", label: "Star Rating" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="text-5xl font-extrabold text-navy sm:text-6xl">
-                {stat.number}
-              </p>
-              <p className="mt-2 text-lg font-medium text-gray-600">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ────────── 3. OFFER BANNER ────────── */}
-      <section className="bg-gradient-to-r from-red to-orange py-14 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            $500 Off Your First Project
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-white/90">
-            New customers receive $500 off their first painting or coating
-            project. Contact us today for your free estimate!
-          </p>
-          <Link
-            href="#contact"
-            className="mt-8 inline-flex items-center rounded-lg bg-white px-8 py-4 text-base font-semibold text-red shadow-lg transition hover:bg-gray-50 active:scale-[0.98]"
-          >
-            Claim Your Discount
-          </Link>
-        </div>
-      </section>
-
-      {/* ────────── 4. TEAM SECTION ────────── */}
-      <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-          {/* Image */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
-            <Image
-              src="/images/team-photo.jpg"
-              alt="Hector and Junior Rivera - HRCCoatings team"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
-
-          {/* Text */}
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              Meet the Team
-            </h2>
-            <div className="mt-6 space-y-4 text-gray-600 leading-relaxed">
-              <p>
-                <span className="font-semibold text-navy">
-                  Hector Rivera
-                </span>{" "}
-                &mdash; Founder &amp; Owner
-              </p>
-              <p>
-                <span className="font-semibold text-navy">
-                  Junior Rivera
-                </span>{" "}
-                &mdash; Co-Owner &amp; Operations Manager
-              </p>
-              <p>
-                With over 20 years of combined expertise, Hector and Junior
-                are a father-son team dedicated to delivering top-quality
-                painting and coating services across San Diego County. Their
-                commitment to craftsmanship, honest communication, and
-                customer satisfaction has built a reputation that homeowners
-                and businesses trust.
-              </p>
-              <p>
-                As a faith-based, family-run business, every project is
-                treated with personal care and attention to detail that
-                larger companies simply can&apos;t match.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ────────── 5. SERVICES ────────── */}
-      <section id="gallery" className="bg-gray-light py-20 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              Our Services
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-lg text-gray-600">
-              Professional painting and coating solutions for every need
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <Link
-                key={service.href}
-                href={service.href}
-                className="group relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={service.image}
-                    alt={service.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  {/* Content */}
-                  <div className="absolute inset-x-0 bottom-0 p-6">
-                    <h3 className="text-xl font-bold text-white">
-                      {service.name}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-white/80">
-                      {service.description}
-                    </p>
-                    <span className="mt-3 inline-flex items-center text-sm font-semibold text-orange transition-colors group-hover:text-white">
-                      Learn More
-                      <svg
-                        className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ────────── 6. TRUSTED BRANDS ────────── */}
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-navy sm:text-3xl">
-            Trusted by the Best Brands
-          </h2>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-10 sm:gap-16">
-            {[
-              {
-                src: "/images/benjamin-moore-logo.png",
-                alt: "Benjamin Moore",
-              },
-              {
-                src: "/images/dunn-edwards-logo.png",
-                alt: "Dunn-Edwards",
-              },
-              {
-                src: "/images/sherwin-williams-logo.png",
-                alt: "Sherwin-Williams",
-              },
-            ].map((logo) => (
-              <Image
-                key={logo.alt}
-                src={logo.src}
-                alt={logo.alt}
-                width={160}
-                height={60}
-                className="h-12 w-auto object-contain opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0 sm:h-14"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ────────── 7. WHY CHOOSE US ────────── */}
-      <section className="bg-gray-light py-20 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            Why Choose Us
-          </h2>
-
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {/* 20+ Years */}
-            <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition hover:shadow-md">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy/10">
-                <svg className="h-7 w-7 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="mt-5 text-lg font-bold text-navy">
-                20+ Years Experience
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                Over two decades of professional painting and coating expertise
-              </p>
+            {/* $500 off pill */}
+            <div className="mt-8 inline-flex items-center gap-3 text-[13px] text-white/70 font-medium">
+              <span className="rounded-full bg-orange px-3 py-1 text-white font-extrabold uppercase tracking-wider text-[11px]">
+                $500 off
+              </span>
+              <span>your first project. Limited spots this month.</span>
             </div>
 
-            {/* Family-Run */}
-            <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition hover:shadow-md">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy/10">
-                <svg className="h-7 w-7 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
-              </div>
-              <h3 className="mt-5 text-lg font-bold text-navy">
-                Family-Run Business
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                Father-son team committed to quality and personal service
-              </p>
-            </div>
-
-            {/* Premium Materials */}
-            <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition hover:shadow-md">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy/10">
-                <svg className="h-7 w-7 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-                </svg>
-              </div>
-              <h3 className="mt-5 text-lg font-bold text-navy">
-                Premium Materials
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                We use only top-quality paints from Benjamin Moore, Sherwin
-                Williams, and Dunn-Edwards
-              </p>
-            </div>
-
-            {/* 100% Satisfaction */}
-            <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition hover:shadow-md">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy/10">
-                <svg className="h-7 w-7 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                </svg>
-              </div>
-              <h3 className="mt-5 text-lg font-bold text-navy">
-                100% Satisfaction
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                We stand behind every project with our quality guarantee
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ────────── 8. REVIEWS ────────── */}
-      <section id="reviews" className="bg-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              What Our Customers Say
-            </h2>
-            <p className="mt-3 text-lg text-gray-600">
-              5.0 rating with 15 Google Reviews
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {reviews.map((review) => (
-              <div
-                key={review.name}
-                className="flex flex-col rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition hover:shadow-md"
-              >
-                <Stars count={review.stars} />
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-gray-600">
-                  &ldquo;{review.text}&rdquo;
-                </p>
-                <div className="mt-6 border-t border-gray-100 pt-4">
-                  <p className="text-sm font-semibold text-navy">
-                    {review.name}
-                  </p>
-                  <p className="text-xs text-gray-400">{review.time}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <a
-              href="https://share.google/aYStfuIFQ71wmgJg0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-lg border-2 border-navy px-6 py-3 text-sm font-semibold text-navy transition hover:bg-navy hover:text-white"
-            >
-              Write a Google Review
-              <svg
-                className="ml-2 h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ────────── 9. ABOUT ────────── */}
-      <section className="bg-gray-light py-20 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-          {/* Logo */}
-          <div className="flex items-center justify-center">
-            <Image
-              src="/images/hrc-logo.png"
-              alt="HRCCoatings LLC logo"
-              width={320}
-              height={100}
-              className="h-auto w-64 sm:w-80"
-            />
-          </div>
-
-          {/* Content */}
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              About HRCCoatings LLC
-            </h2>
-            <div className="mt-6 space-y-4 text-gray-600 leading-relaxed">
-              <p>
-                HRCCoatings LLC is a faith-based, family-run painting company
-                trusted by homeowners and businesses across San Diego. Built
-                on over 20 years of experience, we combine quality
-                craftsmanship with honest, reliable service.
-              </p>
-              <p>
-                Whether it&apos;s a residential refresh or a commercial
-                transformation, we treat every project with the care and
-                attention it deserves.
-              </p>
-            </div>
-
-            {/* Mini stats */}
-            <div className="mt-8 grid grid-cols-3 gap-4">
+            {/* Stats inline */}
+            <div className="mt-16 grid grid-cols-3 gap-6 sm:gap-12 max-w-2xl pt-8 border-t border-white/15">
               {[
-                { number: "20+", label: "Years Experience" },
-                { number: "500+", label: "Projects Completed" },
-                { number: "100%", label: "Satisfaction" },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-xl bg-white p-4 text-center shadow-sm"
-                >
-                  <p className="text-2xl font-extrabold text-navy">
-                    {stat.number}
+                { num: "600+", label: "Projects Done" },
+                { num: "20+", label: "Years Working" },
+                { num: "5.0★", label: "Google Rating" },
+              ].map((s) => (
+                <div key={s.label}>
+                  <p className="editorial-num text-4xl sm:text-5xl lg:text-6xl font-black text-white">
+                    {s.num}
                   </p>
-                  <p className="mt-1 text-xs font-medium text-gray-500">
-                    {stat.label}
+                  <p className="mt-1 text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/50 font-bold">
+                    {s.label}
                   </p>
                 </div>
               ))}
@@ -663,22 +340,350 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ────────── 10. SERVICE AREAS ────────── */}
-      <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            Proudly Serving San Diego County
+      {/* ────────── BRAND STRIP ────────── */}
+      <section className="bg-ink-soft border-y border-white/10 py-8 overflow-hidden">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="flex items-center gap-12 lg:gap-20 flex-wrap justify-center">
+            <p className="text-[11px] uppercase tracking-[0.22em] text-white/50 font-bold">
+              We use premium paints
+            </p>
+            {[
+              { src: "/images/benjamin-moore-logo.png", alt: "Benjamin Moore" },
+              { src: "/images/dunn-edwards-logo.png", alt: "Dunn Edwards" },
+              { src: "/images/sherwin-williams-logo.png", alt: "Sherwin Williams" },
+            ].map((logo) => (
+              <Image
+                key={logo.alt}
+                src={logo.src}
+                alt={logo.alt}
+                width={140}
+                height={50}
+                className="h-9 w-auto object-contain brightness-0 invert opacity-60 transition hover:opacity-100"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ────────── SERVICES ────────── */}
+      <section id="gallery" className="bg-cream py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="grid lg:grid-cols-12 gap-8 mb-16">
+            <div className="lg:col-span-7">
+              <SectionLabel>What we do</SectionLabel>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl lg:text-7xl text-ink">
+                EVERY SURFACE.<br />
+                <span className="text-navy">DONE RIGHT.</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-5 lg:pt-10">
+              <p className="text-base text-stone leading-relaxed font-medium">
+                From single accent walls to full commercial buildouts, we
+                handle every surface that needs paint, coating, or repair.
+                Premium materials. Reliable timelines. Honest pricing.
+              </p>
+            </div>
+          </div>
+
+          {/* Featured (first 2 services large) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+            {services.slice(0, 2).map((service, idx) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group relative overflow-hidden rounded-3xl bg-ink"
+              >
+                <div className="relative aspect-[16/11]">
+                  <Image
+                    src={service.image}
+                    alt={service.name}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
+                </div>
+                <div className="absolute inset-0 flex flex-col justify-between p-7 lg:p-9">
+                  <div className="flex items-start justify-between">
+                    <span className="editorial-num text-2xl font-black text-white/70">
+                      0{idx + 1}
+                    </span>
+                    {service.tag && (
+                      <span className="rounded-full bg-orange px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white">
+                        {service.tag}
+                      </span>
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="font-black tracking-[-0.03em] text-3xl lg:text-5xl text-white leading-[0.95] uppercase">
+                      {service.name}
+                    </h3>
+                    <p className="mt-3 max-w-md text-sm text-white/70 font-medium">
+                      {service.description}
+                    </p>
+                    <div className="mt-5 inline-flex items-center gap-2 text-[12px] font-extrabold uppercase tracking-wider text-white">
+                      View Details
+                      <svg className="h-3 w-3 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Remaining services */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {services.slice(2).map((service, idx) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group relative overflow-hidden rounded-2xl bg-ink"
+              >
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={service.image}
+                    alt={service.name}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
+                </div>
+                <div className="absolute inset-0 flex flex-col justify-between p-5">
+                  <span className="editorial-num text-base font-black text-white/70 self-start">
+                    0{idx + 3}
+                  </span>
+                  <div>
+                    <h3 className="font-black tracking-[-0.02em] text-xl lg:text-2xl text-white uppercase leading-tight">
+                      {service.name}
+                    </h3>
+                    <div className="mt-2 inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-white/80">
+                      View Details
+                      <svg className="h-2.5 w-2.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ────────── PROCESS ────────── */}
+      <section className="bg-navy-deep text-white py-24 lg:py-32 px-5 lg:px-10">
+        <div className="relative mx-auto max-w-[1400px]">
+          <div className="grid lg:grid-cols-12 gap-8 mb-16">
+            <div className="lg:col-span-7">
+              <SectionLabel light>How it works</SectionLabel>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl lg:text-7xl">
+                THREE STEPS.<br />
+                <span className="text-orange">ZERO STRESS.</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-5 lg:pt-10">
+              <p className="text-base text-white/70 leading-relaxed font-medium">
+                No surprises. No upsells. Just clear pricing, on time crews,
+                and finishes that hold up for years.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {process.map((step) => (
+              <div
+                key={step.num}
+                className="relative rounded-3xl border border-white/10 bg-white/[0.03] p-8 lg:p-10"
+              >
+                <span className="editorial-num text-7xl lg:text-8xl font-black text-orange/40 leading-none block mb-6">
+                  {step.num}
+                </span>
+                <h3 className="font-black tracking-[-0.02em] text-2xl lg:text-3xl uppercase">
+                  {step.title}
+                </h3>
+                <p className="mt-4 text-sm text-white/60 leading-relaxed font-medium">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ────────── ABOUT / TEAM ────────── */}
+      <section className="bg-cream py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            {/* Image */}
+            <div className="lg:col-span-7 relative">
+              <div className="relative aspect-[5/4] overflow-hidden rounded-3xl">
+                <Image
+                  src="/images/team-photo.jpg"
+                  alt="Hector and Junior Rivera, HRCCoatings Inc team"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                />
+              </div>
+
+              {/* Floating stat card */}
+              <div className="absolute -bottom-6 -right-6 lg:bottom-8 lg:-right-8 hidden sm:block">
+                <div className="rounded-2xl bg-white shadow-2xl p-6 border border-ink/5 max-w-[260px]">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Stars count={5} />
+                    <span className="text-[12px] font-bold text-ink-soft">5.0</span>
+                  </div>
+                  <p className="text-sm text-ink-soft leading-snug font-medium">
+                    &ldquo;Hardworking father son team. Punctual, tidy, fast. Excellent stucco work too.&rdquo;
+                  </p>
+                  <p className="mt-3 text-[11px] text-stone uppercase tracking-wider font-bold">
+                    Jessica, Realtor
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Text */}
+            <div className="lg:col-span-5">
+              <SectionLabel>The team</SectionLabel>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl text-ink uppercase">
+                HECTOR &amp;<br />
+                <span className="text-navy">JUNIOR RIVERA.</span>
+              </h2>
+              <p className="mt-3 text-sm uppercase tracking-[0.18em] text-stone font-bold">
+                Father &amp; Son. Founders.
+              </p>
+              <div className="mt-6 space-y-4 text-[15px] text-stone leading-relaxed font-medium">
+                <p>
+                  Twenty plus years of combined expertise. A father son team
+                  obsessed with craftsmanship, honest communication, and finishes
+                  that hold up.
+                </p>
+                <p>
+                  As a faith based, family run business, every project gets
+                  the personal care and attention to detail larger crews
+                  simply can&apos;t match.
+                </p>
+              </div>
+              <div className="mt-8 grid grid-cols-3 gap-4">
+                {[
+                  { num: "20+", label: "Years" },
+                  { num: "600+", label: "Projects" },
+                  { num: "5.0", label: "Rated" },
+                ].map((s) => (
+                  <div key={s.label} className="border-l-4 border-orange pl-3">
+                    <p className="editorial-num text-3xl font-black text-navy">{s.num}</p>
+                    <p className="text-[11px] uppercase tracking-wider text-stone mt-1 font-bold">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ────────── REVIEWS ────────── */}
+      <section id="reviews" className="bg-cream-dark py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="grid lg:grid-cols-12 gap-8 mb-16">
+            <div className="lg:col-span-7">
+              <SectionLabel>What clients say</SectionLabel>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl lg:text-7xl text-ink uppercase">
+                FIVE STARS.<br />
+                <span className="text-navy">EVERY TIME.</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-5 lg:pt-10 flex items-center gap-6">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <Stars count={5} />
+                  <span className="text-2xl font-black text-ink">5.0</span>
+                </div>
+                <p className="text-[12px] text-stone uppercase tracking-wider font-bold">15 Google Reviews</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-12 gap-5">
+            {/* Featured review */}
+            <div className="lg:col-span-7 lg:row-span-2 rounded-3xl bg-white border border-ink/5 p-8 lg:p-12 relative">
+              <svg className="absolute top-8 right-8 h-16 w-16 text-orange/20" fill="currentColor" viewBox="0 0 32 32">
+                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+              </svg>
+              <Stars count={reviews[0].stars} />
+              <p className="mt-6 font-bold text-2xl lg:text-3xl leading-tight text-ink tracking-[-0.01em]">
+                &ldquo;{reviews[0].text}&rdquo;
+              </p>
+              <div className="mt-8 flex items-center gap-4 pt-6 border-t border-ink/10">
+                <div className="h-12 w-12 rounded-full bg-navy text-white flex items-center justify-center font-black text-lg">
+                  {reviews[0].name[0]}
+                </div>
+                <div>
+                  <p className="font-bold text-ink">{reviews[0].name}</p>
+                  <p className="text-[12px] text-stone font-medium">{reviews[0].role}</p>
+                </div>
+              </div>
+            </div>
+
+            {reviews.slice(1).map((review) => (
+              <div
+                key={review.name}
+                className="lg:col-span-5 rounded-3xl bg-white border border-ink/5 p-7"
+              >
+                <Stars count={review.stars} />
+                <p className="mt-4 text-[15px] text-ink-soft leading-relaxed font-medium">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <div className="mt-6 flex items-center gap-3 pt-5 border-t border-ink/10">
+                  <div className="h-10 w-10 rounded-full bg-navy text-white flex items-center justify-center font-black text-sm">
+                    {review.name[0]}
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-ink">{review.name}</p>
+                    <p className="text-[11px] text-stone font-medium">{review.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href="https://share.google/aYStfuIFQ71wmgJg0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-navy text-white px-6 py-3 text-[12px] font-extrabold uppercase tracking-wider transition hover:bg-navy-deep"
+            >
+              Read All 15 Reviews
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ────────── SERVICE AREAS ────────── */}
+      <section className="bg-cream py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1100px] text-center">
+          <SectionLabel>Service area</SectionLabel>
+          <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl lg:text-7xl text-ink uppercase">
+            ALL OF<br />
+            <span className="text-navy">SAN DIEGO COUNTY.</span>
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-lg text-gray-600">
-            Professional painting services throughout San Diego and
-            surrounding communities
+          <p className="mx-auto mt-6 max-w-xl text-base text-stone font-medium">
+            From beach to backcountry, we cover the whole region with the same
+            premium care.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-2.5">
             {serviceAreas.map((area) => (
               <span
                 key={area}
-                className="rounded-full border border-navy/20 bg-navy/5 px-5 py-2.5 text-sm font-medium text-navy transition hover:bg-navy hover:text-white"
+                className="rounded-full border-2 border-ink/10 bg-white px-5 py-2.5 text-[13px] font-bold text-ink-soft transition hover:border-navy hover:bg-navy hover:text-white cursor-default"
               >
                 {area}
               </span>
@@ -687,75 +692,116 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ────────── 11. FAQ ────────── */}
-      <section className="bg-gray-light py-20 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-10 text-center text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            Frequently Asked Questions
-          </h2>
-          <FAQAccordion items={faqItems} />
+      {/* ────────── FAQ ────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1100px]">
+          <div className="grid lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-5 lg:sticky lg:top-32 lg:self-start">
+              <SectionLabel>Common questions</SectionLabel>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl text-ink uppercase">
+                GOT<br />
+                <span className="text-navy">QUESTIONS?</span>
+              </h2>
+              <p className="mt-6 text-base text-stone leading-relaxed font-medium">
+                Still have questions? Give us a call at{" "}
+                <a href="tel:+16193041289" className="text-navy underline underline-offset-4 hover:text-red font-bold">
+                  (619) 304-1289
+                </a>
+                . We&apos;re here 7AM to 5PM daily.
+              </p>
+            </div>
+            <div className="lg:col-span-7">
+              <FAQAccordion items={faqItems} />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ────────── 12. BLOG PREVIEW ────────── */}
-      <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              From Our Blog
-            </h2>
+      {/* ────────── BLOG ────────── */}
+      <section className="bg-cream py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="grid lg:grid-cols-12 gap-8 mb-12 items-end">
+            <div className="lg:col-span-8">
+              <SectionLabel>From the blog</SectionLabel>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl lg:text-7xl text-ink uppercase">
+                COLOR, CARE,<br />
+                <span className="text-navy">CRAFT.</span>
+              </h2>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {blogPosts.map((post) => (
               <Link
                 key={post.href}
                 href={post.href}
-                className="group overflow-hidden rounded-2xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="group"
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-ink/5 mb-5">
                   <Image
                     src={post.image}
                     alt={post.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <div className="p-6">
-                  <p className="text-xs font-medium text-gray-400">
-                    {post.date}
-                  </p>
-                  <h3 className="mt-2 text-lg font-bold text-navy group-hover:text-red transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                    {post.excerpt}
-                  </p>
-                  <span className="mt-4 inline-flex items-center text-sm font-semibold text-red">
-                    Read More
-                    <svg
-                      className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </span>
-                </div>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-navy font-extrabold mb-2">
+                  {post.category} · {post.date}
+                </p>
+                <h3 className="font-black tracking-[-0.02em] text-2xl text-ink leading-tight uppercase group-hover:text-navy transition-colors">
+                  {post.title}
+                </h3>
+                <p className="mt-2 text-sm text-stone leading-relaxed font-medium">
+                  {post.excerpt}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-navy">
+                  Read Article
+                  <svg className="h-2.5 w-2.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ────────── 13. CONTACT FORM ────────── */}
+      {/* ────────── BIG CTA before form ────────── */}
+      <section className="bg-navy-deep text-white py-20 lg:py-28 px-5 lg:px-10">
+        <div className="relative mx-auto max-w-[1100px] text-center">
+          <p className="inline-flex items-center gap-2 rounded-full bg-orange px-4 py-1.5 text-white text-[11px] font-extrabold uppercase tracking-wider">
+            $500 off · Limited spots
+          </p>
+          <h2 className="mt-6 font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl lg:text-7xl uppercase">
+            READY TO MAKE YOUR<br />
+            <span className="text-orange">SPACE LOOK NEW?</span>
+          </h2>
+          <p className="mt-6 mx-auto max-w-xl text-base text-white/70 font-medium">
+            Free estimates within 24 hours. No pressure, no obligation. Just
+            honest pricing and a crew that shows up on time.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="#contact"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-orange text-white px-8 py-4 text-[14px] font-extrabold uppercase tracking-wider transition-all hover:bg-red active:scale-[0.98]"
+            >
+              Get Free Estimate
+              <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <a
+              href="tel:+16193041289"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 px-8 py-4 text-[14px] font-bold text-white transition-all hover:bg-white hover:text-ink"
+            >
+              CALL (619) 304-1289
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ────────── CONTACT FORM ────────── */}
       <ContactForm />
     </>
   );

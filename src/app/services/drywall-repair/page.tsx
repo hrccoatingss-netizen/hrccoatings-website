@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import ServiceSchema from "@/components/ServiceSchema";
 
 export const metadata: Metadata = {
   title: "Drywall Repair Services in San Diego",
@@ -13,6 +14,19 @@ export const metadata: Metadata = {
 export default function DrywallRepairPage() {
   return (
     <>
+      <ServiceSchema
+        slug="drywall-repair"
+        name="Drywall Repair"
+        description="Professional drywall repair services in San Diego. Seamless patches, crack repair, hole repair, and smooth finishing for any size project."
+        image="/images/drywall-services.jpg"
+        steps={[
+          { title: "Damage Assessment", description: "We inspect the damaged area and identify the underlying cause to prevent it from happening again." },
+          { title: "Cut & Patch", description: "Clean removal of damaged drywall and precise patching with new material." },
+          { title: "Tape & Mud", description: "Multiple coats of joint compound with proper drying time between each layer." },
+          { title: "Sand & Texture Match", description: "Smooth sanding and texture matching to blend seamlessly with the existing wall." },
+          { title: "Prime & Paint Ready", description: "Final priming so the area is ready for paint to match your existing wall color." },
+        ]}
+      />
       {/* Hero */}
       <section className="relative flex items-center justify-center overflow-hidden bg-navy py-24 sm:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/95 to-navy/80" />

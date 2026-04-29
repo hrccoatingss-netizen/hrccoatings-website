@@ -51,6 +51,9 @@ interface FeatureCard {
 }
 
 export interface ServicePageProps {
+  /* URL slug for breadcrumbs and canonical, e.g. "interior-painting" */
+  slug: string;
+
   /* Hero */
   heroTitle: string;
   heroSubtitle: string;
@@ -109,6 +112,7 @@ const benefitIcons = [
 /* ------------------------------------------------------------------ */
 
 export default function ServicePageLayout({
+  slug,
   heroTitle,
   heroSubtitle,
   heroImage,
@@ -121,37 +125,72 @@ export default function ServicePageLayout({
   faqs,
   relatedServices,
 }: ServicePageProps) {
+  const canonicalUrl = `https://hrccoatingsco.com/services/${slug}`;
+
   return (
     <>
-      {/* Service + FAQ structured data */}
+      {/* Service structured data with full Offer details */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": `${canonicalUrl}#service`,
+            url: canonicalUrl,
             name: `${heroTitle} in San Diego`,
+            serviceType: heroTitle,
             description: overview.split("\n\n")[0],
+            image: `https://hrccoatingsco.com${heroImage}`,
             provider: {
               "@type": "LocalBusiness",
-              name: "HRCCoatings LLC",
+              "@id": "https://hrccoatingsco.com#business",
+              name: "HRCCoatings Inc",
               url: "https://hrccoatingsco.com",
-              telephone: "+16192893908",
+              telephone: "+16193041289",
+              email: "hrccoatingss@gmail.com",
+              priceRange: "$$",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "3334 Clairemont Mesa Blvd Ste 101",
+                addressLocality: "San Diego",
+                addressRegion: "CA",
+                postalCode: "92111",
+                addressCountry: "US",
+              },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5.0",
+                reviewCount: "15",
+              },
             },
-            areaServed: {
-              "@type": "City",
-              name: "San Diego",
-              containedInPlace: { "@type": "State", name: "California" },
-            },
+            areaServed: [
+              {
+                "@type": "City",
+                name: "San Diego",
+                containedInPlace: { "@type": "State", name: "California" },
+              },
+              { "@type": "City", name: "Carlsbad" },
+              { "@type": "City", name: "La Jolla" },
+              { "@type": "City", name: "Chula Vista" },
+              { "@type": "City", name: "Encinitas" },
+              { "@type": "City", name: "Oceanside" },
+            ],
             offers: {
               "@type": "Offer",
-              description: "Free estimates with no obligation",
+              name: "Free Estimate",
+              description: "Free in-home estimate with no obligation. $500 off first project for new customers.",
               price: "0",
               priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+              validFrom: "2026-01-01",
+              url: `${canonicalUrl}#contact`,
             },
           }),
         }}
       />
+
+      {/* FAQ Page schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -170,6 +209,74 @@ export default function ServicePageLayout({
         }}
       />
 
+      {/* HowTo schema for the process */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: `Our ${heroTitle} Process`,
+            description: `The step-by-step process HRCCoatings Inc follows for every ${heroTitle.toLowerCase()} project in San Diego.`,
+            image: `https://hrccoatingsco.com${heroImage}`,
+            totalTime: "P3D",
+            estimatedCost: {
+              "@type": "MonetaryAmount",
+              currency: "USD",
+              value: "0",
+            },
+            supply: [
+              { "@type": "HowToSupply", name: "Premium paints (Benjamin Moore, Sherwin Williams, Dunn-Edwards)" },
+              { "@type": "HowToSupply", name: "Drop cloths and surface protection" },
+              { "@type": "HowToSupply", name: "Primers, fillers, and prep materials" },
+            ],
+            tool: [
+              { "@type": "HowToTool", name: "Professional brushes and rollers" },
+              { "@type": "HowToTool", name: "HVLP sprayers" },
+              { "@type": "HowToTool", name: "Sanders and prep equipment" },
+            ],
+            step: processSteps.map((step, i) => ({
+              "@type": "HowToStep",
+              position: i + 1,
+              name: step.title,
+              text: step.description,
+              url: `${canonicalUrl}#step-${i + 1}`,
+            })),
+          }),
+        }}
+      />
+
+      {/* Breadcrumb schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://hrccoatingsco.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: "https://hrccoatingsco.com/#services",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: heroTitle,
+                item: canonicalUrl,
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* ====== 1. HERO ====== */}
       <section className="relative flex min-h-[420px] items-center justify-center overflow-hidden sm:min-h-[500px]">
         <Image
@@ -183,7 +290,7 @@ export default function ServicePageLayout({
         <div className="absolute inset-0 bg-navy/70" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 text-center text-white sm:py-32">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-orange">
-            HRCCoatings LLC
+            HRCCoatings Inc
           </p>
           <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
             {heroTitle}
@@ -199,10 +306,10 @@ export default function ServicePageLayout({
               Get a Free Estimate
             </Link>
             <a
-              href="tel:+16192893908"
+              href="tel:+16193041289"
               className="rounded-lg border border-white/30 px-8 py-3.5 text-base font-semibold text-white transition hover:bg-white/10"
             >
-              Call (619) 289-3908
+              Call (619) 304-1289
             </a>
           </div>
         </div>
@@ -255,7 +362,7 @@ export default function ServicePageLayout({
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 lg:px-8">
           <h2 className="mb-12 text-center text-3xl font-bold text-navy sm:text-4xl">
-            Why Choose HRCCoatings
+            Why Choose HRCCoatings Inc
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {benefits.map((benefit, i) => (

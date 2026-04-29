@@ -10,10 +10,11 @@ export const metadata: Metadata = {
 export default function InteriorPaintingPage() {
   return (
     <ServicePageLayout
+      slug="interior-painting"
       heroTitle="Interior Painting"
       heroSubtitle="Transform Your Home with Expert Interior Painting"
       heroImage="/images/interior/kitchen-2.jpg"
-      overview={`Your home's interior is your personal sanctuary, and the colors you choose set the tone for every room. At HRCCoatings, we specialize in professional interior painting that brings your vision to life with flawless results.
+      overview={`Your home's interior is your personal sanctuary, and the colors you choose set the tone for every room. At HRCCoatings Inc, we specialize in professional interior painting that brings your vision to life with flawless results.
 
 Whether you're refreshing a single room or repainting your entire home, our experienced team works meticulously to deliver smooth, even coverage and crisp, clean lines. We use premium paints from Benjamin Moore, Sherwin Williams, and Dunn-Edwards to ensure lasting beauty and durability.
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -9,35 +9,30 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "HRCCoatings LLC - Professional Painting Services in San Diego | 20+ Years Experience",
-    template: "%s | HRCCoatings LLC",
+    default: "HRCCoatings Inc - Professional Painting Services in San Diego | 20+ Years Experience",
+    template: "%s | HRCCoatings Inc",
   },
   description:
     "Professional painting, epoxy flooring, and coating services in San Diego County. Family-run, faith-based company with 20+ years experience. Free estimates. $500 off first project!",
   metadataBase: new URL("https://hrccoatingsco.com"),
   openGraph: {
-    title: "HRCCoatings LLC - San Diego's Trusted Painting Experts",
+    title: "HRCCoatings Inc - San Diego's Trusted Painting Experts",
     description:
       "Professional painting, epoxy flooring, and coating services in San Diego County. Family-run, faith-based company with 20+ years experience.",
     url: "https://hrccoatingsco.com",
-    siteName: "HRCCoatings LLC",
+    siteName: "HRCCoatings Inc",
     locale: "en_US",
     type: "website",
     images: [{ url: "/images/hero-painting.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "HRCCoatings LLC - San Diego's Trusted Painting Experts",
+    title: "HRCCoatings Inc - San Diego's Trusted Painting Experts",
     description:
       "Professional painting, epoxy flooring, and coating services in San Diego County.",
     images: ["/images/hero-painting.jpg"],
@@ -65,11 +60,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "@id": "https://hrccoatingsco.com",
-              name: "HRCCoatings LLC",
+              name: "HRCCoatings Inc",
               description:
                 "Professional painting, epoxy flooring, and coating services in San Diego County.",
               url: "https://hrccoatingsco.com",
-              telephone: "+16192893908",
+              telephone: "+16193041289",
               email: "hrccoatingss@gmail.com",
               image: "https://hrccoatingsco.com/images/hero-painting.jpg",
               logo: "https://hrccoatingsco.com/images/hrc-logo.png",
@@ -145,7 +140,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased bg-cream`}>
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2Q1EKNERW2"

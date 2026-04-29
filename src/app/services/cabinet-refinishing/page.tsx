@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import ServiceSchema from "@/components/ServiceSchema";
 
 export const metadata: Metadata = {
   title: "Cabinet Refinishing Services in San Diego",
@@ -13,6 +14,19 @@ export const metadata: Metadata = {
 export default function CabinetRefinishingPage() {
   return (
     <>
+      <ServiceSchema
+        slug="cabinet-refinishing"
+        name="Cabinet Refinishing"
+        description="Professional cabinet refinishing services in San Diego. Transform your kitchen and bathroom cabinets with premium finishes, custom colors, and lasting durability."
+        image="/images/cabinet-services.jpg"
+        steps={[
+          { title: "Inspection & Color Selection", description: "We assess your existing cabinets and help you choose the perfect color and finish." },
+          { title: "Disassembly & Cleaning", description: "We remove all hardware and thoroughly clean every surface to ensure proper adhesion." },
+          { title: "Sanding & Priming", description: "Light sanding and a high-quality bonding primer for a smooth, durable foundation." },
+          { title: "Finish Application", description: "Multiple coats of premium paint or stain applied with a sprayer for a factory-quality finish." },
+          { title: "Reassembly & Walkthrough", description: "We reinstall hardware and walk through the project with you to ensure perfection." },
+        ]}
+      />
       {/* Hero */}
       <section className="relative flex items-center justify-center overflow-hidden bg-navy py-24 sm:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/95 to-navy/80" />

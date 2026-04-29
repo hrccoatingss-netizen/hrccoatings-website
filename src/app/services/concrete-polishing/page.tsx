@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function ConcretePolishingPage() {
   return (
     <ServicePageLayout
+      slug="concrete-polishing"
       heroTitle="Concrete Polishing"
       heroSubtitle="Budget-Friendly Concrete Polishing Solutions"
       heroImage="/images/concrete/polished-hero.jpg"
@@ -17,7 +18,7 @@ export default function ConcretePolishingPage() {
 
 The polishing process transforms rough, dull concrete into a clean, attractive surface with a subtle sheen. Unlike coatings that sit on top of concrete, polished concrete becomes part of the surface itself—meaning no peeling, chipping, or delamination over time.
 
-At HRCCoatings, we use professional grinding and polishing equipment to achieve consistent, high-quality results. The process removes surface imperfections, smooths rough areas, and creates a durable finish that stands up to heavy use. It's an excellent option for customers seeking an industrial-modern aesthetic without the higher cost of epoxy systems.`}
+At HRCCoatings Inc, we use professional grinding and polishing equipment to achieve consistent, high-quality results. The process removes surface imperfections, smooths rough areas, and creates a durable finish that stands up to heavy use. It's an excellent option for customers seeking an industrial-modern aesthetic without the higher cost of epoxy systems.`}
       processSteps={[
         {
           title: "Surface Assessment",

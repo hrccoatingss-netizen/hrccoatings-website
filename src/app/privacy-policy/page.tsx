@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "HRCCoatings LLC privacy policy. Learn how we collect, use, and protect your personal information.",
+    "HRCCoatings Inc privacy policy. Learn how we collect, use, and protect your personal information.",
   alternates: { canonical: "/privacy-policy" },
 };
 
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-xl font-bold text-navy">1. Introduction</h2>
               <p className="mt-3 text-gray-600 leading-relaxed">
-                HRCCoatings LLC (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or
+                HRCCoatings Inc (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or
                 &ldquo;our&rdquo;) is committed to protecting your privacy. This
                 Privacy Policy explains how we collect, use, disclose, and
                 safeguard your information when you visit our website, use our
@@ -203,7 +203,7 @@ export default function PrivacyPolicyPage() {
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
                   You consent to receive transactional and/or marketing text
-                  messages from HRCCoatings LLC
+                  messages from HRCCoatings Inc
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
@@ -222,10 +222,10 @@ export default function PrivacyPolicyPage() {
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
                   For help, reply HELP or contact us at{" "}
                   <a
-                    href="tel:+16192893908"
+                    href="tel:+16193041289"
                     className="font-medium text-navy underline underline-offset-2"
                   >
-                    (619) 289-3908
+                    (619) 304-1289
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
@@ -358,10 +358,10 @@ export default function PrivacyPolicyPage() {
                   <span>
                     Phone:{" "}
                     <a
-                      href="tel:+16192893908"
+                      href="tel:+16193041289"
                       className="font-medium text-navy underline underline-offset-2"
                     >
-                      (619) 289-3908
+                      (619) 304-1289
                     </a>
                   </span>
                 </li>

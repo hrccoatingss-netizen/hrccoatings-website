@@ -46,7 +46,7 @@ export default function ThankYouPage() {
           className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#0e0e0e]"
           style={{ fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace' }}
         >
-          HRCCoatings&nbsp;<span style={{ color: "#DB143C" }}>·</span>&nbsp;San&nbsp;Diego
+          HRCCoatings Inc&nbsp;<span style={{ color: "#DB143C" }}>·</span>&nbsp;San&nbsp;Diego
         </div>
         <div
           className="text-[10px] font-bold uppercase tracking-[0.28em]"
@@ -232,7 +232,7 @@ export default function ThankYouPage() {
               fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
             }}
           >
-            HRCCoatings&nbsp;Inc
+            HRCCoatings Inc&nbsp;Inc
           </div>
           <div
             className="flex items-center gap-3"

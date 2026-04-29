@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About HRCCoatings LLC - San Diego Painting Company Since 2003",
+  title: "About HRCCoatings Inc - San Diego Painting Company Since 2003",
   description:
-    "HRCCoatings LLC is a family-owned painting company in San Diego founded in 2003 by Hector Rivera. Father-son team with 20+ years experience, 600+ projects, and a 5.0 Google rating.",
+    "HRCCoatings Inc is a family-owned painting company in San Diego founded in 2003 by Hector Rivera. Father-son team with 20+ years experience, 600+ projects, and a 5.0 Google rating.",
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
       <section className="bg-[#0B2C75] py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-4xl font-extrabold text-white sm:text-5xl">
-            About HRCCoatings LLC
+            About HRCCoatings Inc
           </h1>
           <p className="mt-4 text-lg text-white/80">
             San Diego&apos;s family-owned painting company since 2003
@@ -30,7 +30,7 @@ export default function AboutPage() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
             <Image
               src="/images/team-photo.jpg"
-              alt="Hector and Junior Rivera - HRCCoatings LLC founders"
+              alt="Hector and Junior Rivera - HRCCoatings Inc founders"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -41,13 +41,13 @@ export default function AboutPage() {
               Meet the Team
             </h2>
             <p className="mt-4 text-gray-700 leading-relaxed">
-              HRCCoatings LLC was founded in 2003 by <strong>Hector Rivera</strong> in San Diego, California. What started as a one-man painting operation has grown into a trusted, full-service painting and coating company serving homes and businesses across San Diego County.
+              HRCCoatings Inc was founded in 2003 by <strong>Hector Rivera</strong> in San Diego, California. What started as a one-man painting operation has grown into a trusted, full-service painting and coating company serving homes and businesses across San Diego County.
             </p>
             <p className="mt-4 text-gray-700 leading-relaxed">
               Today, Hector runs the company alongside his son, <strong>Junior Rivera</strong>, who serves as Co-Owner and Operations Manager. Together, this father-son team personally manages every project from estimate to final walkthrough.
             </p>
             <p className="mt-4 text-gray-700 leading-relaxed">
-              As a faith-based, family-run business, HRCCoatings operates on principles of honesty, quality craftsmanship, and treating every customer&apos;s home or business with the same care they&apos;d give their own.
+              As a faith-based, family-run business, HRCCoatings Inc operates on principles of honesty, quality craftsmanship, and treating every customer&apos;s home or business with the same care they&apos;d give their own.
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
             Services Offered
           </h2>
           <p className="mt-4 text-gray-700 leading-relaxed">
-            HRCCoatings provides a comprehensive range of painting and coating services for both residential and commercial properties in San Diego:
+            HRCCoatings Inc provides a comprehensive range of painting and coating services for both residential and commercial properties in San Diego:
           </p>
           <ul className="mt-4 space-y-2 text-gray-700">
             <li><strong>Interior Painting</strong> - Living rooms, bedrooms, kitchens, bathrooms, hallways, trim, ceilings, and accent walls</li>
@@ -113,7 +113,7 @@ export default function AboutPage() {
             Paint Brands We Use
           </h2>
           <p className="mt-4 text-gray-700 leading-relaxed">
-            HRCCoatings exclusively uses premium paint brands to ensure lasting results:
+            HRCCoatings Inc exclusively uses premium paint brands to ensure lasting results:
           </p>
           <ul className="mt-4 space-y-2 text-gray-700">
             <li><strong>Benjamin Moore</strong> - Known for superior coverage and color accuracy</li>
@@ -128,17 +128,17 @@ export default function AboutPage() {
             Areas We Serve in San Diego
           </h2>
           <p className="mt-4 text-gray-700 leading-relaxed">
-            HRCCoatings serves all neighborhoods and communities in San Diego County, including Clairemont, Carlsbad, La Jolla, Chula Vista, Pacific Beach, Mission Valley, Point Loma, North Park, Hillcrest, Del Mar, Encinitas, Oceanside, and surrounding areas.
+            HRCCoatings Inc serves all neighborhoods and communities in San Diego County, including Clairemont, Carlsbad, La Jolla, Chula Vista, Pacific Beach, Mission Valley, Point Loma, North Park, Hillcrest, Del Mar, Encinitas, Oceanside, and surrounding areas.
           </p>
         </section>
 
         {/* Contact */}
         <section className="mt-16">
           <h2 className="text-2xl font-bold text-[#0B2C75]">
-            Contact HRCCoatings
+            Contact HRCCoatings Inc
           </h2>
           <div className="mt-4 space-y-2 text-gray-700">
-            <p><strong>Phone:</strong> <a href="tel:+16192893908" className="text-[#DB143C] hover:underline">(619) 289-3908</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+16193041289" className="text-[#DB143C] hover:underline">(619) 304-1289</a></p>
             <p><strong>Email:</strong> <a href="mailto:hrccoatingss@gmail.com" className="text-[#DB143C] hover:underline">hrccoatingss@gmail.com</a></p>
             <p><strong>Address:</strong> 3334 Clairemont Mesa Blvd Ste 101, San Diego, CA 92111</p>
             <p><strong>Hours:</strong> 7 AM - 5 PM, Monday through Sunday</p>

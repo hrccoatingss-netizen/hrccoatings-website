@@ -34,6 +34,12 @@ export default function Header() {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
+  // Marketing landings (thank-you, etc.) get a clean chrome-less layout
+  const HIDE_NAV_ROUTES = ["/thank-you"];
+  if (HIDE_NAV_ROUTES.some((p) => pathname === p || pathname.startsWith(p + "/"))) {
+    return null;
+  }
+
   // Shadow on scroll
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);

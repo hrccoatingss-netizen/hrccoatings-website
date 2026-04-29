@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Thank You — Your Free Estimate is on the Way",
+  title: "Thank You — Your Free Estimate Is on the Way",
   description:
     "Your request for a free painting estimate has been received. A member of our team will call you shortly to schedule your in-home appointment.",
-  // FB lead-form thank-you pages should NOT be indexed
   robots: { index: false, follow: false },
   alternates: { canonical: "https://hrccoatingsco.com/thank-you" },
 };
@@ -15,179 +13,241 @@ export default function ThankYouPage() {
   const PHONE_TEL = "+16193041289";
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white via-gray-light to-white">
-      <section className="mx-auto max-w-4xl px-6 pt-16 pb-12 sm:pt-24 sm:pb-16">
-        {/* Confirmation badge */}
+    <main
+      className="relative min-h-screen overflow-hidden font-sans"
+      style={{
+        background: "#f4f1ea",
+        color: "#0e0e0e",
+      }}
+    >
+      {/* Subtle blueprint grid background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(11,44,117,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(11,44,117,0.06) 1px, transparent 1px)",
+          backgroundSize: "44px 44px",
+        }}
+      />
+      {/* Diagonal brand stripe overlay (very subtle) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(115deg, transparent 0 36px, rgba(219,20,60,0.04) 36px 37px)",
+        }}
+      />
+
+      {/* TOP STRIP — minimal mono labels */}
+      <div className="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-6 pt-8 sm:px-12 sm:pt-10">
+        <div
+          className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#0e0e0e]"
+          style={{ fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace' }}
+        >
+          HRC&nbsp;Coatings&nbsp;<span style={{ color: "#DB143C" }}>·</span>&nbsp;San&nbsp;Diego
+        </div>
+        <div
+          className="text-[10px] font-bold uppercase tracking-[0.28em]"
+          style={{
+            fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+            color: "#0B2C75",
+          }}
+        >
+          Submission&nbsp;Confirmed
+        </div>
+      </div>
+
+      {/* HERO */}
+      <section className="relative z-10 mx-auto max-w-6xl px-6 pt-20 pb-12 sm:px-12 sm:pt-28 sm:pb-16">
         <div className="flex flex-col items-center text-center">
+          {/* Mono kicker with dot */}
           <div
-            aria-hidden="true"
-            className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-navy shadow-lg sm:h-24 sm:w-24"
+            className="mb-6 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.28em]"
+            style={{
+              fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+              color: "#DB143C",
+            }}
           >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              className="h-10 w-10 text-white sm:h-12 sm:w-12"
-              stroke="currentColor"
-              strokeWidth={3}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12.5l5 5 9-9" />
-            </svg>
+            <span
+              aria-hidden="true"
+              className="inline-block h-2 w-2 rounded-full"
+              style={{ background: "#DB143C" }}
+            />
+            Application Received
           </div>
 
-          <p className="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-red sm:text-sm">
-            Submission Confirmed
-          </p>
-          <h1 className="mb-4 text-3xl font-extrabold leading-tight text-navy sm:text-5xl sm:leading-tight">
-            Your request was received.
+          {/* HUGE editorial headline */}
+          <h1
+            className="text-[64px] font-black leading-[0.88] tracking-[-0.04em] sm:text-[120px] md:text-[148px]"
+            style={{ color: "#0e0e0e" }}
+          >
+            Thank{" "}
+            <span
+              className="italic"
+              style={{
+                color: "#DB143C",
+                fontStyle: "italic",
+                fontWeight: 900,
+              }}
+            >
+              you.
+            </span>
           </h1>
-          <p className="mx-auto max-w-2xl text-base text-foreground/80 sm:text-lg">
-            Thanks for reaching out to <span className="font-semibold text-navy">HRC Coatings</span>.
-            One of our team members will call you shortly to schedule your free in-home estimate
-            and walk you through the <span className="font-semibold text-red">$500 off your first project</span>.
-          </p>
-        </div>
 
-        {/* SAVE OUR NUMBER — primary CTA */}
-        <div className="mt-12 rounded-2xl border-2 border-navy/10 bg-white p-6 shadow-xl sm:p-8">
-          <div className="flex flex-col items-center text-center">
-            <p className="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-orange">
-              ⚡ Important — Read This
-            </p>
-            <h2 className="mb-3 text-2xl font-extrabold text-navy sm:text-3xl">
-              Save this number to your contacts
-            </h2>
-            <p className="mb-6 max-w-xl text-base text-foreground/75 sm:text-lg">
-              We'll be calling you from the number below. Save it now so you don't miss us — and
-              feel free to call <span className="font-semibold">right now</span> if you'd rather skip the wait.
-            </p>
-
-            <a
-              href={`tel:${PHONE_TEL}`}
-              className="group inline-flex items-center gap-3 rounded-xl bg-red px-8 py-5 text-2xl font-extrabold text-white shadow-lg transition hover:scale-[1.02] hover:bg-red/90 active:scale-[0.99] sm:gap-4 sm:px-12 sm:py-6 sm:text-3xl"
-            >
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                fill="none"
-                className="h-7 w-7 sm:h-8 sm:w-8"
-                stroke="currentColor"
-                strokeWidth={2.2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-              {PHONE_DISPLAY}
-            </a>
-
-            <p className="mt-4 text-sm text-foreground/60">
-              Tap to call · Open 7 days a week, 7am – 5pm
-            </p>
-          </div>
-        </div>
-
-        {/* What happens next — 3 steps */}
-        <div className="mt-12 sm:mt-16">
-          <h2 className="mb-2 text-center text-xs font-bold uppercase tracking-[0.22em] text-red sm:mb-3">
-            What happens next
-          </h2>
-          <h3 className="mb-8 text-center text-2xl font-extrabold text-navy sm:mb-10 sm:text-4xl">
-            Three simple steps.
-          </h3>
-
-          <div className="grid gap-6 sm:grid-cols-3 sm:gap-5">
-            {[
-              {
-                num: "01",
-                title: "We'll call you",
-                body: "A team member calls you from (619) 304-1289 within one business day. We confirm what you're looking for and lock in a time that works.",
-              },
-              {
-                num: "02",
-                title: "Free in-home estimate",
-                body: "An owner walks the project with you. No salesperson, no upsell — just a written quote with every line item, materials, and timeline.",
-              },
-              {
-                num: "03",
-                title: "$500 off your project",
-                body: "If you move forward, your first project comes with $500 off plus our 100% satisfaction guarantee. Premium paints. Family-run. 20+ years.",
-              },
-            ].map((step) => (
-              <div
-                key={step.num}
-                className="rounded-xl border border-navy/10 bg-white p-6 shadow-sm transition hover:shadow-md sm:p-7"
-              >
-                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-navy text-base font-extrabold text-white">
-                  {step.num}
-                </div>
-                <h4 className="mb-2 text-lg font-bold text-navy sm:text-xl">{step.title}</h4>
-                <p className="text-sm text-foreground/75 sm:text-base">{step.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Trust strip */}
-        <div className="mt-12 rounded-2xl bg-navy px-6 py-8 text-white sm:mt-16 sm:px-8 sm:py-10">
-          <div className="grid gap-6 text-center sm:grid-cols-3">
-            <div>
-              <div className="mb-1 flex justify-center gap-1 text-orange" aria-label="5 out of 5 stars">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <svg key={i} viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
-                    <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.79L10 14.77l-5.2 2.74.99-5.79-4.21-4.1 5.82-.85L10 1.5z" />
-                  </svg>
-                ))}
-              </div>
-              <div className="text-2xl font-extrabold sm:text-3xl">5.0 Google</div>
-              <div className="text-xs uppercase tracking-wider text-white/70">Rating</div>
-            </div>
-            <div className="border-t border-white/15 pt-6 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0">
-              <div className="text-2xl font-extrabold sm:text-3xl">600+</div>
-              <div className="text-xs uppercase tracking-wider text-white/70">Projects Completed</div>
-            </div>
-            <div className="border-t border-white/15 pt-6 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0">
-              <div className="text-2xl font-extrabold sm:text-3xl">20+ Years</div>
-              <div className="text-xs uppercase tracking-wider text-white/70">Family-Run · Faith-Based</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Soft secondary action */}
-        <div className="mt-10 text-center sm:mt-14">
-          <p className="mb-4 text-sm text-foreground/70 sm:text-base">
-            Want to skip the call and book your estimate online?
-          </p>
-          <Link
-            href="/#contact"
-            className="inline-flex items-center gap-2 rounded-lg border-2 border-navy bg-white px-6 py-3 text-sm font-bold text-navy transition hover:bg-navy hover:text-white sm:text-base"
-          >
-            Use the contact form on our site
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              className="h-4 w-4"
-              stroke="currentColor"
-              strokeWidth={2.5}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
-
-        {/* Premium paint partners — soft trust signal */}
-        <div className="mt-12 border-t border-navy/10 pt-8 text-center sm:mt-16">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-foreground/60">
-            We use only premium paints
-          </p>
-          <p className="text-sm font-medium text-foreground/80 sm:text-base">
-            Benjamin Moore · Sherwin-Williams · Dunn-Edwards
+          {/* Subtitle — narrow column for editorial feel */}
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-[#3a3530] sm:mt-8 sm:text-lg">
+            Thanks for filling out our form. One of our representatives will
+            call you shortly to schedule your free in-home estimate. If
+            you&apos;d like to reach us sooner, feel free to call us directly.
           </p>
         </div>
       </section>
+
+      {/* BLACK BUSINESS-CARD PHONE CALLOUT */}
+      <section className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 pb-16 sm:px-12 sm:pb-20">
+        <a
+          href={`tel:${PHONE_TEL}`}
+          className="group block w-full max-w-md rounded-sm shadow-[0_24px_60px_-30px_rgba(0,0,0,0.5)] transition hover:scale-[1.01] active:scale-[0.99]"
+          style={{ background: "#0e0e0e" }}
+        >
+          <div className="flex flex-col items-center px-8 py-7 sm:px-10 sm:py-8">
+            <div
+              className="mb-2 text-[10px] font-bold uppercase tracking-[0.32em]"
+              style={{
+                fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+                color: "#a8a39a",
+              }}
+            >
+              Call Us Directly
+            </div>
+            <div
+              className="text-3xl font-black tracking-[-0.02em] text-white sm:text-4xl md:text-[44px]"
+              style={{ letterSpacing: "-0.01em" }}
+            >
+              +1&nbsp;{PHONE_DISPLAY}
+            </div>
+          </div>
+        </a>
+        <p className="mt-5 max-w-md text-center text-sm leading-relaxed text-[#3a3530]">
+          <span className="font-semibold text-[#0e0e0e]">
+            Save this number to your contacts.
+          </span>{" "}
+          This is also the number we&apos;ll be calling from, so you don&apos;t
+          miss our call.
+        </p>
+      </section>
+
+      {/* WHAT HAPPENS NEXT — minimal numbered cards */}
+      <section className="relative z-10 mx-auto max-w-6xl px-6 pb-20 sm:px-12 sm:pb-28">
+        <div
+          className="mb-10 text-center text-[11px] font-bold uppercase tracking-[0.32em]"
+          style={{
+            fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+            color: "#3a3530",
+          }}
+        >
+          What Happens Next
+        </div>
+
+        <div className="grid gap-px overflow-hidden border border-[#0e0e0e]/12 bg-[#0e0e0e]/12 sm:grid-cols-3">
+          {[
+            {
+              num: "01",
+              title: "Form Received",
+              body: "Your information is in and our team has been notified.",
+              active: true,
+            },
+            {
+              num: "02",
+              title: "A Rep Will Call You",
+              body: `We'll reach out shortly from ${PHONE_DISPLAY}. Save it so you don't miss the call.`,
+              active: false,
+            },
+            {
+              num: "03",
+              title: "In-Home Estimate",
+              body: "An owner walks the project with you. Written quote, every line itemed. $500 off your first project.",
+              active: false,
+            },
+          ].map((step) => (
+            <div
+              key={step.num}
+              className="flex flex-col p-7 sm:p-8"
+              style={{ background: "#f4f1ea" }}
+            >
+              <div className="mb-5 flex items-start justify-between">
+                <div
+                  className="text-5xl font-black leading-none tracking-[-0.04em]"
+                  style={{ color: "#0e0e0e" }}
+                >
+                  {step.num}
+                </div>
+                <div
+                  aria-hidden="true"
+                  className="mt-2 flex h-5 w-5 items-center justify-center rounded-full border-2"
+                  style={{
+                    borderColor: "#DB143C",
+                    background: step.active ? "#DB143C" : "transparent",
+                  }}
+                >
+                  {step.active && (
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth={3.5}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-2.5 w-2.5"
+                    >
+                      <path d="M5 12.5l5 5 9-9" />
+                    </svg>
+                  )}
+                </div>
+              </div>
+              <div
+                className="mb-2 text-[10px] font-bold uppercase tracking-[0.24em]"
+                style={{
+                  fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+                  color: "#0B2C75",
+                }}
+              >
+                {step.title}
+              </div>
+              <p className="text-sm leading-relaxed text-[#3a3530]">
+                {step.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FOOTER — editorial, minimal */}
+      <footer className="relative z-10 mx-auto max-w-6xl border-t border-[#0e0e0e]/15 px-6 pb-10 pt-6 sm:px-12">
+        <div className="flex flex-col items-center justify-between gap-4 text-[10px] font-bold uppercase tracking-[0.28em] text-[#3a3530] sm:flex-row sm:gap-0">
+          <div
+            style={{
+              fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+            }}
+          >
+            HRC&nbsp;Coatings&nbsp;LLC
+          </div>
+          <div
+            className="flex items-center gap-3"
+            style={{
+              fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+              color: "#0e0e0e",
+            }}
+          >
+            <span style={{ color: "#DB143C" }}>●</span>
+            <a href={`tel:${PHONE_TEL}`} className="hover:underline">
+              +1&nbsp;{PHONE_DISPLAY}
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

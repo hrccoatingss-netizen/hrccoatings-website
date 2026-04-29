@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -9,7 +12,14 @@ const quickLinks = [
   { name: "Contact", href: "/#contact" },
 ];
 
+const HIDE_FOOTER_ROUTES = ["/thank-you"];
+
 export default function Footer() {
+  const pathname = usePathname();
+  if (HIDE_FOOTER_ROUTES.some((p) => pathname === p || pathname.startsWith(p + "/"))) {
+    return null;
+  }
+
   return (
     <footer className="bg-navy text-white">
       {/* Main Footer */}

@@ -46,7 +46,7 @@ export default function ThankYouPage() {
           className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#0e0e0e]"
           style={{ fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace' }}
         >
-          HRC&nbsp;Coatings&nbsp;<span style={{ color: "#DB143C" }}>·</span>&nbsp;San&nbsp;Diego
+          HRCCoatings&nbsp;<span style={{ color: "#DB143C" }}>·</span>&nbsp;San&nbsp;Diego
         </div>
         <div
           className="text-[10px] font-bold uppercase tracking-[0.28em]"
@@ -123,7 +123,7 @@ export default function ThankYouPage() {
               Call Us Directly
             </div>
             <div
-              className="text-3xl font-black tracking-[-0.02em] text-white sm:text-4xl md:text-[44px]"
+              className="whitespace-nowrap text-2xl font-black tracking-[-0.02em] text-white sm:text-3xl md:text-4xl"
               style={{ letterSpacing: "-0.01em" }}
             >
               +1&nbsp;{PHONE_DISPLAY}
@@ -168,7 +168,7 @@ export default function ThankYouPage() {
             {
               num: "03",
               title: "In-Home Estimate",
-              body: "An owner walks the project with you. Written quote, every line itemed. $500 off your first project.",
+              body: "We schedule your in-home appointment to walk the project together.",
               active: false,
             },
           ].map((step) => (
@@ -232,7 +232,7 @@ export default function ThankYouPage() {
               fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
             }}
           >
-            HRC&nbsp;Coatings&nbsp;LLC
+            HRCCoatings&nbsp;Inc
           </div>
           <div
             className="flex items-center gap-3"

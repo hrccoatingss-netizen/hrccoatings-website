@@ -131,7 +131,7 @@ export default function ThankYouPage() {
           </div>
         </a>
         <p className="mt-5 max-w-md text-center text-sm leading-relaxed text-[#3a3530]">
-          <span className="font-semibold text-[#0e0e0e]">
+          <span className="font-semibold" style={{ color: "#DB143C" }}>
             Save this number to your contacts.
           </span>{" "}
           This is also the number we&apos;ll be calling from, so you don&apos;t

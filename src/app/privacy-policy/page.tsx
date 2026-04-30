@@ -11,22 +11,31 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-navy py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Privacy Policy
+      {/* ───── HERO ───── */}
+      <section className="bg-ink pt-32 pb-20 lg:pt-40 lg:pb-24 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1100px]">
+          <div className="mb-6 flex items-center gap-2 text-[12px] uppercase tracking-[0.22em] font-bold text-white/60">
+            <Link href="/" className="transition-colors hover:text-orange">Home</Link>
+            <span>·</span>
+            <span className="text-orange">Privacy</span>
+          </div>
+          <h1 className="text-white font-black tracking-[-0.045em] leading-[0.92] text-5xl sm:text-6xl lg:text-7xl uppercase">
+            Privacy<br />
+            <span className="text-orange">policy.</span>
           </h1>
+          <p className="mt-6 text-base text-white/70 max-w-xl leading-relaxed">
+            How we collect, use, and protect your personal information.
+          </p>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl">
+      {/* ───── CONTENT ───── */}
+      <section className="bg-cream py-20 lg:py-24 px-5 lg:px-10">
+        <div className="mx-auto max-w-[800px]">
           {/* Last Updated aside */}
-          <aside className="mb-10 rounded-xl border border-gray-100 bg-gray-light px-6 py-4">
-            <p className="text-sm text-gray-500">
-              <span className="font-semibold text-navy">Last Updated:</span>{" "}
+          <aside className="mb-10 rounded-2xl border border-ink/10 bg-white px-6 py-5">
+            <p className="text-[13px] text-stone">
+              <span className="font-bold uppercase tracking-wider text-ink mr-2 text-[11px]">Last Updated</span>
               April 6, 2026
             </p>
           </aside>

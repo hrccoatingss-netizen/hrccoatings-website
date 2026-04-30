@@ -85,29 +85,6 @@ export interface ServicePageProps {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Inline SVG icons for the 4 benefit cards (generic paint-themed)    */
-/* ------------------------------------------------------------------ */
-
-const benefitIcons = [
-  /* Icon 1 - Star / award */
-  <svg key="b1" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-  </svg>,
-  /* Icon 2 - Paint bucket / swatch */
-  <svg key="b2" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072" />
-  </svg>,
-  /* Icon 3 - Check badge */
-  <svg key="b3" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.745 3.745 0 011.043 3.296A3.745 3.745 0 0121 12z" />
-  </svg>,
-  /* Icon 4 - Shield / clock */
-  <svg key="b4" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-  </svg>,
-];
-
-/* ------------------------------------------------------------------ */
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
 
@@ -129,7 +106,9 @@ export default function ServicePageLayout({
 
   return (
     <>
-      {/* Service structured data with full Offer details */}
+      {/* ─────────────────── STRUCTURED DATA ─────────────────── */}
+
+      {/* Service schema with full Offer details */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -179,7 +158,8 @@ export default function ServicePageLayout({
             offers: {
               "@type": "Offer",
               name: "Free Estimate",
-              description: "Free in-home estimate with no obligation. $500 off first project for new customers.",
+              description:
+                "Free in-home estimate with no obligation. $500 off first project for new customers.",
               price: "0",
               priceCurrency: "USD",
               availability: "https://schema.org/InStock",
@@ -277,106 +257,160 @@ export default function ServicePageLayout({
         }}
       />
 
-      {/* ====== 1. HERO ====== */}
-      <section className="relative flex min-h-[420px] items-center justify-center overflow-hidden sm:min-h-[500px]">
-        <Image
-          src={heroImage}
-          alt={heroTitle}
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-navy/70" />
-        <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 text-center text-white sm:py-32">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-orange">
-            HRCCoatings Inc
-          </p>
-          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-            {heroTitle}
-          </h1>
-          <p className="mt-4 text-lg text-gray-200 sm:text-xl">
-            {heroSubtitle}
-          </p>
-          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="#contact"
-              className="rounded-lg bg-red px-8 py-3.5 text-base font-semibold text-white shadow-lg transition hover:bg-[#B8102F]"
-            >
-              Get a Free Estimate
-            </Link>
-            <a
-              href="tel:+16193041289"
-              className="rounded-lg border border-white/30 px-8 py-3.5 text-base font-semibold text-white transition hover:bg-white/10"
-            >
-              Call (619) 304-1289
-            </a>
+      {/* ─────────────────── 1. EDITORIAL HERO ─────────────────── */}
+      <section className="relative overflow-hidden min-h-[90vh] flex items-end bg-ink">
+        <div className="absolute inset-0">
+          <Image
+            src={heroImage}
+            alt={heroTitle}
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/65 to-ink/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-[1400px] w-full px-5 lg:px-10 pt-32 pb-20 lg:pt-40 lg:pb-28">
+          <div className="max-w-3xl">
+            {/* Breadcrumb visual */}
+            <div className="mb-6 flex items-center gap-2 text-[12px] uppercase tracking-[0.22em] font-bold text-white/60">
+              <Link href="/" className="transition-colors hover:text-orange">
+                Home
+              </Link>
+              <span>·</span>
+              <span>Services</span>
+              <span>·</span>
+              <span className="text-orange">{heroTitle}</span>
+            </div>
+
+            <h1 className="text-white font-black tracking-[-0.045em] leading-[0.92] text-5xl sm:text-6xl lg:text-7xl xl:text-8xl uppercase">
+              {heroTitle}
+            </h1>
+
+            <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
+              {heroSubtitle}
+            </p>
+
+            <div className="mt-10 flex flex-col sm:flex-row gap-3">
+              <Link
+                href="#contact"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-orange text-white px-8 py-4 text-[13px] font-extrabold uppercase tracking-wider transition-all hover:bg-red"
+              >
+                Get Free Estimate
+                <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <a
+                href="tel:+16193041289"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-8 py-4 text-[14px] font-medium text-white transition-all hover:bg-white/5"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                (619) 304-1289
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ====== 2. OVERVIEW ====== */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 lg:px-8">
-          <h2 className="mb-6 text-center text-3xl font-bold text-navy sm:text-4xl">
-            About Our {heroTitle} Services
-          </h2>
-          <div className="space-y-4 text-base leading-relaxed text-gray-700 sm:text-lg">
-            {overview.split("\n\n").map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
+      {/* ─────────────────── 2. EDITORIAL OVERVIEW ─────────────────── */}
+      <section className="bg-cream py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+            <div className="lg:col-span-4">
+              <div className="inline-flex items-center gap-2.5 mb-6">
+                <span className="h-px w-8 bg-navy/30" />
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy/70">
+                  About this service
+                </span>
+              </div>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-4xl sm:text-5xl lg:text-6xl text-ink uppercase">
+                Done<br />
+                <span className="text-navy">right.</span>
+              </h2>
+            </div>
+            <div className="lg:col-span-8 space-y-5 text-base sm:text-lg leading-relaxed text-stone">
+              {overview.split("\n\n").map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ====== 3. PROCESS STEPS ====== */}
-      <section className="bg-gray-light py-16 sm:py-20">
-        <div className="mx-auto max-w-5xl px-4 lg:px-8">
-          <h2 className="mb-12 text-center text-3xl font-bold text-navy sm:text-4xl">
-            Our Process
-          </h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:gap-10">
+      {/* ─────────────────── 3. PROCESS STEPS ─────────────────── */}
+      <section className="bg-ink py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="mb-16 lg:mb-20">
+            <div className="inline-flex items-center gap-2.5 mb-6">
+              <span className="h-px w-8 bg-orange" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-orange">
+                Our process
+              </span>
+            </div>
+            <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl lg:text-7xl text-white uppercase max-w-3xl">
+              How we<br />
+              <span className="text-orange">work.</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {processSteps.map((step, i) => (
               <div
                 key={i}
-                className="flex gap-5 rounded-xl bg-white p-6 shadow-sm transition hover:shadow-md"
+                id={`step-${i + 1}`}
+                className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 lg:p-10 transition-all hover:bg-white/[0.06]"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-navy text-lg font-bold text-white">
-                  {i + 1}
-                </div>
-                <div>
-                  <h3 className="mb-1 text-lg font-bold text-navy">
+                <div className="flex items-baseline gap-4 mb-4">
+                  <span className="text-orange font-black text-5xl lg:text-6xl tracking-tight">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-white font-black text-xl lg:text-2xl tracking-tight uppercase">
                     {step.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-gray-600">
-                    {step.description}
-                  </p>
                 </div>
+                <p className="text-white/60 leading-relaxed text-[15px]">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ====== 4. BENEFITS ====== */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 lg:px-8">
-          <h2 className="mb-12 text-center text-3xl font-bold text-navy sm:text-4xl">
-            Why Choose HRCCoatings Inc
-          </h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {/* ─────────────────── 4. BENEFITS ─────────────────── */}
+      <section className="bg-cream py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="mb-16 lg:mb-20 max-w-3xl">
+            <div className="inline-flex items-center gap-2.5 mb-6">
+              <span className="h-px w-8 bg-navy/30" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy/70">
+                Why us
+              </span>
+            </div>
+            <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl lg:text-7xl text-ink uppercase">
+              Why choose<br />
+              <span className="text-navy">HRCCoatings.</span>
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
             {benefits.map((benefit, i) => (
               <div
                 key={i}
-                className="group rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm transition hover:shadow-lg"
+                className="rounded-3xl bg-white p-7 lg:p-8 border border-ink/5 hover:border-navy/20 transition-all hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-navy/10 text-navy transition group-hover:bg-navy group-hover:text-white">
-                  {benefitIcons[i % benefitIcons.length]}
+                <div className="text-orange font-black text-3xl lg:text-4xl tracking-tight mb-5">
+                  {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="mb-2 text-lg font-bold text-navy">
+                <h3 className="text-ink font-black text-lg tracking-tight uppercase mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-gray-600">
+                <p className="text-stone text-[14px] leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -385,28 +419,37 @@ export default function ServicePageLayout({
         </div>
       </section>
 
-      {/* ====== 5a. FEATURES GRID (alternative to gallery) ====== */}
+      {/* ─────────────────── 5a. FEATURES GRID (alternative) ─────────────────── */}
       {featuresGrid && featuresGrid.length > 0 && (
-        <section className="bg-gray-light py-16 sm:py-20">
-          <div className="mx-auto max-w-6xl px-4 lg:px-8">
-            <h2 className="mb-12 text-center text-3xl font-bold text-navy sm:text-4xl">
-              Our Services
-            </h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <section className="bg-cream-dark py-24 lg:py-32 px-5 lg:px-10">
+          <div className="mx-auto max-w-[1400px]">
+            <div className="mb-16 max-w-3xl">
+              <div className="inline-flex items-center gap-2.5 mb-6">
+                <span className="h-px w-8 bg-navy/30" />
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy/70">
+                  What&apos;s included
+                </span>
+              </div>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl text-ink uppercase">
+                Every detail<br />
+                <span className="text-navy">covered.</span>
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {featuresGrid.map((feature, i) => (
                 <div
                   key={i}
-                  className="rounded-xl bg-white p-6 shadow-sm transition hover:shadow-md"
+                  className="rounded-3xl bg-white p-7 border border-ink/5 hover:border-navy/20 transition-all hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-navy/10 text-navy">
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-navy/5 text-navy">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-navy">
+                  <h3 className="text-ink font-black text-lg tracking-tight uppercase mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-gray-600">
+                  <p className="text-stone text-[14px] leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -416,31 +459,41 @@ export default function ServicePageLayout({
         </section>
       )}
 
-      {/* ====== 5b. GALLERY ====== */}
+      {/* ─────────────────── 5b. GALLERY ─────────────────── */}
       {gallerySections && gallerySections.length > 0 && (
-        <section className="bg-gray-light py-16 sm:py-20">
-          <div className="mx-auto max-w-6xl px-4 lg:px-8">
-            <h2 className="mb-12 text-center text-3xl font-bold text-navy sm:text-4xl">
-              Our Work
-            </h2>
+        <section className="bg-cream-dark py-24 lg:py-32 px-5 lg:px-10">
+          <div className="mx-auto max-w-[1400px]">
+            <div className="mb-16 max-w-3xl">
+              <div className="inline-flex items-center gap-2.5 mb-6">
+                <span className="h-px w-8 bg-navy/30" />
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy/70">
+                  Recent work
+                </span>
+              </div>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl text-ink uppercase">
+                The work<br />
+                <span className="text-navy">speaks.</span>
+              </h2>
+            </div>
+
             {gallerySections.map((section, si) => (
-              <div key={si} className={si > 0 ? "mt-12" : ""}>
+              <div key={si} className={si > 0 ? "mt-16" : ""}>
                 {section.label && (
-                  <h3 className="mb-6 text-center text-xl font-semibold text-navy">
+                  <h3 className="mb-8 text-[12px] uppercase tracking-[0.22em] font-bold text-navy">
                     {section.label}
                   </h3>
                 )}
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
                   {section.images.map((img, ii) => (
                     <div
                       key={ii}
-                      className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-sm"
+                      className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-ink/5"
                     >
                       <Image
                         src={img.src}
                         alt={img.alt}
                         fill
-                        className="object-cover transition duration-300 group-hover:scale-105"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
@@ -452,21 +505,31 @@ export default function ServicePageLayout({
         </section>
       )}
 
-      {/* ====== 5c. BEFORE / AFTER ====== */}
+      {/* ─────────────────── 5c. BEFORE / AFTER ─────────────────── */}
       {beforeAfter && beforeAfter.length > 0 && (
-        <section className="bg-white py-16 sm:py-20">
-          <div className="mx-auto max-w-6xl px-4 lg:px-8">
-            <h2 className="mb-12 text-center text-3xl font-bold text-navy sm:text-4xl">
-              Before &amp; After
-            </h2>
-            <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
+        <section className="bg-cream py-24 lg:py-32 px-5 lg:px-10">
+          <div className="mx-auto max-w-[1400px]">
+            <div className="mb-16 max-w-3xl">
+              <div className="inline-flex items-center gap-2.5 mb-6">
+                <span className="h-px w-8 bg-navy/30" />
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy/70">
+                  Transformations
+                </span>
+              </div>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl text-ink uppercase">
+                Before<br />
+                <span className="text-navy">&amp; after.</span>
+              </h2>
+            </div>
+
+            <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {beforeAfter.map((pair, i) => (
                 <div key={i}>
-                  <h3 className="mb-4 text-center text-lg font-semibold text-navy">
+                  <h3 className="mb-4 text-[13px] uppercase tracking-[0.18em] font-bold text-ink">
                     {pair.label}
                   </h3>
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-sm">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-ink/5">
                       <Image
                         src={pair.before}
                         alt={`${pair.label} - Before`}
@@ -474,11 +537,11 @@ export default function ServicePageLayout({
                         className="object-cover"
                         sizes="(max-width: 640px) 50vw, 25vw"
                       />
-                      <span className="absolute bottom-2 left-2 rounded bg-navy/80 px-2 py-0.5 text-xs font-semibold text-white">
+                      <span className="absolute bottom-3 left-3 rounded-full bg-ink/85 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white">
                         Before
                       </span>
                     </div>
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-sm">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-ink/5">
                       <Image
                         src={pair.after}
                         alt={`${pair.label} - After`}
@@ -486,7 +549,7 @@ export default function ServicePageLayout({
                         className="object-cover"
                         sizes="(max-width: 640px) 50vw, 25vw"
                       />
-                      <span className="absolute bottom-2 left-2 rounded bg-orange/90 px-2 py-0.5 text-xs font-semibold text-white">
+                      <span className="absolute bottom-3 left-3 rounded-full bg-orange px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white">
                         After
                       </span>
                     </div>
@@ -498,49 +561,73 @@ export default function ServicePageLayout({
         </section>
       )}
 
-      {/* ====== 6. FAQs ====== */}
-      <section className="bg-gray-light py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl px-4 lg:px-8">
-          <h2 className="mb-10 text-center text-3xl font-bold text-navy sm:text-4xl">
-            Frequently Asked Questions
-          </h2>
-          <FAQAccordion items={faqs} />
+      {/* ─────────────────── 6. FAQs ─────────────────── */}
+      <section className="bg-cream py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1100px]">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+            <div className="lg:col-span-5">
+              <div className="inline-flex items-center gap-2.5 mb-6">
+                <span className="h-px w-8 bg-navy/30" />
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy/70">
+                  FAQ
+                </span>
+              </div>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl text-ink uppercase">
+                Common<br />
+                <span className="text-navy">questions.</span>
+              </h2>
+              <p className="mt-6 text-base text-stone leading-relaxed max-w-sm">
+                Don&apos;t see your question? Call us or send a message. We&apos;ll get back to you within 24 hours.
+              </p>
+            </div>
+            <div className="lg:col-span-7">
+              <FAQAccordion items={faqs} />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ====== 7. RELATED SERVICES ====== */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 lg:px-8">
-          <h2 className="mb-12 text-center text-3xl font-bold text-navy sm:text-4xl">
-            Related Services
-          </h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {/* ─────────────────── 7. RELATED SERVICES ─────────────────── */}
+      <section className="bg-cream-dark py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="mb-16 max-w-3xl">
+            <div className="inline-flex items-center gap-2.5 mb-6">
+              <span className="h-px w-8 bg-navy/30" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-navy/70">
+                More services
+              </span>
+            </div>
+            <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl text-ink uppercase">
+              Need<br />
+              <span className="text-navy">something else?</span>
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {relatedServices.map((service, i) => (
               <Link
                 key={i}
                 href={service.href}
-                className="group overflow-hidden rounded-xl bg-white shadow-sm transition hover:shadow-lg"
+                className="group relative overflow-hidden rounded-3xl bg-ink aspect-[4/5]"
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="flex items-center justify-between p-5">
-                  <h3 className="text-lg font-bold text-navy">{service.title}</h3>
-                  <svg
-                    className="h-5 w-5 text-navy transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover opacity-70 transition-all duration-500 group-hover:scale-105 group-hover:opacity-90"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6 lg:p-7">
+                  <h3 className="text-white font-black text-2xl lg:text-3xl tracking-tight uppercase mb-2">
+                    {service.title}
+                  </h3>
+                  <span className="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-wider text-orange">
+                    Learn more
+                    <svg className="h-3 w-3 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
                 </div>
               </Link>
             ))}
@@ -548,7 +635,7 @@ export default function ServicePageLayout({
         </div>
       </section>
 
-      {/* ====== 8. CONTACT FORM ====== */}
+      {/* ─────────────────── 8. CONTACT FORM ─────────────────── */}
       <ContactForm />
     </>
   );

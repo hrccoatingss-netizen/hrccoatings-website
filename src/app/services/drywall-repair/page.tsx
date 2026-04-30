@@ -1,83 +1,160 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import ContactForm from "@/components/ContactForm";
-import ServiceSchema from "@/components/ServiceSchema";
+import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata: Metadata = {
   title: "Drywall Repair Services in San Diego",
   description:
-    "Expert drywall repair in San Diego. Seamless patches, crack repair, and smooth finishes. Free estimates.",
+    "Expert drywall repair in San Diego. Hole patching, crack repair, water damage restoration, and seamless texture matching. Free estimates from a licensed pro.",
   alternates: { canonical: "/services/drywall-repair" },
 };
 
 export default function DrywallRepairPage() {
   return (
-    <>
-      <ServiceSchema
-        slug="drywall-repair"
-        name="Drywall Repair"
-        description="Professional drywall repair services in San Diego. Seamless patches, crack repair, hole repair, and smooth finishing for any size project."
-        image="/images/drywall-services.jpg"
-        steps={[
-          { title: "Damage Assessment", description: "We inspect the damaged area and identify the underlying cause to prevent it from happening again." },
-          { title: "Cut & Patch", description: "Clean removal of damaged drywall and precise patching with new material." },
-          { title: "Tape & Mud", description: "Multiple coats of joint compound with proper drying time between each layer." },
-          { title: "Sand & Texture Match", description: "Smooth sanding and texture matching to blend seamlessly with the existing wall." },
-          { title: "Prime & Paint Ready", description: "Final priming so the area is ready for paint to match your existing wall color." },
-        ]}
-      />
-      {/* Hero */}
-      <section className="relative flex items-center justify-center overflow-hidden bg-navy py-24 sm:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/95 to-navy/80" />
-        <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-            Drywall Repair
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-white/90">
-            Expert Drywall Repair for Flawless Walls
-          </p>
-        </div>
-      </section>
+    <ServicePageLayout
+      slug="drywall-repair"
+      heroTitle="Drywall Repair"
+      heroSubtitle="Holes, cracks, water damage, settling. We fix it cleanly and match the texture so you can't tell anything ever happened."
+      heroImage="/images/drywall-services.jpg"
+      overview={`Drywall problems are inevitable in any home. Door knobs punch holes. Settling cracks the corners. A leaky pipe ruins a ceiling. Whatever the damage, we fix it cleanly and match the surrounding texture so the repair disappears into the wall.
 
-      {/* Content */}
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
-            <Image
-              src="/images/drywall-services.jpg"
-              alt="Expert drywall repair in San Diego"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
+At HRCCoatings Inc, we've been doing drywall repair across San Diego County for over 20 years. From small nail holes to full ceiling replacements after water damage, we handle every size of repair with the same attention to detail. Most homeowners try to do this work themselves and end up calling us anyway because the patch is visible after painting — texture matching is what separates an amateur fix from a professional one.
 
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              Restore Your Walls to Perfection
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-gray-600">
-              Restore your walls to perfect condition with our seamless drywall
-              repair services. From small nail holes to significant damage, our
-              experienced team handles all drywall issues efficiently and
-              effectively, leaving your walls smooth and ready for paint. Contact
-              us for a free estimate.
-            </p>
-            <div className="mt-8">
-              <Link
-                href="/#contact"
-                className="inline-flex items-center rounded-lg bg-red px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-[#B8102F] active:scale-[0.98]"
-              >
-                Get Free Estimate
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <ContactForm />
-    </>
+Every project includes proper drying time between coats of joint compound, multiple sanding passes for a glass-smooth finish, and texture matching that blends seamlessly with your existing wall. By the time we're done, the area is paint-ready and indistinguishable from the original drywall.`}
+      processSteps={[
+        {
+          title: "Damage Assessment",
+          description:
+            "We inspect the damaged area, identify the underlying cause (settling, water, impact), and confirm there are no hidden issues before patching.",
+        },
+        {
+          title: "Cut & Patch",
+          description:
+            "Clean removal of damaged drywall and precise patching with new material cut to size. We use proper anchoring techniques so the patch holds for the long term.",
+        },
+        {
+          title: "Tape & Mud",
+          description:
+            "Multiple coats of joint compound applied with proper drying time between layers. Each coat is feathered out wider than the last for an invisible blend.",
+        },
+        {
+          title: "Sand & Texture Match",
+          description:
+            "Smooth sanding to a glass-flat finish, then careful texture matching. Smooth, knockdown, orange peel, popcorn — we match what's already on your wall.",
+        },
+        {
+          title: "Prime & Paint Ready",
+          description:
+            "Final priming so the repaired area is sealed and ready for paint. We can also paint the patched section to match the rest of your wall.",
+        },
+      ]}
+      benefits={[
+        {
+          title: "Invisible Repairs",
+          description:
+            "Our texture matching means you can't see where the repair was once it's painted.",
+        },
+        {
+          title: "Any Size Project",
+          description:
+            "Single nail hole, full ceiling replacement, water damage — we handle every scale.",
+        },
+        {
+          title: "Fast Turnaround",
+          description:
+            "Most small repairs are completed same-day. Larger projects take 2-4 days.",
+        },
+        {
+          title: "Proper Prep",
+          description:
+            "We don't rush drying time. Each coat cures fully before the next layer goes on.",
+        },
+      ]}
+      featuresGrid={[
+        {
+          title: "Hole Patching",
+          description:
+            "Door knob holes, accidental impacts, anchor holes — patched and matched seamlessly.",
+        },
+        {
+          title: "Crack Repair",
+          description:
+            "Settling cracks, ceiling cracks, corner cracks. We address the cause and the visible damage.",
+        },
+        {
+          title: "Water Damage Restoration",
+          description:
+            "Removal of water-damaged drywall, mold inspection, full replacement, and texture matching.",
+        },
+        {
+          title: "Ceiling Repair",
+          description:
+            "Sagging ceilings, water spots, popcorn ceiling damage. Full ceiling restoration available.",
+        },
+        {
+          title: "Texture Matching",
+          description:
+            "Smooth, knockdown, orange peel, skip trowel, popcorn — we match what's on your wall.",
+        },
+        {
+          title: "Paint-Ready Finish",
+          description:
+            "Every repair is primed and finished to a paintable surface. Optional paint matching available.",
+        },
+      ]}
+      faqs={[
+        {
+          question: "How much does drywall repair cost?",
+          answer:
+            "Small repairs (nail holes, minor cracks) start around $150-$300. Mid-size repairs (door knob holes, water damage spots) typically range $300-$700. Larger repairs and full ceiling work are quoted after on-site inspection.",
+        },
+        {
+          question: "How long does drywall repair take?",
+          answer:
+            "Small repairs are typically completed same-day. Mid-size repairs take 2-3 days due to drying time between joint compound coats. Larger repairs (ceiling replacements, water damage) can take 3-5 days.",
+        },
+        {
+          question: "Can you match the texture on my walls?",
+          answer:
+            "Yes. We match all common San Diego textures including smooth, knockdown, orange peel, skip trowel, and popcorn. Texture matching is what separates a professional repair from a DIY one.",
+        },
+        {
+          question: "Do you handle water damage?",
+          answer:
+            "Yes. We remove water-damaged drywall, inspect for mold, replace the damaged sections, and texture match for a seamless finish. We can coordinate with plumbers if the water source still needs to be fixed.",
+        },
+        {
+          question: "Will the repair be visible after painting?",
+          answer:
+            "Not when done correctly. Proper feathering of joint compound, smooth sanding, and accurate texture matching make the repair invisible once paint is applied.",
+        },
+        {
+          question: "Do you also paint the repaired area?",
+          answer:
+            "Yes. We can paint the patched section to match the surrounding wall, or paint the entire wall for a perfect blend if the existing paint has aged.",
+        },
+        {
+          question: "What about popcorn ceilings?",
+          answer:
+            "We can match existing popcorn texture for repairs, or we offer full popcorn ceiling removal as a separate service if you'd like to modernize the look.",
+        },
+      ]}
+      relatedServices={[
+        {
+          title: "Interior Painting",
+          href: "/services/interior-painting",
+          image: "/images/interior/kitchen-2.jpg",
+        },
+        {
+          title: "Stucco Repair",
+          href: "/services/stucco-repair",
+          image: "/images/stucco-services.jpg",
+        },
+        {
+          title: "Popcorn Removal",
+          href: "/services/specialty-services",
+          image: "/images/popcorn-services.jpg",
+        },
+      ]}
+    />
   );
 }

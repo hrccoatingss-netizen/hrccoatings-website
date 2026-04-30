@@ -14,7 +14,7 @@ export default function CabinetRefinishingPage() {
       slug="cabinet-refinishing"
       heroTitle="Cabinet Refinishing"
       heroSubtitle="Brand-new kitchens and bathrooms without the cost of replacement. Custom colors, factory-quality spray finishes, and lasting durability."
-      heroImage="/images/cabinet-services.jpg"
+      heroImage="/images/cabinet/kitchen-white-shaker.jpg"
       overview={`Replacing kitchen or bathroom cabinets is one of the most expensive renovations a homeowner can take on, and most of the time it isn't necessary. If your cabinet boxes are still solid, refinishing gives you a brand-new look at a fraction of the cost.
 
 At HRCCoatings Inc, we specialize in professional cabinet refinishing that holds up to daily use. We remove every door and drawer, deep clean every surface to get rid of years of grease, lightly sand for adhesion, prime with a high-bond bonding primer, then spray multiple coats of premium cabinet paint or stain for that smooth, factory-quality finish you can't get with a brush.
@@ -101,6 +101,16 @@ The result is a kitchen or bathroom that looks completely renovated without tear
             "Beyond paint — we offer professional stain refinishing for cabinets, vanities, and built-ins.",
         },
       ]}
+      gallerySections={[
+        {
+          images: [
+            { src: "/images/cabinet/kitchen-white-shaker.jpg", alt: "White shaker kitchen cabinets after refinishing" },
+            { src: "/images/cabinet/kitchen-navy-island.jpg", alt: "Two-tone kitchen with navy island after refinishing" },
+            { src: "/images/cabinet/bathroom-vanity.jpg", alt: "Bathroom vanity refinish in sage green" },
+            { src: "/images/cabinet/cabinet-detail.jpg", alt: "Close-up detail of refinished cabinet door" },
+          ],
+        },
+      ]}
       beforeAfter={[
         {
           label: "Built-In Cabinet Refinish",
@@ -154,7 +164,7 @@ The result is a kitchen or bathroom that looks completely renovated without tear
         {
           title: "Drywall Repair",
           href: "/services/drywall-repair",
-          image: "/images/drywall-services.jpg",
+          image: "/images/drywall/joint-compound.jpg",
         },
         {
           title: "Wallpaper",

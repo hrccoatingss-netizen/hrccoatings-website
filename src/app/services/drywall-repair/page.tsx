@@ -14,7 +14,7 @@ export default function DrywallRepairPage() {
       slug="drywall-repair"
       heroTitle="Drywall Repair"
       heroSubtitle="Holes, cracks, water damage, settling. We fix it cleanly and match the texture so you can't tell anything ever happened."
-      heroImage="/images/drywall-services.jpg"
+      heroImage="/images/drywall/joint-compound.jpg"
       overview={`Drywall problems are inevitable in any home. Door knobs punch holes. Settling cracks the corners. A leaky pipe ruins a ceiling. Whatever the damage, we fix it cleanly and match the surrounding texture so the repair disappears into the wall.
 
 At HRCCoatings Inc, we've been doing drywall repair across San Diego County for over 20 years. From small nail holes to full ceiling replacements after water damage, we handle every size of repair with the same attention to detail. Most homeowners try to do this work themselves and end up calling us anyway because the patch is visible after painting — texture matching is what separates an amateur fix from a professional one.
@@ -101,6 +101,16 @@ Every project includes proper drying time between coats of joint compound, multi
             "Every repair is primed and finished to a paintable surface. Optional paint matching available.",
         },
       ]}
+      gallerySections={[
+        {
+          images: [
+            { src: "/images/drywall/joint-compound.jpg", alt: "Professional drywall taping and joint compound application" },
+            { src: "/images/drywall/wall-smooth-finish.jpg", alt: "Freshly repaired smooth interior wall" },
+            { src: "/images/drywall/ceiling-repair.jpg", alt: "Smooth interior ceiling repair" },
+            { src: "/images/drywall/wall-corner.jpg", alt: "Perfectly finished interior wall corner" },
+          ],
+        },
+      ]}
       faqs={[
         {
           question: "How much does drywall repair cost?",
@@ -147,12 +157,12 @@ Every project includes proper drying time between coats of joint compound, multi
         {
           title: "Stucco Repair",
           href: "/services/stucco-repair",
-          image: "/images/stucco-services.jpg",
+          image: "/images/stucco/spanish-home.jpg",
         },
         {
           title: "Popcorn Removal",
           href: "/services/specialty-services",
-          image: "/images/popcorn-services.jpg",
+          image: "/images/popcorn/smooth-ceiling.jpg",
         },
       ]}
     />

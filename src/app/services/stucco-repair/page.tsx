@@ -14,7 +14,7 @@ export default function StuccoRepairPage() {
       slug="stucco-repair"
       heroTitle="Stucco Repair"
       heroSubtitle="Crack repair, hole patching, and texture matching that disappears into the wall. Built for San Diego's coastal climate."
-      heroImage="/images/stucco-services.jpg"
+      heroImage="/images/stucco/spanish-home.jpg"
       overview={`Stucco is one of the most common exterior finishes in San Diego County, and it's also one of the most prone to cracking and damage over time. Salt air, sun exposure, settling, and moisture intrusion all take a toll on stucco. Left untreated, small cracks turn into big problems — water gets behind the wall, the underlying lath rusts, and the repair cost goes up exponentially.
 
 At HRCCoatings Inc, we've been repairing stucco across San Diego for over 20 years. We know the climate, we know the common failure points, and we know how to match every texture finish in the region — from smooth and sand to lace, knockdown, and traditional Spanish patterns.
@@ -101,6 +101,16 @@ Every project starts with diagnosing the cause. Then we rebuild the wall properl
             "Integral color stucco or painted finishes — we match your home's existing color exactly.",
         },
       ]}
+      gallerySections={[
+        {
+          images: [
+            { src: "/images/stucco/spanish-home.jpg", alt: "Spanish style San Diego home with cream stucco" },
+            { src: "/images/stucco/coastal-home.jpg", alt: "Modern coastal home with white stucco exterior" },
+            { src: "/images/stucco/textured-wall.jpg", alt: "Close-up of textured lace stucco wall" },
+            { src: "/images/stucco/repair-detail.jpg", alt: "Detail of repaired stucco wall in San Diego" },
+          ],
+        },
+      ]}
       faqs={[
         {
           question: "How much does stucco repair cost?",
@@ -147,7 +157,7 @@ Every project starts with diagnosing the cause. Then we rebuild the wall properl
         {
           title: "Drywall Repair",
           href: "/services/drywall-repair",
-          image: "/images/drywall-services.jpg",
+          image: "/images/drywall/joint-compound.jpg",
         },
         {
           title: "Commercial Painting",

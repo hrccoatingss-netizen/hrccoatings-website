@@ -14,7 +14,7 @@ export default function SpecialtyServicesPage() {
       slug="specialty-services"
       heroTitle="Popcorn Removal & Specialty Painting"
       heroSubtitle="Modernize your ceilings and walls with professional popcorn removal, accent walls, faux finishes, and decorative coatings."
-      heroImage="/images/popcorn-services.jpg"
+      heroImage="/images/popcorn/smooth-ceiling.jpg"
       overview={`Popcorn ceilings instantly date a home. Built mostly between the 1960s and 1990s, that bumpy "cottage cheese" texture used to be the standard, but today it's the single biggest visual cue that a home hasn't been updated. Removing it and refinishing the ceiling smooth is one of the highest-ROI cosmetic changes you can make to a property — both visually and at resale.
 
 At HRCCoatings Inc, we specialize in clean, dust-controlled popcorn ceiling removal across San Diego County. We tarp the room, contain the dust, scrape the texture, skim coat the ceiling smooth, and refinish to a paint-ready surface. Most rooms are completed in 2-3 days with minimal disruption to the rest of your home.
@@ -101,6 +101,16 @@ We also offer the full range of specialty painting work: accent walls with custo
             "Magnetic paint, chalkboard paint, dry-erase coatings, and other functional finishes.",
         },
       ]}
+      gallerySections={[
+        {
+          images: [
+            { src: "/images/popcorn/smooth-ceiling.jpg", alt: "Smooth white ceiling after popcorn removal" },
+            { src: "/images/popcorn/bedroom-after.jpg", alt: "Bedroom with new smooth ceiling after popcorn removal" },
+            { src: "/images/popcorn/accent-wall.jpg", alt: "Modern living room with navy blue accent wall" },
+            { src: "/images/popcorn/faux-finish.jpg", alt: "Elegant dining room with venetian plaster faux finish" },
+          ],
+        },
+      ]}
       faqs={[
         {
           question: "How much does popcorn ceiling removal cost?",
@@ -147,7 +157,7 @@ We also offer the full range of specialty painting work: accent walls with custo
         {
           title: "Drywall Repair",
           href: "/services/drywall-repair",
-          image: "/images/drywall-services.jpg",
+          image: "/images/drywall/joint-compound.jpg",
         },
         {
           title: "Wallpaper",

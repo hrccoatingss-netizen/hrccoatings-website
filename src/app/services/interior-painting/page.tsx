@@ -125,12 +125,12 @@ From color consultations to final walkthroughs, we handle every detail with care
         {
           title: "Cabinet Refinishing",
           href: "/services/cabinet-refinishing",
-          image: "/images/cabinet-services.jpg",
+          image: "/images/cabinet/kitchen-white-shaker.jpg",
         },
         {
           title: "Drywall Repair",
           href: "/services/drywall-repair",
-          image: "/images/drywall-services.jpg",
+          image: "/images/drywall/joint-compound.jpg",
         },
         {
           title: "Exterior Painting",

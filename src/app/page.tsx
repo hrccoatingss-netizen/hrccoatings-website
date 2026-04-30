@@ -44,28 +44,28 @@ const services = [
   },
   {
     name: "Cabinet Refinishing",
-    image: "/images/cabinet-services.jpg",
+    image: "/images/cabinet/kitchen-white-shaker.jpg",
     description:
       "Breathe new life into your kitchen or bathroom with professional cabinet refinishing.",
     href: "/services/cabinet-refinishing",
   },
   {
     name: "Drywall Repair",
-    image: "/images/drywall-services.jpg",
+    image: "/images/drywall/joint-compound.jpg",
     description:
       "Restore walls to perfect condition with seamless repairs for all drywall issues.",
     href: "/services/drywall-repair",
   },
   {
     name: "Stucco Repair",
-    image: "/images/stucco-services.jpg",
+    image: "/images/stucco/spanish-home.jpg",
     description:
       "Protect and enhance your property's exterior with expert stucco repair and painting.",
     href: "/services/stucco-repair",
   },
   {
     name: "Popcorn Removal",
-    image: "/images/popcorn-services.jpg",
+    image: "/images/popcorn/smooth-ceiling.jpg",
     description:
       "Modernize your ceilings with our professional popcorn removal service.",
     href: "/services/specialty-services",

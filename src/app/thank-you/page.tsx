@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Thank You — Your Free Estimate Is on the Way",
@@ -20,6 +21,28 @@ export default function ThankYouPage() {
         color: "#0e0e0e",
       }}
     >
+      {/* Meta Pixel: fire Lead event on this thank-you page */}
+      <Script id="meta-pixel-lead" strategy="afterInteractive">
+        {`
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead', { content_name: 'Free Estimate Request' });
+          }
+        `}
+      </Script>
+
+      {/* Google Ads conversion event (only fires if AW-XXXXXX env is set) */}
+      <Script id="gtag-lead" strategy="afterInteractive">
+        {`
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              event_category: 'engagement',
+              event_label: 'Free Estimate Form Submission',
+              value: 1
+            });
+          }
+        `}
+      </Script>
+
       {/* Subtle blueprint grid background */}
       <div
         aria-hidden="true"

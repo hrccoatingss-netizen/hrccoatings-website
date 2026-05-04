@@ -232,7 +232,7 @@ export default function ThankYouPage() {
               fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
             }}
           >
-            HRCCoatings Inc&nbsp;Inc
+            HRCCoatings Inc
           </div>
           <div
             className="flex items-center gap-3"

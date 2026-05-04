@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { submitEstimateForm } from "@/app/actions/submit-form";
 
 const SERVICE_OPTIONS = [
@@ -20,6 +21,7 @@ const SERVICE_OPTIONS = [
 ] as const;
 
 export default function ContactForm() {
+  const router = useRouter();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -61,17 +63,9 @@ export default function ContactForm() {
     });
 
     if (result.success) {
-      setStatus("success");
-      setForm({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        service: "",
-        message: "",
-        consentTransactional: false,
-        consentMarketing: false,
-      });
+      // Redirect to /thank-you for proper conversion tracking + better UX.
+      // Meta Pixel, Google Ads, and GA4 conversion events all fire on URL change.
+      router.push("/thank-you");
     } else {
       setStatus("error");
       setErrorMsg(result.error || "Something went wrong. Please try again.");

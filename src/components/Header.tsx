@@ -98,6 +98,7 @@ export default function Header() {
   const hoverBg = transparentMode ? "hover:bg-white/10" : "hover:bg-ink/5";
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         transparentMode
@@ -234,21 +235,34 @@ export default function Header() {
           </div>
         </button>
       </nav>
+      </header>
 
-      {/* Mobile Overlay */}
+      {/* Mobile Overlay — rendered OUTSIDE <header> so the header's
+          backdrop-filter does not break its fixed positioning */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-40 bg-ink/40 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-[60] bg-ink/40 backdrop-blur-sm lg:hidden"
           onClick={() => setMobileOpen(false)}
         />
       )}
 
       {/* Mobile Slide-out Menu */}
       <div
-        className={`fixed right-0 top-0 z-40 flex h-full w-80 max-w-[85vw] flex-col bg-cream shadow-2xl transition-transform duration-500 lg:hidden ${
+        className={`fixed right-0 top-0 z-[70] flex h-full w-80 max-w-[85vw] flex-col bg-cream shadow-2xl transition-transform duration-500 lg:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
+        {/* Close button */}
+        <button
+          onClick={() => setMobileOpen(false)}
+          className="absolute right-5 top-5 z-10 rounded-full p-2 text-ink-soft transition-colors hover:bg-ink/5"
+          aria-label="Close menu"
+        >
+          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
         <div className="flex-1 overflow-y-auto px-6 pb-6 pt-24">
           <div className="space-y-1">
             {navLinks.map((link) =>
@@ -327,6 +341,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }

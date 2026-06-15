@@ -157,12 +157,12 @@ Every project includes proper drying time between coats of joint compound, multi
         {
           title: "Stucco Repair",
           href: "/services/stucco-repair",
-          image: "/images/stucco/spanish-home.jpg",
+          image: "/images/stucco-services.jpg",
         },
         {
           title: "Popcorn Removal",
           href: "/services/specialty-services",
-          image: "/images/popcorn/smooth-ceiling.jpg",
+          image: "/images/popcorn-services.jpg",
         },
       ]}
     />

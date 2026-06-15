@@ -58,14 +58,14 @@ const services = [
   },
   {
     name: "Stucco Repair",
-    image: "/images/stucco/spanish-home.jpg",
+    image: "/images/stucco-services.jpg",
     description:
       "Protect and enhance your property's exterior with expert stucco repair and painting.",
     href: "/services/stucco-repair",
   },
   {
     name: "Popcorn Removal",
-    image: "/images/popcorn/smooth-ceiling.jpg",
+    image: "/images/popcorn-services.jpg",
     description:
       "Modernize your ceilings with our professional popcorn removal service.",
     href: "/services/specialty-services",

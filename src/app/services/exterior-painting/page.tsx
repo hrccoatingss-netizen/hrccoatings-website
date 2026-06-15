@@ -104,7 +104,7 @@ Our process begins with thorough surface preparation—the key to long-lasting r
         {
           title: "Stucco Repair",
           href: "/services/stucco-repair",
-          image: "/images/stucco/spanish-home.jpg",
+          image: "/images/stucco-services.jpg",
         },
         {
           title: "Interior Painting",

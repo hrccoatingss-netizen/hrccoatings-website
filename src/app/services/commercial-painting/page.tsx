@@ -132,7 +132,7 @@ We understand the unique demands of commercial projects—tight timelines, after
         {
           title: "Drywall Repair",
           href: "/services/drywall-repair",
-          image: "/images/drywall/joint-compound.jpg",
+          image: "/images/drywall-services.jpg",
         },
       ]}
     />

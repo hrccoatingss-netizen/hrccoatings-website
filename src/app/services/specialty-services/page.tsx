@@ -107,7 +107,7 @@ We also offer the full range of specialty painting work: accent walls with custo
             { src: "/images/interior/living-room-1.jpg", alt: "Living room with smooth ceiling after popcorn removal" },
             { src: "/images/interior/bedroom-2.jpg", alt: "Bedroom with smooth ceiling after popcorn removal" },
             { src: "/images/interior/entryway-1.jpg", alt: "Entryway with smooth refinished ceiling" },
-            { src: "/images/popcorn/accent-wall.jpg", alt: "Modern living room with navy blue accent wall" },
+            { src: "/images/interior/kitchen-1.jpg", alt: "Kitchen with smooth refinished ceiling" },
           ],
         },
       ]}
@@ -157,7 +157,7 @@ We also offer the full range of specialty painting work: accent walls with custo
         {
           title: "Drywall Repair",
           href: "/services/drywall-repair",
-          image: "/images/drywall/joint-compound.jpg",
+          image: "/images/drywall-services.jpg",
         },
         {
           title: "Wallpaper",

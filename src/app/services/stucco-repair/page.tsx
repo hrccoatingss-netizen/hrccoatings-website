@@ -104,10 +104,10 @@ Every project starts with diagnosing the cause. Then we rebuild the wall properl
       gallerySections={[
         {
           images: [
-            { src: "/images/stucco-services.jpg", alt: "HRCCoatings patching and matching stucco on an exterior wall" },
-            { src: "/images/stucco/textured-wall.jpg", alt: "Close-up of matched stucco texture" },
-            { src: "/images/stucco/repair-detail.jpg", alt: "Repaired stucco section blended into the wall" },
-            { src: "/images/stucco/coastal-home.jpg", alt: "Finished stucco home exterior in San Diego" },
+            { src: "/images/stucco/exterior-wall.jpg", alt: "Stucco exterior wall with clean trim lines" },
+            { src: "/images/stucco/lace-texture.jpg", alt: "Spanish lace stucco texture matched" },
+            { src: "/images/stucco/troweled-finish.jpg", alt: "Smooth troweled stucco finish" },
+            { src: "/images/stucco/hairline-cracks.jpg", alt: "Stucco surface repaired and refinished" },
           ],
         },
       ]}
@@ -157,7 +157,7 @@ Every project starts with diagnosing the cause. Then we rebuild the wall properl
         {
           title: "Drywall Repair",
           href: "/services/drywall-repair",
-          image: "/images/drywall/joint-compound.jpg",
+          image: "/images/drywall-services.jpg",
         },
         {
           title: "Commercial Painting",

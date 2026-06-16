@@ -44,14 +44,14 @@ const services = [
   },
   {
     name: "Cabinet Refinishing",
-    image: "/images/cabinet/kitchen-white-shaker.jpg",
+    image: "/images/cabinet-services.jpg",
     description:
       "Breathe new life into your kitchen or bathroom with professional cabinet refinishing.",
     href: "/services/cabinet-refinishing",
   },
   {
     name: "Drywall Repair",
-    image: "/images/drywall/joint-compound.jpg",
+    image: "/images/drywall-services.jpg",
     description:
       "Restore walls to perfect condition with seamless repairs for all drywall issues.",
     href: "/services/drywall-repair",

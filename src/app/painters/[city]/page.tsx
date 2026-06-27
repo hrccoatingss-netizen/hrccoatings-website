@@ -37,7 +37,7 @@ export async function generateMetadata({
   const c = getCity(city);
   if (!c) return {};
   return {
-    title: `Painters in ${c.name}, CA | HRCCoatings Inc`,
+    title: `Painters in ${c.name}, CA`,
     description: `Professional house painting, stucco, and coating services in ${c.name}, CA. ${c.localFocus} Family-run, 20+ years, 5-star rated. Free estimates.`,
     alternates: { canonical: `https://hrccoatingsco.com/painters/${c.slug}` },
   };

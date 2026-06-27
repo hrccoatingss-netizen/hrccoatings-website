@@ -40,8 +40,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: { canonical: "https://hrccoatingsco.com" },
   icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
   },
 };
 

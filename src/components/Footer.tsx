@@ -15,8 +15,17 @@ const services = [
 const company = [
   { name: "About", href: "/about" },
   { name: "Reviews", href: "/#reviews" },
-  { name: "Service Areas", href: "/#gallery" },
+  { name: "Service Areas", href: "/painters" },
   { name: "Free Estimate", href: "/#contact" },
+];
+
+const serviceAreas = [
+  { name: "Chula Vista", href: "/painters/chula-vista" },
+  { name: "El Cajon", href: "/painters/el-cajon" },
+  { name: "La Mesa", href: "/painters/la-mesa" },
+  { name: "Carlsbad", href: "/painters/carlsbad" },
+  { name: "La Jolla", href: "/painters/la-jolla" },
+  { name: "All Areas", href: "/painters" },
 ];
 
 const HIDE_FOOTER_ROUTES = ["/thank-you"];
@@ -114,12 +123,31 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-2 lg:col-start-6">
+          <div className="lg:col-span-2">
             <p className="text-[11px] uppercase tracking-[0.22em] text-white/50 font-semibold mb-5">
               Services
             </p>
             <ul className="space-y-3">
               {services.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-[13px] text-white/80 transition-colors hover:text-orange"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div className="lg:col-span-2">
+            <p className="text-[11px] uppercase tracking-[0.22em] text-white/50 font-semibold mb-5">
+              Service Areas
+            </p>
+            <ul className="space-y-3">
+              {serviceAreas.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -152,7 +180,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <p className="text-[11px] uppercase tracking-[0.22em] text-white/50 font-semibold mb-5">
               Contact
             </p>

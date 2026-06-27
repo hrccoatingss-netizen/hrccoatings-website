@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { CITIES } from "@/lib/cities";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://hrccoatingsco.com";
@@ -40,6 +41,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.6,
+    })),
+    {
+      url: `${baseUrl}/painters`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...CITIES.map((c) => ({
+      url: `${baseUrl}/painters/${c.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
     {
       url: `${baseUrl}/about`,

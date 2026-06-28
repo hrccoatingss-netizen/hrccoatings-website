@@ -138,6 +138,41 @@ const faqItems = [
     answer:
       "Yes! We offer full color consultations and work with all major paint brands to help you find the perfect color for your space.",
   },
+  {
+    question: "What areas of San Diego County do you serve?",
+    answer:
+      "We serve all of San Diego County, including Chula Vista, El Cajon, La Mesa, Carlsbad, Oceanside, Encinitas, La Jolla, Poway, Santee, Escondido, Coronado, and the surrounding communities.",
+  },
+  {
+    question: "Do you install epoxy garage floor coatings?",
+    answer:
+      "Yes. We install premium flake and metallic epoxy floor coatings for garages, patios, and commercial spaces. They are durable, easy to clean, and built to handle daily wear for years.",
+  },
+  {
+    question: "Do you offer stucco repair?",
+    answer:
+      "Yes. We repair cracks and damage, match your existing texture, and seal the surface so it lasts, for clean and weatherproof results across San Diego County.",
+  },
+  {
+    question: "Do you refinish kitchen cabinets?",
+    answer:
+      "Absolutely. Cabinet refinishing gives your kitchen a brand-new look for a fraction of the cost of replacement, with smooth sprayed finishes and custom colors available.",
+  },
+  {
+    question: "Can you remove popcorn ceilings?",
+    answer:
+      "Yes. We remove dated popcorn texture, repair the drywall, and finish ceilings smooth and clean and ready for paint, with dust kept under control from start to finish.",
+  },
+  {
+    question: "Are you licensed and insured?",
+    answer:
+      "Yes. HRCCoatings Inc is a licensed and insured, family-run painting company with over 20 years of experience serving San Diego County.",
+  },
+  {
+    question: "What paint brands do you use?",
+    answer:
+      "We use premium paints from Benjamin Moore, Sherwin-Williams, and Dunn-Edwards for lasting, professional-quality results.",
+  },
 ];
 
 const blogPosts = [

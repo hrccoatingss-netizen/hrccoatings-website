@@ -207,7 +207,7 @@ export default function Footer() {
               </li>
               <li className="text-[13px] text-white/60">
                 <span className="text-white/40">Hours: </span>
-                7AM – 5PM Daily
+                7AM – 6PM Daily
               </li>
             </ul>
           </div>

@@ -266,7 +266,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-white/40 mb-1">Hours</p>
-                <p>7 AM - 5 PM, 7 days a week</p>
+                <p>7 AM - 6 PM, 7 days a week</p>
               </div>
 
               <Link

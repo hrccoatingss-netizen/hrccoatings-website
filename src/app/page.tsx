@@ -121,7 +121,7 @@ const faqItems = [
   {
     question: "Do you work on weekends?",
     answer:
-      "Yes, we're available 7 days a week from 7 AM to 5 PM to accommodate your schedule.",
+      "Yes, we're available 7 days a week from 7 AM to 6 PM to accommodate your schedule.",
   },
   {
     question: "What's included in your warranty?",
@@ -742,7 +742,7 @@ export default function Home() {
                 <a href="tel:+16193041289" className="text-navy underline underline-offset-4 hover:text-red font-bold">
                   (619) 304-1289
                 </a>
-                . We&apos;re here 7AM to 5PM daily.
+                . We&apos;re here 7AM to 6PM daily.
               </p>
             </div>
             <div className="lg:col-span-7">

@@ -82,7 +82,7 @@ export default function RootLayout({
                 latitude: 32.8312,
                 longitude: -117.1646,
               },
-              openingHours: "Mo-Su 07:00-17:00",
+              openingHours: "Mo-Su 07:00-18:00",
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "5.0",

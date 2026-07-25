@@ -166,7 +166,7 @@ const faqItems = [
   {
     question: "Are you licensed and insured?",
     answer:
-      "Yes. HRCCoatings Inc is a licensed and insured, family-run painting company with over 20 years of experience serving San Diego County.",
+      "Yes. HRCCoatings Inc is fully licensed (CSLB LIC #1158346), bonded, and insured. We are a family-run painting company with over 20 years of experience serving San Diego County.",
   },
   {
     question: "What paint brands do you use?",
@@ -307,7 +307,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-3 rounded-full bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2 mb-8">
               <Stars count={5} />
               <span className="text-[12px] font-semibold text-white">
-                5.0 on Google · 600+ projects · Family run since 2003
+                5.0 on Google · Licensed, Bonded &amp; Insured · CSLB #1158346
               </span>
             </div>
 

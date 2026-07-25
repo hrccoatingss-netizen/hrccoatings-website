@@ -15,6 +15,7 @@ const services = [
 const company = [
   { name: "About", href: "/about" },
   { name: "Reviews", href: "/#reviews" },
+  { name: "Leave us a Review ★", href: "https://g.page/r/CbGIhjpPj8pSEBM/review" },
   { name: "Service Areas", href: "/painters" },
   { name: "Free Estimate", href: "/#contact" },
 ];
@@ -170,6 +171,9 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
+                    {...(link.href.startsWith("http")
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
                     className="text-[13px] text-white/80 transition-colors hover:text-orange"
                   >
                     {link.name}
@@ -202,7 +206,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-[13px] text-white/60 leading-relaxed">
-                3334 Clairemont Mesa Blvd<br />
+                8334 Clairemont Mesa Blvd<br />
                 Ste 101, San Diego, CA 92111
               </li>
               <li className="text-[13px] text-white/60">
@@ -218,7 +222,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-3 px-5 py-6 text-center text-[12px] text-white/50 sm:flex-row sm:justify-between sm:text-left lg:px-10">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-            <span>&copy; 2024 HRCCoatings Inc</span>
+            <span>&copy; 2026 HRCCoatings Inc · CSLB LIC #1158346</span>
             <div className="flex gap-4">
               <Link
                 href="/privacy-policy"

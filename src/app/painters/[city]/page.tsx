@@ -19,7 +19,7 @@ const SERVICES = [
 
 const BENEFITS = [
   { title: "20+ Years Local", description: "Family-run since 2003, with hundreds of San Diego County homes painted." },
-  { title: "Licensed & Insured", description: "Fully licensed (CSLB), bonded, and insured for your peace of mind." },
+  { title: "Licensed & Insured", description: "Fully licensed (CSLB LIC #1158346), bonded, and insured for your peace of mind." },
   { title: "Premium Materials", description: "Benjamin Moore, Sherwin Williams, and Dunn-Edwards for lasting results." },
   { title: "5.0 Star Rated", description: "Clean, on-time, respectful crews that treat your home like their own." },
 ];
@@ -67,7 +67,7 @@ export default async function CityPage({
     },
     {
       question: "Are you licensed and insured?",
-      answer: "Yes. HRCCoatings Inc is fully licensed with the California State License Board (CSLB), bonded, and insured. You're protected on every project.",
+      answer: "Yes. HRCCoatings Inc is fully licensed with the California State License Board (CSLB LIC #1158346), bonded, and insured. You're protected on every project.",
     },
     {
       question: `What painting services do you offer in ${c.name}?`,
@@ -184,6 +184,38 @@ export default async function CityPage({
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* SEARCH-DEMAND SECTIONS (mined from Search Console) */}
+      {c.extraSections && c.extraSections.length > 0 && (
+        <section className="bg-cream pb-20 lg:pb-28 px-5 lg:px-10">
+          <div className="mx-auto max-w-[1100px] space-y-14">
+            {c.extraSections.map((s) => (
+              <div key={s.heading} className="max-w-3xl">
+                <h2 className="font-black tracking-[-0.03em] leading-tight text-2xl sm:text-3xl text-ink uppercase mb-4">
+                  {s.heading}
+                </h2>
+                <p className="text-lg text-stone leading-relaxed">{s.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* PAINT BRANDS */}
+      <section className="bg-cream py-16 lg:py-20 px-5 lg:px-10 border-t border-ink/5">
+        <div className="mx-auto max-w-[1100px]">
+          <h2 className="font-black tracking-[-0.03em] leading-tight text-2xl sm:text-3xl text-ink uppercase mb-4 max-w-3xl">
+            The paint brands we use in {c.name}
+          </h2>
+          <p className="text-lg text-stone leading-relaxed max-w-3xl">
+            Every {c.name} project is finished with premium paint from Benjamin Moore,
+            Sherwin-Williams, or Dunn-Edwards. We help you choose the right product line
+            and sheen for your surfaces and climate, and we can color-match any existing
+            paint. Quality materials cost a little more up front and last years longer,
+            which is why we never quote builder-grade paint.
+          </p>
         </div>
       </section>
 

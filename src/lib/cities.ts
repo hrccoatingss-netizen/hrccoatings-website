@@ -9,6 +9,12 @@ export interface City {
   neighborhoods: string[];
   /** One city-specific line used in the FAQ + meta description. */
   localFocus: string;
+  /**
+   * Search-demand sections mined from Search Console queries.
+   * Each renders as an H2 + paragraph on the city page to cover
+   * query clusters the page gets impressions for but doesn't answer.
+   */
+  extraSections?: { heading: string; body: string }[];
 }
 
 export const CITIES: City[] = [
@@ -21,6 +27,20 @@ export const CITIES: City[] = [
     neighborhoods: ["Otay Ranch", "EastLake", "Rancho del Rey", "Bonita", "Terra Nova", "Third Avenue Village"],
     localFocus:
       "South Bay homes take a lot of sun, so we use premium exterior coatings that resist fading and hold up for years.",
+    extraSections: [
+      {
+        heading: "Exterior and house painting in Chula Vista",
+        body: "Exterior house painting is our most requested service in Chula Vista. South Bay sun fades cheap paint fast, so we pressure wash, scrape, patch, prime, and finish with premium UV-resistant coatings that keep their color for years. Whether it's a full exterior repaint, a stucco refresh, or interior house painting room by room, every job gets the same careful prep and clean lines. We also paint manufactured and mobile homes across Chula Vista, a service many painters won't take on.",
+      },
+      {
+        heading: "Painters serving Otay Ranch and EastLake",
+        body: "A big share of our Chula Vista work happens in Otay Ranch and EastLake. These newer master-planned homes look their best when builder-grade paint is upgraded to premium finishes, and HOA color requirements are matched exactly. We know the approved palettes, we handle the paperwork-friendly color matching, and we leave the job site spotless. If you're in Otay Ranch, EastLake, or Rancho del Rey, you've probably driven past our work.",
+      },
+      {
+        heading: "HOA, commercial, and multi-unit painting in Chula Vista",
+        body: "Beyond single-family homes, we handle HOA painting services, multi-unit complexes, and commercial painting across Chula Vista. That includes apartment buildings, offices, and retail spaces, with flexible scheduling so your tenants and customers aren't disrupted. As a licensed, bonded, and insured contractor (CSLB LIC #1158346), we meet the documentation requirements HOAs and property managers expect.",
+      },
+    ],
   },
   {
     slug: "el-cajon",
@@ -31,6 +51,20 @@ export const CITIES: City[] = [
     neighborhoods: ["Fletcher Hills", "Rancho San Diego", "Bostonia", "Granite Hills", "Crest"],
     localFocus:
       "Because El Cajon runs hot, we recommend premium UV-resistant exterior paint that won't blister or fade in the inland heat.",
+    extraSections: [
+      {
+        heading: "Painting contractor in Granite Hills",
+        body: "Granite Hills is one of our busiest areas in El Cajon. The larger lots and older custom homes here often need more than a quick repaint: think stucco crack repair, wood trim restoration, and full exterior prep before any color goes on. As a licensed painting contractor (CSLB LIC #1158346) working Granite Hills, Rancho San Diego, and Bostonia regularly, we give these homes the patient prep work they deserve, then protect them with heat-resistant premium coatings.",
+      },
+      {
+        heading: "Stucco repair and painting in El Cajon",
+        body: "East County heat is brutal on stucco. We repair hairline cracks, patch damaged sections, match your existing texture, and repaint with elastomeric and UV-stable coatings made for inland San Diego. If you're searching for a stucco contractor in Granite Hills or anywhere in El Cajon, we handle both the repair and the finish coat, so you get one crew and one clean result instead of coordinating two trades.",
+      },
+      {
+        heading: "Commercial painting in El Cajon",
+        body: "We also serve El Cajon businesses: offices, retail storefronts, warehouses, and multi-unit properties. Commercial jobs get the same premium materials as our residential work, with scheduling built around your business hours so you never have to close. Free walkthroughs and itemized commercial estimates are available throughout the 92019, 92020, and 92021 areas.",
+      },
+    ],
   },
   {
     slug: "la-mesa",
@@ -101,6 +135,12 @@ export const CITIES: City[] = [
     neighborhoods: ["Old Escondido", "Hidden Meadows", "Kit Carson Park", "San Pasqual", "Felicita"],
     localFocus:
       "Inland Escondido gets hot and dry, so UV-resistant exterior paint and careful prep make all the difference here.",
+    extraSections: [
+      {
+        heading: "Painting contractor in Hidden Meadows",
+        body: "Hidden Meadows homes sit up in the hills north of Escondido, where sun exposure and temperature swings wear exterior paint faster than in coastal neighborhoods. We work Hidden Meadows regularly as a licensed painting contractor (CSLB LIC #1158346), bringing the right prep, primers, and UV-resistant topcoats for hillside properties. From full exterior repaints to interior refreshes and stucco repair, you get a family crew that shows up on time and treats your property with respect.",
+      },
+    ],
   },
   {
     slug: "poway",

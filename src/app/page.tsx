@@ -177,6 +177,15 @@ const faqItems = [
 
 const blogPosts = [
   {
+    image: "/images/exterior/front-home.jpg",
+    title: "What It Costs to Paint a House in San Diego",
+    date: "Jul 22, 2026",
+    category: "Pricing",
+    excerpt:
+      "Real 2026 price ranges for interior, exterior, cabinets, and epoxy, from a licensed contractor.",
+    href: "/blog/san-diego-painting-cost-guide",
+  },
+  {
     image: "/images/blog/paint-color-selection.jpg",
     title: "How to Choose the Perfect Paint Color",
     date: "Dec 10, 2024",

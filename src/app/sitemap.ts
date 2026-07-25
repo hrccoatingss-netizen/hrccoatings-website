@@ -15,9 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "stucco-repair",
     "specialty-services",
     "wallpaper",
+    "exterior-painting-chula-vista",
   ];
 
   const blogs = [
+    "san-diego-painting-cost-guide",
     "paint-color-guide",
     "signs-home-needs-repainting",
     "epoxy-vs-traditional",

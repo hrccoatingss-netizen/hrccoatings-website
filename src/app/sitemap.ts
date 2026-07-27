@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "specialty-services",
     "wallpaper",
     "exterior-painting-chula-vista",
+    "exterior-painting-el-cajon",
   ];
 
   const blogs = [

@@ -62,16 +62,26 @@ export default function RootLayout({
               "@id": "https://hrccoatingsco.com",
               name: "HRCCoatings Inc",
               description:
-                "Professional painting, epoxy flooring, and coating services in San Diego County.",
+                "Professional painting, epoxy flooring, and coating services in San Diego County. Licensed (CSLB LIC #1158346), bonded, and insured.",
               url: "https://hrccoatingsco.com",
               telephone: "+16193041289",
               email: "hrccoatingss@gmail.com",
               image: "https://hrccoatingsco.com/images/hero-painting.jpg",
               logo: "https://hrccoatingsco.com/images/hrc-logo.png",
               priceRange: "$$",
+              hasCredential: {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "license",
+                name: "CSLB C-33 Painting Contractor License",
+                identifier: "1158346",
+                recognizedBy: {
+                  "@type": "GovernmentOrganization",
+                  name: "California Contractors State License Board (CSLB)",
+                },
+              },
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "3334 Clairemont Mesa Blvd Ste 101",
+                streetAddress: "8334 Clairemont Mesa Blvd Ste 101",
                 addressLocality: "San Diego",
                 addressRegion: "CA",
                 postalCode: "92111",
@@ -86,7 +96,7 @@ export default function RootLayout({
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "5.0",
-                reviewCount: "15",
+                reviewCount: "19",
               },
               areaServed: [
                 "San Diego",

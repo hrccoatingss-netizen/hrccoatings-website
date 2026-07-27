@@ -82,6 +82,27 @@ const reviews = [
     featured: true,
   },
   {
+    name: "Christopher Melendez",
+    role: "Homeowner, San Diego",
+    stars: 5,
+    time: "1 month ago",
+    text: "The HRC team did a great job refinishing our kitchen cabinets, epoxying the exterior floor, and completing a full exterior paint job. Professional work and quality results. Highly recommend!",
+  },
+  {
+    name: "Chris Kerbow",
+    role: "Repeat Customer",
+    stars: 5,
+    time: "6 weeks ago",
+    text: "Top tier service. I trust JR with everything. Nothing less than excellence from these guys!",
+  },
+  {
+    name: "Gustavo Noriega",
+    role: "Homeowner",
+    stars: 5,
+    time: "1 month ago",
+    text: "Very reasonably priced and a hard working, get it done company. Will definitely hire them for every upcoming project. 10 out of 10 recommended.",
+  },
+  {
     name: "Sandra",
     role: "Homeowner, San Diego",
     stars: 5,

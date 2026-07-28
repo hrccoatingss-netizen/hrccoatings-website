@@ -99,14 +99,18 @@ export default function CabinetThankYouPage() {
       {/* THE PROCESS VIDEO */}
       <section className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 pb-12 sm:px-12 sm:pb-16">
         <div className="w-full max-w-md overflow-hidden rounded-sm border border-[#0e0e0e]/12 bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.35)]">
-          <iframe
-            src={`${IG_REEL}embed/`}
-            className="h-[640px] w-full"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            title="HRCCoatings 14-step cabinet refinishing process"
-          />
+          <blockquote
+            className="instagram-media"
+            data-instgrm-permalink={IG_REEL}
+            data-instgrm-version="14"
+            style={{ margin: 0, width: "100%", minHeight: 560 }}
+          >
+            <a href={IG_REEL} target="_blank" rel="noopener noreferrer">
+              Watch our 14-step cabinet refinishing process on Instagram
+            </a>
+          </blockquote>
         </div>
+        <Script src="https://www.instagram.com/embed.js" strategy="lazyOnload" />
         <a
           href={IG_REEL}
           target="_blank"

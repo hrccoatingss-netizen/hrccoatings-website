@@ -167,14 +167,22 @@ export default function ThankYouPage() {
           Watch A Full Home Transformation
         </div>
         <div className="w-full max-w-md overflow-hidden rounded-sm border border-[#0e0e0e]/12 bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.35)]">
-          <iframe
-            src="https://www.instagram.com/hrccoatings/reel/DMjJ5bnS8jc/embed/"
-            className="h-[640px] w-full"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            title="HRCCoatings exterior transformation — from faded to flawless"
-          />
+          <blockquote
+            className="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/reel/DMjJ5bnS8jc/"
+            data-instgrm-version="14"
+            style={{ margin: 0, width: "100%", minHeight: 560 }}
+          >
+            <a
+              href="https://www.instagram.com/reel/DMjJ5bnS8jc/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Watch our full home transformation on Instagram
+            </a>
+          </blockquote>
         </div>
+        <Script src="https://www.instagram.com/embed.js" strategy="lazyOnload" />
         <p className="mt-4 max-w-md text-center text-sm leading-relaxed text-[#3a3530]">
           From faded to flawless — this is what your home could look like. Junior
           will walk your project with you on the call.

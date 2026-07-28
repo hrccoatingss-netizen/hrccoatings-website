@@ -155,6 +155,32 @@ export default function ThankYouPage() {
         </p>
       </section>
 
+      {/* FEATURED VIDEO — EXTERIOR TRANSFORMATION */}
+      <section className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 pb-16 sm:px-12 sm:pb-20">
+        <div
+          className="mb-6 text-center text-[11px] font-bold uppercase tracking-[0.32em]"
+          style={{
+            fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace",
+            color: "#3a3530",
+          }}
+        >
+          Watch A Full Home Transformation
+        </div>
+        <div className="w-full max-w-md overflow-hidden rounded-sm border border-[#0e0e0e]/12 bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,0.35)]">
+          <iframe
+            src="https://www.instagram.com/hrccoatings/reel/DMjJ5bnS8jc/embed/"
+            className="h-[640px] w-full"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            title="HRCCoatings exterior transformation — from faded to flawless"
+          />
+        </div>
+        <p className="mt-4 max-w-md text-center text-sm leading-relaxed text-[#3a3530]">
+          From faded to flawless — this is what your home could look like. Junior
+          will walk your project with you on the call.
+        </p>
+      </section>
+
       {/* FATHER & SON — WHO'S CALLING YOU */}
       <section className="relative z-10 mx-auto max-w-6xl px-6 pb-16 sm:px-12 sm:pb-20">
         <div className="grid items-center gap-8 border border-[#0e0e0e]/12 bg-white/60 p-7 sm:grid-cols-2 sm:p-10">

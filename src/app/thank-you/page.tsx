@@ -218,7 +218,7 @@ export default function ThankYouPage() {
         >
           Real Jobs · Real San Diego Homes
         </div>
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-3">
           {[
             {
               before: "/images/interior/before-after/cabinets-before.jpg",
@@ -229,6 +229,11 @@ export default function ThankYouPage() {
               before: "/images/interior/before-after/fireplace-before.jpg",
               after: "/images/interior/before-after/fireplace-after.jpg",
               label: "Fireplace Transformation",
+            },
+            {
+              before: "/images/interior/before-after/railing-before.jpg",
+              after: "/images/interior/before-after/railing-after.jpg",
+              label: "Railing Refinish",
             },
           ].map((pair) => (
             <div key={pair.label} className="border border-[#0e0e0e]/12 bg-white/60 p-4">
@@ -377,6 +382,29 @@ export default function ThankYouPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* SEE MORE — WEBSITE CTA */}
+      <section className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 pb-20 sm:px-12 sm:pb-24">
+        <div
+          className="mb-4 text-[11px] font-bold uppercase tracking-[0.32em]"
+          style={{
+            fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace",
+            color: "#3a3530",
+          }}
+        >
+          While You Wait For Junior&apos;s Call
+        </div>
+        <a
+          href="https://hrccoatingsco.com"
+          className="inline-flex items-center gap-3 px-8 py-4 text-sm font-black uppercase tracking-[0.18em] text-white transition hover:opacity-90"
+          style={{ background: "#0B2C75" }}
+        >
+          Explore Our Work · hrccoatingsco.com
+          <span aria-hidden="true" style={{ color: "#DB143C" }}>
+            →
+          </span>
+        </a>
       </section>
 
       {/* FOOTER */}

@@ -417,14 +417,18 @@ export default function Home() {
               { src: "/images/dunn-edwards-logo.png", alt: "Dunn Edwards" },
               { src: "/images/sherwin-williams-logo.png", alt: "Sherwin Williams" },
             ].map((logo) => (
-              <Image
+              <div
                 key={logo.alt}
-                src={logo.src}
-                alt={logo.alt}
-                width={140}
-                height={50}
-                className="h-9 w-auto object-contain brightness-0 invert opacity-60 transition hover:opacity-100"
-              />
+                className="flex items-center justify-center rounded-lg bg-white px-4 py-2.5 opacity-90 transition hover:opacity-100"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={140}
+                  height={50}
+                  className="h-8 w-auto object-contain"
+                />
+              </div>
             ))}
           </div>
         </div>

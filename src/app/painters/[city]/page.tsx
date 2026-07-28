@@ -55,7 +55,7 @@ export default async function CityPage({
   const faqs = [
     {
       question: `Do you offer free estimates in ${c.name}?`,
-      answer: `Yes. We provide free, no-obligation estimates anywhere in ${c.name} and the surrounding San Diego County area. Call (619) 304-1289 or request a quote online and we'll get back to you within 24 hours.`,
+      answer: `Yes. We provide free, no-obligation estimates anywhere in ${c.name} and the surrounding San Diego County area. Call (619) 289-3908 or request a quote online and we'll get back to you within 24 hours.`,
     },
     {
       question: `How much does it cost to paint a house in ${c.name}?`,
@@ -84,7 +84,7 @@ export default async function CityPage({
     provider: {
       "@type": "LocalBusiness",
       name: "HRCCoatings Inc",
-      telephone: "+16193041289",
+      telephone: "+16192893908",
       url: "https://hrccoatingsco.com",
       image: "https://hrccoatingsco.com/images/exterior/front-home.jpg",
       aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "17" },
@@ -148,8 +148,8 @@ export default async function CityPage({
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-            <a href="tel:+16193041289" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-[14px] font-medium text-white transition-all hover:bg-white/5">
-              (619) 304-1289
+            <a href="tel:+16192893908" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-[14px] font-medium text-white transition-all hover:bg-white/5">
+              (619) 289-3908
             </a>
           </div>
         </div>
@@ -179,8 +179,8 @@ export default async function CityPage({
                   </li>
                 ))}
               </ul>
-              <a href="tel:+16193041289" className="mt-7 block text-center rounded-full bg-navy text-white px-6 py-3.5 text-[13px] font-extrabold uppercase tracking-wider transition-all hover:bg-red">
-                Call (619) 304-1289
+              <a href="tel:+16192893908" className="mt-7 block text-center rounded-full bg-navy text-white px-6 py-3.5 text-[13px] font-extrabold uppercase tracking-wider transition-all hover:bg-red">
+                Call (619) 289-3908
               </a>
             </div>
           </div>

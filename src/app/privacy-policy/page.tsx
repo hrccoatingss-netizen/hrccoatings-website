@@ -231,10 +231,10 @@ export default function PrivacyPolicyPage() {
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-navy" />
                   For help, reply HELP or contact us at{" "}
                   <a
-                    href="tel:+16193041289"
+                    href="tel:+16192893908"
                     className="font-medium text-navy underline underline-offset-2"
                   >
-                    (619) 304-1289
+                    (619) 289-3908
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
@@ -367,10 +367,10 @@ export default function PrivacyPolicyPage() {
                   <span>
                     Phone:{" "}
                     <a
-                      href="tel:+16193041289"
+                      href="tel:+16192893908"
                       className="font-medium text-navy underline underline-offset-2"
                     >
-                      (619) 304-1289
+                      (619) 289-3908
                     </a>
                   </span>
                 </li>

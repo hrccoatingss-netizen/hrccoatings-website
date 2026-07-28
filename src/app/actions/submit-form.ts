@@ -8,6 +8,7 @@ type FormData = {
   phone: string;
   email: string;
   service: string;
+  timeline: string;
   message: string;
 };
 
@@ -20,6 +21,8 @@ export async function submitEstimateForm(data: FormData) {
       phone: data.phone,
       email: data.email,
       source: "Website Form",
+      service: data.service,
+      timeline: data.timeline,
     });
 
     const contactId = contactRes.contact?.id;

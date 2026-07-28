@@ -63,10 +63,10 @@ export default function Footer() {
               </svg>
             </Link>
             <a
-              href="tel:+16193041289"
+              href="tel:+16192893908"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-[14px] font-medium text-white transition-all hover:bg-white/5"
             >
-              (619) 304-1289
+              (619) 289-3908
             </a>
           </div>
         </div>
@@ -191,10 +191,10 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+16193041289"
+                  href="tel:+16192893908"
                   className="text-2xl font-black tracking-tight text-white transition-colors hover:text-orange"
                 >
-                  (619) 304-1289
+                  (619) 289-3908
                 </a>
               </li>
               <li>

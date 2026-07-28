@@ -64,7 +64,7 @@ export default function RootLayout({
               description:
                 "Professional painting, epoxy flooring, and coating services in San Diego County. Licensed (CSLB LIC #1158346), bonded, and insured.",
               url: "https://hrccoatingsco.com",
-              telephone: "+16193041289",
+              telephone: "+16192893908",
               email: "hrccoatingss@gmail.com",
               image: "https://hrccoatingsco.com/images/hero-painting.jpg",
               logo: "https://hrccoatingsco.com/images/hrc-logo.png",

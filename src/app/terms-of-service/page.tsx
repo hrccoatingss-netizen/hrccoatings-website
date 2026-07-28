@@ -140,10 +140,10 @@ export default function TermsOfServicePage() {
                     with the keyword HELP for more assistance, or reach out
                     directly to{" "}
                     <a
-                      href="tel:+16193041289"
+                      href="tel:+16192893908"
                       className="font-medium text-navy underline underline-offset-2"
                     >
-                      (619) 304-1289
+                      (619) 289-3908
                     </a>
                     .
                   </span>
@@ -288,10 +288,10 @@ export default function TermsOfServicePage() {
                   <span>
                     Phone:{" "}
                     <a
-                      href="tel:+16193041289"
+                      href="tel:+16192893908"
                       className="font-medium text-navy underline underline-offset-2"
                     >
-                      (619) 304-1289
+                      (619) 289-3908
                     </a>
                   </span>
                 </li>

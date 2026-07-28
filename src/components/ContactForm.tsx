@@ -20,6 +20,15 @@ const SERVICE_OPTIONS = [
   "Other",
 ] as const;
 
+// Match the Meta lead form's timeline answers exactly so both sources write the
+// same values into the shared GHL field (and the lead-alert text reads clean).
+const TIMELINE_OPTIONS = [
+  "ASAP (within 2 weeks)",
+  "2 to 4 weeks",
+  "1 to 2 months",
+  "3+ months (just exploring)",
+] as const;
+
 export default function ContactForm() {
   const router = useRouter();
   const [form, setForm] = useState({
@@ -28,6 +37,7 @@ export default function ContactForm() {
     phone: "",
     email: "",
     service: "",
+    timeline: "",
     message: "",
     consentTransactional: false,
     consentMarketing: false,
@@ -59,6 +69,7 @@ export default function ContactForm() {
       phone: form.phone,
       email: form.email,
       service: form.service,
+      timeline: form.timeline,
       message: form.message,
     });
 
@@ -118,10 +129,10 @@ export default function ContactForm() {
                 Or call us directly
               </p>
               <a
-                href="tel:+16193041289"
+                href="tel:+16192893908"
                 className="text-3xl font-black tracking-tight text-navy hover:text-red transition"
               >
-                (619) 304-1289
+                (619) 289-3908
               </a>
             </div>
           </div>
@@ -261,6 +272,30 @@ export default function ContactForm() {
                     {SERVICE_OPTIONS.map((s) => (
                       <option key={s} value={s}>
                         {s}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Timeline (optional — helps us prioritize your estimate) */}
+                <div className="mt-5">
+                  <label
+                    htmlFor="timeline"
+                    className="mb-2 block text-[12px] font-semibold uppercase tracking-wider text-ink-soft"
+                  >
+                    When are you looking to start?
+                  </label>
+                  <select
+                    id="timeline"
+                    name="timeline"
+                    value={form.timeline}
+                    onChange={handleChange}
+                    className={`${inputBase} appearance-none bg-cream`}
+                  >
+                    <option value="">Select a timeframe…</option>
+                    {TIMELINE_OPTIONS.map((t) => (
+                      <option key={t} value={t}>
+                        {t}
                       </option>
                     ))}
                   </select>

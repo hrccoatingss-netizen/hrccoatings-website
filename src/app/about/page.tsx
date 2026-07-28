@@ -250,8 +250,8 @@ export default function AboutPage() {
             <div className="lg:col-span-5 space-y-4 text-white/70 text-[15px]">
               <div>
                 <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-white/40 mb-1">Phone</p>
-                <a href="tel:+16193041289" className="text-2xl font-black text-white hover:text-orange transition">
-                  (619) 304-1289
+                <a href="tel:+16192893908" className="text-2xl font-black text-white hover:text-orange transition">
+                  (619) 289-3908
                 </a>
               </div>
               <div>
@@ -262,7 +262,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-white/40 mb-1">Address</p>
-                <p>3334 Clairemont Mesa Blvd Ste 101<br />San Diego, CA 92111</p>
+                <p>8334 Clairemont Mesa Blvd Ste 101<br />San Diego, CA 92111</p>
               </div>
               <div>
                 <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-white/40 mb-1">Hours</p>

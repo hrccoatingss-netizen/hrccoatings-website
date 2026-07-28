@@ -27,8 +27,8 @@ export default function PaintersHubPage() {
           <p className="mt-6 max-w-xl text-base sm:text-lg text-white/80 leading-relaxed">
             For over 20 years, HRCCoatings Inc has painted and coated homes from the coast to the inland valleys. Find your city below, or call us for a free estimate anywhere in the county.
           </p>
-          <a href="tel:+16193041289" className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-orange text-white px-7 py-4 text-[12px] font-extrabold uppercase tracking-wider transition-all hover:bg-red">
-            Call (619) 304-1289
+          <a href="tel:+16192893908" className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-orange text-white px-7 py-4 text-[12px] font-extrabold uppercase tracking-wider transition-all hover:bg-red">
+            Call (619) 289-3908
           </a>
         </div>
       </section>

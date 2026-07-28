@@ -47,7 +47,7 @@ export default function ExteriorPaintingElCajonPage() {
     provider: {
       "@type": "LocalBusiness",
       name: "HRCCoatings Inc",
-      telephone: "+16193041289",
+      telephone: "+16192893908",
       url: "https://hrccoatingsco.com",
       image: "https://hrccoatingsco.com/images/exterior/front-home.jpg",
       aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "19" },
@@ -108,8 +108,8 @@ export default function ExteriorPaintingElCajonPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-            <a href="tel:+16193041289" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-[14px] font-medium text-white transition-all hover:bg-white/5">
-              (619) 304-1289
+            <a href="tel:+16192893908" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-[14px] font-medium text-white transition-all hover:bg-white/5">
+              (619) 289-3908
             </a>
           </div>
         </div>

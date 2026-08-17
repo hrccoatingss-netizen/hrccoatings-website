@@ -33,7 +33,7 @@ export default function Header() {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
-  const HIDE_NAV_ROUTES = ["/thank-you"];
+  const HIDE_NAV_ROUTES = ["/thank-you", "/go"];
   if (HIDE_NAV_ROUTES.some((p) => pathname === p || pathname.startsWith(p + "/"))) {
     return null;
   }

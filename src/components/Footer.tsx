@@ -29,7 +29,7 @@ const serviceAreas = [
   { name: "All Areas", href: "/painters" },
 ];
 
-const HIDE_FOOTER_ROUTES = ["/thank-you"];
+const HIDE_FOOTER_ROUTES = ["/thank-you", "/go"];
 
 export default function Footer() {
   const pathname = usePathname();

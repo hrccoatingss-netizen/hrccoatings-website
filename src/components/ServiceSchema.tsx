@@ -53,7 +53,7 @@ export default function ServiceSchema({
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: "5.0",
-          reviewCount: "15",
+          reviewCount: "19",
         },
       },
       areaServed: [

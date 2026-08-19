@@ -72,13 +72,37 @@ const services = [
   },
 ];
 
-const reviews = [
+/**
+ * Reviews use segmented text so the words that describe the actual WORK get
+ * visual weight instead of the whole quote reading as flat body copy:
+ *   (no style) = setup/context, muted
+ *   "b"        = the specific scope of work performed, bold + dark
+ *   "a"        = the payoff line (referral, recommendation), brand accent
+ * `text` is kept intact for schema/AEO and as the plain-text fallback.
+ */
+type Seg = { t: string; s?: "b" | "a" };
+
+const reviews: {
+  name: string;
+  role: string;
+  stars: number;
+  time: string;
+  text: string;
+  seg: Seg[];
+  featured?: boolean;
+}[] = [
   {
     name: "Jessica Aliano",
     role: "Local Realtor, Carlsbad",
     stars: 5,
     time: "4 months ago",
     text: "I've hired Hector and Junior multiple times and they always deliver top notch results. Most recently, a full beach themed remodel in Carlsbad with two accent walls in navy and light blue stripes that turned out absolutely stunning. As a local realtor, I now refer them to all of my real estate clients.",
+    seg: [
+      { t: "I've hired Hector and Junior multiple times and they always deliver top notch results. Most recently, " },
+      { t: "a full beach themed remodel in Carlsbad with two accent walls in navy and light blue stripes", s: "b" },
+      { t: " that turned out absolutely stunning. " },
+      { t: "As a local realtor, I now refer them to all of my real estate clients.", s: "a" },
+    ],
     featured: true,
   },
   {
@@ -87,6 +111,12 @@ const reviews = [
     stars: 5,
     time: "1 month ago",
     text: "The HRC team did a great job refinishing our kitchen cabinets, epoxying the exterior floor, and completing a full exterior paint job. Professional work and quality results. Highly recommend!",
+    seg: [
+      { t: "The HRC team did a great job " },
+      { t: "refinishing our kitchen cabinets, epoxying the exterior floor, and completing a full exterior paint job", s: "b" },
+      { t: ". Professional work and quality results. " },
+      { t: "Highly recommend!", s: "a" },
+    ],
   },
   {
     name: "Chris Kerbow",
@@ -94,6 +124,12 @@ const reviews = [
     stars: 5,
     time: "6 weeks ago",
     text: "Top tier service. I trust JR with everything. Nothing less than excellence from these guys!",
+    seg: [
+      { t: "Top tier service. " },
+      { t: "I trust JR with everything", s: "b" },
+      { t: ". " },
+      { t: "Nothing less than excellence from these guys!", s: "a" },
+    ],
   },
   {
     name: "Gustavo Noriega",
@@ -101,6 +137,12 @@ const reviews = [
     stars: 5,
     time: "1 month ago",
     text: "Very reasonably priced and a hard working, get it done company. Will definitely hire them for every upcoming project. 10 out of 10 recommended.",
+    seg: [
+      { t: "Very reasonably priced and a " },
+      { t: "hard working, get it done company", s: "b" },
+      { t: ". Will definitely hire them for every upcoming project. " },
+      { t: "10 out of 10 recommended.", s: "a" },
+    ],
   },
   {
     name: "Sandra",
@@ -108,6 +150,11 @@ const reviews = [
     stars: 5,
     time: "2 months ago",
     text: "Our experience was exceptional. We are very satisfied with the outcome of our project. Hector and Jr. delivered outstanding results on our interior painting.",
+    seg: [
+      { t: "Our experience was exceptional. We are very satisfied with the outcome of our project. Hector and Jr. " },
+      { t: "delivered outstanding results on our interior painting", s: "b" },
+      { t: "." },
+    ],
   },
   {
     name: "Elio Espinosa",
@@ -115,6 +162,11 @@ const reviews = [
     stars: 5,
     time: "3 months ago",
     text: "They painted our home last year and they were professional, efficient, and did an excellent job!",
+    seg: [
+      { t: "They painted our home last year and they were " },
+      { t: "professional, efficient, and did an excellent job", s: "b" },
+      { t: "!" },
+    ],
   },
 ];
 
@@ -262,6 +314,34 @@ const process = [
 ];
 
 /* ──────────────────────── helpers ─────────────────────────── */
+
+/** Renders a segmented review quote: scope-of-work bold, payoff line in brand orange. */
+function ReviewText({ seg, size }: { seg: Seg[]; size: "featured" | "card" }) {
+  const base =
+    size === "featured"
+      ? "text-xl lg:text-2xl leading-snug tracking-[-0.01em]"
+      : "text-[15px] leading-relaxed";
+  return (
+    <p className={`${base} text-stone font-medium`}>
+      &ldquo;
+      {seg.map((s, i) => (
+        <span
+          key={i}
+          className={
+            s.s === "b"
+              ? "font-bold text-ink"
+              : s.s === "a"
+                ? "font-bold text-orange"
+                : undefined
+          }
+        >
+          {s.t}
+        </span>
+      ))}
+      &rdquo;
+    </p>
+  );
+}
 
 function Stars({ count }: { count: number }) {
   return (
@@ -689,9 +769,9 @@ export default function Home() {
                 <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
               </svg>
               <Stars count={reviews[0].stars} />
-              <p className="mt-6 font-bold text-2xl lg:text-3xl leading-tight text-ink tracking-[-0.01em]">
-                &ldquo;{reviews[0].text}&rdquo;
-              </p>
+              <div className="mt-6">
+                <ReviewText seg={reviews[0].seg} size="featured" />
+              </div>
               <div className="mt-8 flex items-center gap-4 pt-6 border-t border-ink/10">
                 <div className="h-12 w-12 rounded-full bg-navy text-white flex items-center justify-center font-black text-lg">
                   {reviews[0].name[0]}
@@ -699,6 +779,9 @@ export default function Home() {
                 <div>
                   <p className="font-bold text-ink">{reviews[0].name}</p>
                   <p className="text-[12px] text-stone font-medium">{reviews[0].role}</p>
+                  <p className="mt-0.5 text-[10px] uppercase tracking-[0.18em] text-stone/70 font-bold">
+                    Google Review
+                  </p>
                 </div>
               </div>
             </div>
@@ -709,9 +792,9 @@ export default function Home() {
                 className="lg:col-span-5 rounded-3xl bg-white border border-ink/5 p-7"
               >
                 <Stars count={review.stars} />
-                <p className="mt-4 text-[15px] text-ink-soft leading-relaxed font-medium">
-                  &ldquo;{review.text}&rdquo;
-                </p>
+                <div className="mt-4">
+                  <ReviewText seg={review.seg} size="card" />
+                </div>
                 <div className="mt-6 flex items-center gap-3 pt-5 border-t border-ink/10">
                   <div className="h-10 w-10 rounded-full bg-navy text-white flex items-center justify-center font-black text-sm">
                     {review.name[0]}
@@ -719,6 +802,9 @@ export default function Home() {
                   <div>
                     <p className="text-sm font-bold text-ink">{review.name}</p>
                     <p className="text-[11px] text-stone font-medium">{review.role}</p>
+                    <p className="mt-0.5 text-[9px] uppercase tracking-[0.18em] text-stone/70 font-bold">
+                      Google Review
+                    </p>
                   </div>
                 </div>
               </div>

@@ -71,6 +71,7 @@ export default function QuoteForm() {
       service: String(fd.get("service") || ""),
       timeline: String(fd.get("timeline") || ""),
       message: "Scanned the QR code on the van",
+      source: "Van QR",
     });
 
     setSending(false);

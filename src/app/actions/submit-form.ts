@@ -10,6 +10,7 @@ type FormData = {
   service: string;
   timeline: string;
   message: string;
+  source?: string;
 };
 
 export async function submitEstimateForm(data: FormData) {
@@ -20,7 +21,7 @@ export async function submitEstimateForm(data: FormData) {
       lastName: data.lastName,
       phone: data.phone,
       email: data.email,
-      source: "Website Form",
+      source: data.source || "Website Form",
       service: data.service,
       timeline: data.timeline,
     });

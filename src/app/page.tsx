@@ -757,7 +757,7 @@ export default function Home() {
                   <Stars count={5} />
                   <span className="text-2xl font-black text-ink">5.0</span>
                 </div>
-                <p className="text-[12px] text-stone uppercase tracking-wider font-bold">19 Google Reviews</p>
+                <p className="text-[12px] text-stone uppercase tracking-wider font-bold">20 Google Reviews</p>
               </div>
             </div>
           </div>
@@ -818,7 +818,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-navy text-white px-6 py-3 text-[12px] font-extrabold uppercase tracking-wider transition hover:bg-navy-deep"
             >
-              Read All 19 Reviews
+              Read All 20 Reviews
               <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>

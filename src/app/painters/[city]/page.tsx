@@ -87,7 +87,7 @@ export default async function CityPage({
       telephone: "+16192893908",
       url: "https://hrccoatingsco.com",
       image: "https://hrccoatingsco.com/images/exterior/front-home.jpg",
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "19" },
+      aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "20" },
     },
     areaServed: { "@type": "City", name: `${c.name}, CA` },
     url: `https://hrccoatingsco.com/painters/${c.slug}`,

@@ -96,7 +96,7 @@ export default function RootLayout({
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "5.0",
-                reviewCount: "19",
+                reviewCount: "20",
               },
               areaServed: [
                 "San Diego",

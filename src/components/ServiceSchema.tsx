@@ -22,7 +22,7 @@ export default function ServiceSchema({
   const canonicalUrl = `https://hrccoatingsco.com/services/${slug}`;
   const heroImage = image
     ? `https://hrccoatingsco.com${image}`
-    : "https://hrccoatingsco.com/images/hero-painting.jpg";
+    : "https://hrccoatingsco.com/images/og-cover.jpg";
 
   const schemas: object[] = [
     {

@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     siteName: "HRCCoatings Inc",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/images/hero-painting.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/og-cover.jpg", width: 1200, height: 630, alt: "HRCCoatings Inc - San Diego painting and cabinet refinishing" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "HRCCoatings Inc - San Diego's Trusted Painting Experts",
     description:
       "Professional painting, epoxy flooring, and coating services in San Diego County.",
-    images: ["/images/hero-painting.jpg"],
+    images: ["/images/og-cover.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://hrccoatingsco.com" },
@@ -66,7 +66,7 @@ export default function RootLayout({
               url: "https://hrccoatingsco.com",
               telephone: "+16192893908",
               email: "hrccoatingss@gmail.com",
-              image: "https://hrccoatingsco.com/images/hero-painting.jpg",
+              image: "https://hrccoatingsco.com/images/og-cover.jpg",
               logo: "https://hrccoatingsco.com/images/hrc-logo.png",
               priceRange: "$$",
               hasCredential: {

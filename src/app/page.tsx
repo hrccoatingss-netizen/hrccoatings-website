@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import FAQAccordion from "@/components/FAQAccordion";
+import { CITIES } from "@/lib/cities";
 
 /* ───────────────────────────── data ───────────────────────────── */
 
@@ -286,10 +287,9 @@ const blogPosts = [
   },
 ];
 
-const serviceAreas = [
-  "Clairemont", "Carlsbad", "La Jolla", "Chula Vista",
-  "Pacific Beach", "Mission Valley", "Point Loma", "North Park",
-  "Hillcrest", "Del Mar", "Encinitas", "Oceanside",
+const serviceNeighborhoods = [
+  "Clairemont", "Pacific Beach", "Mission Valley", "Point Loma",
+  "North Park", "Hillcrest", "Del Mar", "Kearny Mesa",
 ];
 
 const process = [
@@ -396,7 +396,7 @@ export default function Home() {
       />
 
       {/* ────────── HERO ────────── */}
-      <section className="relative overflow-hidden min-h-screen flex items-center bg-ink">
+      <section className="relative overflow-hidden min-h-[88svh] sm:min-h-screen flex items-center bg-ink">
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
@@ -411,34 +411,34 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-[1400px] w-full px-5 lg:px-10 pt-32 pb-20 lg:pt-36 lg:pb-24">
+        <div className="relative z-10 mx-auto max-w-[1400px] w-full px-5 lg:px-10 pt-24 pb-10 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24">
           <div className="max-w-4xl">
             {/* Trust pill */}
-            <div className="inline-flex items-center gap-3 rounded-full bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2 mb-8">
+            <div className="inline-flex items-center gap-3 rounded-full bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-1.5 mb-5 sm:px-4 sm:py-2 sm:mb-8">
               <Stars count={5} />
-              <span className="text-[12px] font-semibold text-white">
+              <span className="text-[11px] sm:text-[12px] font-semibold text-white">
                 5.0 on Google · Licensed, Bonded &amp; Insured · CSLB #1158346
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-white font-black tracking-[-0.045em] leading-[0.92] text-6xl sm:text-7xl lg:text-8xl xl:text-[136px]">
+            <h1 className="text-white font-black tracking-[-0.045em] leading-[0.92] text-[44px] sm:text-7xl lg:text-8xl xl:text-[136px]">
               SAN DIEGO&apos;S<br />
               <span className="text-orange">MOST TRUSTED</span><br />
               PAINTERS.
             </h1>
 
-            <p className="mt-8 max-w-xl text-base sm:text-lg text-white/80 leading-relaxed font-medium">
+            <p className="mt-5 sm:mt-8 max-w-xl text-[15px] sm:text-lg text-white/80 leading-relaxed font-medium">
               Father and son. 20 plus years of experience. Premium paints, clean
               job sites, and finishes that last. From single accent walls to full
               commercial buildouts.
             </p>
 
             {/* CTAs */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row gap-2.5 sm:gap-3">
               <Link
                 href="#contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-orange text-white px-8 py-4 text-[14px] font-extrabold tracking-wide uppercase transition-all hover:bg-red active:scale-[0.98]"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-orange text-white px-8 py-3.5 sm:py-4 text-[14px] font-extrabold tracking-wide uppercase transition-all hover:bg-red active:scale-[0.98]"
               >
                 Get Free Estimate
                 <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -447,7 +447,7 @@ export default function Home() {
               </Link>
               <a
                 href="tel:+16192893908"
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 bg-white/5 backdrop-blur-md px-8 py-4 text-[14px] font-bold text-white transition-all hover:bg-white hover:text-ink"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 bg-white/5 backdrop-blur-md px-8 py-3.5 sm:py-4 text-[14px] font-bold text-white transition-all hover:bg-white hover:text-ink"
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -457,7 +457,7 @@ export default function Home() {
             </div>
 
             {/* $500 off pill */}
-            <div className="mt-8 inline-flex items-center gap-3 text-[13px] text-white/70 font-medium">
+            <div className="mt-5 sm:mt-8 inline-flex items-center gap-3 text-[13px] text-white/70 font-medium">
               <span className="rounded-full bg-orange px-3 py-1 text-white font-extrabold uppercase tracking-wider text-[11px]">
                 $500 off
               </span>
@@ -465,14 +465,14 @@ export default function Home() {
             </div>
 
             {/* Stats inline */}
-            <div className="mt-16 grid grid-cols-3 gap-6 sm:gap-12 max-w-2xl pt-8 border-t border-white/15">
+            <div className="mt-8 sm:mt-16 grid grid-cols-3 gap-6 sm:gap-12 max-w-2xl pt-5 sm:pt-8 border-t border-white/15">
               {[
                 { num: "600+", label: "Projects Done" },
                 { num: "20+", label: "Years Working" },
                 { num: "5.0★", label: "Google Rating" },
               ].map((s) => (
                 <div key={s.label}>
-                  <p className="editorial-num text-4xl sm:text-5xl lg:text-6xl font-black text-white">
+                  <p className="editorial-num text-3xl sm:text-5xl lg:text-6xl font-black text-white">
                     {s.num}
                   </p>
                   <p className="mt-1 text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/50 font-bold">
@@ -852,14 +852,38 @@ export default function Home() {
           </p>
 
           <div className="mt-12 flex flex-wrap items-center justify-center gap-2.5">
-            {serviceAreas.map((area) => (
-              <span
-                key={area}
-                className="rounded-full border-2 border-ink/10 bg-white px-5 py-2.5 text-[13px] font-bold text-ink-soft transition hover:border-navy hover:bg-navy hover:text-white cursor-default"
+            {CITIES.map((city) => (
+              <Link
+                key={city.slug}
+                href={`/painters/${city.slug}`}
+                className="rounded-full border-2 border-ink/10 bg-white px-5 py-2.5 text-[13px] font-bold text-ink-soft transition hover:border-navy hover:bg-navy hover:text-white"
               >
-                {area}
-              </span>
+                {city.name}
+              </Link>
             ))}
+            <Link
+              href="/painters"
+              className="rounded-full border-2 border-navy bg-navy px-5 py-2.5 text-[13px] font-bold text-white transition hover:bg-navy-deep"
+            >
+              All service areas
+            </Link>
+          </div>
+
+          <p className="mx-auto mt-6 max-w-2xl text-[13px] text-stone/80 font-medium">
+            Also serving {serviceNeighborhoods.join(", ")} and the rest of the
+            city of San Diego.
+          </p>
+
+          {/* Google Business Profile map embed */}
+          <div className="mt-14 overflow-hidden rounded-3xl border-2 border-ink/10 bg-white shadow-sm">
+            <iframe
+              title="HRCCoatings Inc on Google Maps, San Diego painting contractor"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429156.3510674016!2d-117.10775999999998!3d32.824487899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x63bf968a360dd159%3A0x52ca8f4f3a8688b1!2sHRCCoatings%20Inc!5e0!3m2!1sen!2sus!4v1789795284642!5m2!1sen!2sus"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              className="block h-[320px] w-full border-0 sm:h-[420px]"
+            />
           </div>
         </div>
       </section>

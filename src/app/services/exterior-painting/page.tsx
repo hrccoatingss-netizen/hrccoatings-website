@@ -13,7 +13,7 @@ export default function ExteriorPaintingPage() {
       slug="exterior-painting"
       heroTitle="Exterior Painting"
       heroSubtitle="Enhance Curb Appeal with Professional Exterior Painting"
-      heroImage="/images/exterior/front-home.jpg"
+      heroImage="/images/commercial/building-angle.jpg"
       overview={`Your home's exterior is its first impression and its primary defense against San Diego's sun, coastal air, and weather. Professional exterior painting not only enhances curb appeal but protects your investment for years to come.
 
 At HRCCoatings Inc, we specialize in comprehensive exterior painting services for all surface types including wood siding, stucco, trim, doors, shutters, and more. We use weather-resistant, premium exterior coatings designed to withstand Southern California's unique climate.
@@ -65,11 +65,12 @@ Our process begins with thorough surface preparation—the key to long-lasting r
       gallerySections={[
         {
           images: [
-            { src: "/images/exterior/front-home.jpg", alt: "Exterior home painting - front" },
-            { src: "/images/exterior/backyard-side.jpg", alt: "Exterior painting - backyard side" },
-            { src: "/images/exterior/backyard-full.jpg", alt: "Exterior painting - backyard full view" },
-            { src: "/images/exterior/modern-backyard.jpg", alt: "Modern home exterior - backyard" },
-            { src: "/images/exterior/modern-front.jpg", alt: "Modern home exterior - front" },
+            { src: "/images/commercial/building-front.jpg", alt: "Commercial building exterior repaint in San Diego" },
+            { src: "/images/commercial/building-prep.jpg", alt: "Exterior prep and masking before painting" },
+            { src: "/images/commercial/building-progress.jpg", alt: "Exterior repaint in progress" },
+            { src: "/images/commercial/building-side.jpg", alt: "Finished exterior repaint, side elevation" },
+            { src: "/images/commercial/roof-coating.jpg", alt: "Parapet and roof coating from a boom lift" },
+            { src: "/images/commercial/before-after/bollards-after-1.jpg", alt: "Safety bollards repainted" },
           ],
         },
       ]}

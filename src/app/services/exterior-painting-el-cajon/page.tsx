@@ -49,7 +49,7 @@ export default function ExteriorPaintingElCajonPage() {
       name: "HRCCoatings Inc",
       telephone: "+16192893908",
       url: "https://hrccoatingsco.com",
-      image: "https://hrccoatingsco.com/images/exterior/front-home.jpg",
+      image: "https://hrccoatingsco.com/images/og-cover.jpg",
       aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "20" },
     },
     areaServed: { "@type": "City", name: "El Cajon, CA" },
@@ -75,7 +75,7 @@ export default function ExteriorPaintingElCajonPage() {
       <section className="relative overflow-hidden min-h-[70vh] flex items-end bg-ink">
         <div className="absolute inset-0">
           <Image
-            src="/images/exterior/front-home.jpg"
+            src="/images/commercial/building-side.jpg"
             alt="Exterior house painting in El Cajon, CA"
             fill
             priority

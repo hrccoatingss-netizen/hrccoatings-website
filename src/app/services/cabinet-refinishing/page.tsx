@@ -14,7 +14,7 @@ export default function CabinetRefinishingPage() {
       slug="cabinet-refinishing"
       heroTitle="Cabinet Refinishing"
       heroSubtitle="Brand-new kitchens and bathrooms without the cost of replacement. Custom colors, factory-quality spray finishes, and lasting durability."
-      heroImage="/images/cabinet-services.jpg"
+      heroImage="/images/projects/kitchen-white-cabinets.jpg"
       overview={`Replacing kitchen or bathroom cabinets is one of the most expensive renovations a homeowner can take on, and most of the time it isn't necessary. If your cabinet boxes are still solid, refinishing gives you a brand-new look at a fraction of the cost.
 
 At HRCCoatings Inc, we specialize in professional cabinet refinishing that holds up to daily use. We remove every door and drawer, deep clean every surface to get rid of years of grease, lightly sand for adhesion, prime with a high-bond bonding primer, then spray multiple coats of premium cabinet paint or stain for that smooth, factory-quality finish you can't get with a brush.
@@ -101,17 +101,64 @@ The result is a kitchen or bathroom that looks completely renovated without tear
             "Beyond paint — we offer professional stain refinishing for cabinets, vanities, and built-ins.",
         },
       ]}
+      videos={[
+        {
+          src: "/videos/cabinet-before-after-reveal.mp4",
+          poster: "/videos/cabinet-before-after-reveal-poster.jpg",
+          title: "Dark espresso to white",
+          caption: "Before and after from a recent San Diego cabinet refinish: kitchen, bathroom vanity, laundry and a bedroom built-in.",
+        },
+        {
+          src: "/videos/cabinet-process-spraying-dark-door-to-white.mp4",
+          poster: "/videos/cabinet-process-spraying-dark-door-to-white-poster.jpg",
+          title: "Sprayed, not brushed",
+          caption: "Every door comes off and gets sprayed on a rack in a sealed tent. That is where the smooth factory finish comes from.",
+        },
+        {
+          src: "/videos/cabinet-prep-zipwall-containment.mp4",
+          poster: "/videos/cabinet-prep-zipwall-containment-poster.jpg",
+          title: "Sealed off first",
+          caption: "Zip walls and plastic go up before any sanding or spraying, so dust and overspray stay out of the rest of the house.",
+        },
+      ]}
       gallerySections={[
         {
           images: [
-            { src: "/images/cabinet/refinished-white-kitchen.jpg", alt: "Bright white refinished kitchen cabinets" },
-            { src: "/images/cabinet/refinished-shaker.jpg", alt: "White shaker cabinets after professional refinishing" },
-            { src: "/images/cabinet/refinished-cherry.jpg", alt: "Cherry stained cabinets refinished" },
-            { src: "/images/cabinet/refinished-modern.jpg", alt: "Modern two-tone cabinets refinished" },
+            { src: "/images/projects/kitchen-white-uppers.jpg", alt: "Kitchen uppers refinished from dark espresso to white" },
+            { src: "/images/projects/bathroom-vanity-blue-gray.jpg", alt: "Bathroom vanity refinished in blue gray" },
+            { src: "/images/projects/laundry-cabinets-blue-gray.jpg", alt: "Laundry room cabinets refinished in blue gray" },
+            { src: "/images/projects/bedroom-cabinet-refinished.jpg", alt: "Bedroom built-in refinished to match the home" },
+            { src: "/images/projects/spraying-cabinet-door.jpg", alt: "HRCCoatings crew spraying a cabinet door in a sealed spray tent" },
+            { src: "/images/projects/cabinet-doors-drying-rack.jpg", alt: "Freshly sprayed cabinet doors drying on the rack" },
           ],
         },
       ]}
       beforeAfter={[
+        {
+          label: "Bathroom Vanity",
+          before: "/images/projects/bathroom-vanity-before.jpg",
+          after: "/images/projects/bathroom-vanity-after.jpg",
+        },
+        {
+          label: "Laundry Room Cabinets",
+          before: "/images/projects/laundry-cabinets-before.jpg",
+          after: "/images/projects/laundry-cabinets-after.jpg",
+        },
+        {
+          label: "Bedroom Built-In",
+          before: "/images/projects/bedroom-cabinet-before.jpg",
+          after: "/images/projects/bedroom-cabinet-after.jpg",
+        },
+        {
+          label: "Kitchen Lower Cabinets",
+          before: "/images/projects/kitchen-cabinets-before.jpg",
+          after: "/images/projects/kitchen-cabinets-after.jpg",
+        },
+        {
+          label: "Cabinet Door, Sprayed on the Rack",
+          before: "/images/projects/cabinet-door-before.jpg",
+          after: "/images/projects/cabinet-door-after.jpg",
+        },
         {
           label: "Built-In Cabinet Refinish",
           before: "/images/interior/before-after/cabinets-before.jpg",
@@ -159,7 +206,7 @@ The result is a kitchen or bathroom that looks completely renovated without tear
         {
           title: "Interior Painting",
           href: "/services/interior-painting",
-          image: "/images/interior/kitchen-2.jpg",
+          image: "/images/interior/before-after/fireplace-after.jpg",
         },
         {
           title: "Drywall Repair",
@@ -169,7 +216,7 @@ The result is a kitchen or bathroom that looks completely renovated without tear
         {
           title: "Wallpaper",
           href: "/services/wallpaper",
-          image: "/images/interior/bedroom-2.jpg",
+          image: "/images/interior/before-after/railing-after.jpg",
         },
       ]}
     />

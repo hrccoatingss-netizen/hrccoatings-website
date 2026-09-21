@@ -13,7 +13,7 @@ export default function WallpaperPage() {
       slug="wallpaper"
       heroTitle="Wallpaper Installation"
       heroSubtitle="Transform Your Space with Professional Wallpaper"
-      heroImage="/images/interior/living-room-1.jpg"
+      heroImage="/images/interior/before-after/fireplace-after.jpg"
       overview={`Add personality, texture, and style to any room with professional wallpaper installation. From modern geometric patterns to classic designs, wallpaper offers endless possibilities to transform your space.
 
 Our experienced team handles every aspect of wallpaper installation – from wall preparation and pattern matching to precise application and finishing. We work with all types of wallpaper to deliver flawless results that last.`}

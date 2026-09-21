@@ -7,7 +7,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import ContactForm from "@/components/ContactForm";
 
 const SERVICES = [
-  { name: "Interior Painting", href: "/services/interior-painting", image: "/images/interior/kitchen-2.jpg" },
+  { name: "Interior Painting", href: "/services/interior-painting", image: "/images/projects/kitchen-white-uppers.jpg" },
   { name: "Exterior Painting", href: "/services/exterior-painting", image: "/images/exterior/exterior-services.jpg" },
   { name: "Cabinet Refinishing", href: "/services/cabinet-refinishing", image: "/images/cabinet-services.jpg" },
   { name: "Epoxy Flooring", href: "/services/epoxy-flooring", image: "/images/epoxy/epoxy-services.jpg" },
@@ -86,7 +86,7 @@ export default async function CityPage({
       name: "HRCCoatings Inc",
       telephone: "+16192893908",
       url: "https://hrccoatingsco.com",
-      image: "https://hrccoatingsco.com/images/exterior/front-home.jpg",
+      image: "https://hrccoatingsco.com/images/og-cover.jpg",
       aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "20" },
     },
     areaServed: { "@type": "City", name: `${c.name}, CA` },

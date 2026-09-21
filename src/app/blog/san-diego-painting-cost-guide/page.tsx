@@ -60,7 +60,7 @@ export default function SanDiegoPaintingCostGuidePage() {
         slug="san-diego-painting-cost-guide"
         title="How Much Does It Cost to Paint a House in San Diego? (2026 Guide)"
         description="Real 2026 price ranges for painting a house in San Diego: interior, exterior, cabinets, and epoxy floors. What drives cost up or down, and how to avoid lowball bids."
-        image="/images/exterior/front-home.jpg"
+        image="/images/commercial/building-front.jpg"
         datePublished="2026-07-22"
         category="Pricing"
       />
@@ -85,8 +85,8 @@ export default function SanDiegoPaintingCostGuidePage() {
         date="Jul 22, 2026"
         dateISO="2026-07-22"
         readTime="8 min read"
-        heroImage="/images/exterior/front-home.jpg"
-        heroImageAlt="Freshly painted San Diego home exterior by HRCCoatings Inc"
+        heroImage="/images/commercial/building-angle.jpg"
+        heroImageAlt="Commercial building exterior repainted by HRCCoatings Inc in San Diego"
         intro="Straight answers from a licensed San Diego painting contractor. These are the real 2026 price ranges we see across San Diego County, what actually drives your quote up or down, and the red flags hiding inside suspiciously cheap bids."
         relatedPosts={relatedPosts}
       >

@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogs = [
+    "dark-cabinets-to-white-san-diego-refinish",
     "san-diego-painting-cost-guide",
     "paint-color-guide",
     "signs-home-needs-repainting",

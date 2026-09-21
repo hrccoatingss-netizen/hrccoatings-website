@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
 import ContactForm from "@/components/ContactForm";
+import ProjectVideo from "@/components/ProjectVideo";
 
 /* ------------------------------------------------------------------ */
 /*  Type definitions                                                   */
@@ -25,6 +26,13 @@ interface GalleryImage {
 interface GallerySection {
   label?: string;
   images: GalleryImage[];
+}
+
+interface ServiceVideo {
+  src: string;
+  poster: string;
+  title: string;
+  caption: string;
 }
 
 interface BeforeAfterPair {
@@ -68,6 +76,9 @@ export interface ServicePageProps {
   /* Benefits */
   benefits: Benefit[];
 
+  /* Real job-site clips (optional) */
+  videos?: ServiceVideo[];
+
   /* Gallery (standard image grid) */
   gallerySections?: GallerySection[];
 
@@ -96,6 +107,7 @@ export default function ServicePageLayout({
   overview,
   processSteps,
   benefits,
+  videos,
   gallerySections,
   beforeAfter,
   featuresGrid,
@@ -453,6 +465,39 @@ export default function ServicePageLayout({
                     {feature.description}
                   </p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─────────────────── 5a. VIDEO ─────────────────── */}
+      {videos && videos.length > 0 && (
+        <section className="bg-ink text-white py-24 lg:py-32 px-5 lg:px-10">
+          <div className="mx-auto max-w-[1400px]">
+            <div className="mb-14 max-w-3xl">
+              <div className="inline-flex items-center gap-2.5 mb-6">
+                <span className="h-px w-8 bg-white/30" />
+                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/60">
+                  Real job, real footage
+                </span>
+              </div>
+              <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl uppercase">
+                Watch the<br />
+                <span className="text-orange">work happen.</span>
+              </h2>
+            </div>
+            <div className={`grid gap-6 ${videos.length > 1 ? "sm:grid-cols-2 lg:grid-cols-3" : "max-w-md"}`}>
+              {videos.map((v) => (
+                <figure key={v.src}>
+                  <div className="relative aspect-[9/16] overflow-hidden rounded-3xl bg-white/5">
+                    <ProjectVideo src={v.src} poster={v.poster} title={v.title} />
+                  </div>
+                  <figcaption className="mt-4">
+                    <p className="text-[14px] font-extrabold uppercase tracking-wide">{v.title}</p>
+                    <p className="mt-1 text-[14px] text-white/65 leading-relaxed">{v.caption}</p>
+                  </figcaption>
+                </figure>
               ))}
             </div>
           </div>

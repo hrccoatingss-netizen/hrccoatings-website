@@ -104,10 +104,10 @@ We also offer the full range of specialty painting work: accent walls with custo
       gallerySections={[
         {
           images: [
-            { src: "/images/interior/living-room-1.jpg", alt: "Living room with smooth ceiling after popcorn removal" },
-            { src: "/images/interior/bedroom-2.jpg", alt: "Bedroom with smooth ceiling after popcorn removal" },
-            { src: "/images/interior/entryway-1.jpg", alt: "Entryway with smooth refinished ceiling" },
-            { src: "/images/interior/kitchen-1.jpg", alt: "Kitchen with smooth refinished ceiling" },
+            { src: "/images/projects/prep-zipwall-containment.jpg", alt: "Zip wall containment before dusty work like ceiling scraping" },
+            { src: "/images/projects/prep-masked-primed-uppers.jpg", alt: "Full masking and floor protection before work begins" },
+            { src: "/images/interior/before-after/fireplace-after.jpg", alt: "Fireplace surround refinished in a custom dark finish" },
+            { src: "/images/interior/before-after/railing-after.jpg", alt: "Stair railing and spindles refinished" },
           ],
         },
       ]}
@@ -152,7 +152,7 @@ We also offer the full range of specialty painting work: accent walls with custo
         {
           title: "Interior Painting",
           href: "/services/interior-painting",
-          image: "/images/interior/kitchen-2.jpg",
+          image: "/images/projects/kitchen-white-uppers.jpg",
         },
         {
           title: "Drywall Repair",
@@ -162,7 +162,7 @@ We also offer the full range of specialty painting work: accent walls with custo
         {
           title: "Wallpaper",
           href: "/services/wallpaper",
-          image: "/images/interior/bedroom-2.jpg",
+          image: "/images/interior/before-after/fireplace-after.jpg",
         },
       ]}
     />

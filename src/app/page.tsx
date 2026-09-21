@@ -3,6 +3,7 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import FAQAccordion from "@/components/FAQAccordion";
 import { CITIES } from "@/lib/cities";
+import ProjectVideo from "@/components/ProjectVideo";
 
 /* ───────────────────────────── data ───────────────────────────── */
 
@@ -251,7 +252,16 @@ const faqItems = [
 
 const blogPosts = [
   {
-    image: "/images/exterior/front-home.jpg",
+    image: "/images/projects/kitchen-white-cabinets.jpg",
+    title: "Dark Espresso Cabinets to White, Start to Finish",
+    date: "Sep 21, 2026",
+    category: "Project Spotlight",
+    excerpt:
+      "A real San Diego cabinet refinish, with photos and video of every step.",
+    href: "/blog/dark-cabinets-to-white-san-diego-refinish",
+  },
+  {
+    image: "/images/commercial/building-front.jpg",
     title: "What It Costs to Paint a House in San Diego",
     date: "Jul 22, 2026",
     category: "Pricing",
@@ -622,6 +632,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ────────── SEE IT HAPPEN (real job footage) ────────── */}
+      <section className="bg-ink text-white py-24 lg:py-32 px-5 lg:px-10">
+        <div className="mx-auto max-w-[1200px] grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6">
+            <div className="inline-flex items-center gap-2.5 mb-6">
+              <span className="h-px w-8 bg-white/30" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/60">
+                Real job, real footage
+              </span>
+            </div>
+            <h2 className="font-black tracking-[-0.04em] leading-[0.95] text-5xl sm:text-6xl lg:text-7xl uppercase">
+              Dark to bright.<br />
+              <span className="text-orange">No replacement.</span>
+            </h2>
+            <p className="mt-6 max-w-lg text-base sm:text-lg text-white/75 leading-relaxed font-medium">
+              A recent San Diego cabinet refinish: kitchen, bathroom vanity,
+              laundry room and a bedroom built-in. Every door came off, got
+              sprayed on a rack in a sealed tent, and went back up looking brand
+              new. No stock photos. This is our crew on a real job.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <Link
+                href="/blog/dark-cabinets-to-white-san-diego-refinish"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-orange text-white px-7 py-3.5 text-[13px] font-extrabold tracking-wide uppercase transition-all hover:bg-red"
+              >
+                See the full project
+              </Link>
+              <Link
+                href="/services/cabinet-refinishing"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 px-7 py-3.5 text-[13px] font-bold text-white transition-all hover:bg-white hover:text-ink"
+              >
+                Cabinet refinishing
+              </Link>
+            </div>
+          </div>
+          <div className="lg:col-span-6 flex justify-center lg:justify-end">
+            <div className="relative aspect-[9/16] w-full max-w-[340px] overflow-hidden rounded-3xl bg-white/5 shadow-2xl">
+              <ProjectVideo
+                src="/videos/cabinet-before-after-reveal.mp4"
+                poster="/videos/cabinet-before-after-reveal-poster.jpg"
+                title="Cabinet refinish before and after, San Diego"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ────────── PROCESS ────────── */}
       <section className="bg-navy-deep text-white py-24 lg:py-32 px-5 lg:px-10">
         <div className="relative mx-auto max-w-[1400px]">
@@ -927,7 +984,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {blogPosts.map((post) => (
+            {blogPosts.slice(0, 3).map((post) => (
               <Link
                 key={post.href}
                 href={post.href}

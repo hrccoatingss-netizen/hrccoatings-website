@@ -152,7 +152,7 @@ Every project includes proper drying time between coats of joint compound, multi
         {
           title: "Interior Painting",
           href: "/services/interior-painting",
-          image: "/images/interior/kitchen-2.jpg",
+          image: "/images/projects/kitchen-white-uppers.jpg",
         },
         {
           title: "Stucco Repair",

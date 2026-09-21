@@ -13,7 +13,7 @@ export default function InteriorPaintingPage() {
       slug="interior-painting"
       heroTitle="Interior Painting"
       heroSubtitle="Transform Your Home with Expert Interior Painting"
-      heroImage="/images/interior/kitchen-2.jpg"
+      heroImage="/images/projects/kitchen-white-uppers.jpg"
       overview={`Your home's interior is your personal sanctuary, and the colors you choose set the tone for every room. At HRCCoatings Inc, we specialize in professional interior painting that brings your vision to life with flawless results.
 
 Whether you're refreshing a single room or repainting your entire home, our experienced team works meticulously to deliver smooth, even coverage and crisp, clean lines. We use premium paints from Benjamin Moore, Sherwin Williams, and Dunn-Edwards to ensure lasting beauty and durability.
@@ -63,16 +63,24 @@ From color consultations to final walkthroughs, we handle every detail with care
             "We protect your furniture, maintain a clean workspace, and complete projects on schedule",
         },
       ]}
+      videos={[
+        {
+          src: "/videos/cabinet-prep-zipwall-containment.mp4",
+          poster: "/videos/cabinet-prep-zipwall-containment-poster.jpg",
+          title: "We seal off the work area",
+          caption: "Zip walls, plastic and floor protection go up before any sanding or spraying, so dust stays out of the rest of your home.",
+        },
+      ]}
       gallerySections={[
         {
           images: [
-            { src: "/images/interior/living-room-1.jpg", alt: "Interior living room painting" },
-            { src: "/images/interior/kitchen-1.jpg", alt: "Kitchen painting project" },
-            { src: "/images/interior/kitchen-2.jpg", alt: "Modern kitchen repaint" },
-            { src: "/images/interior/bedroom-1.jpg", alt: "Bedroom painting" },
-            { src: "/images/interior/bedroom-2.jpg", alt: "Bedroom accent wall" },
-            { src: "/images/interior/bathroom-1.jpg", alt: "Bathroom painting" },
-            { src: "/images/interior/entryway-1.jpg", alt: "Entryway painting" },
+            { src: "/images/interior/before-after/fireplace-after.jpg", alt: "Fireplace surround repainted in a modern dark finish" },
+            { src: "/images/interior/before-after/railing-after.jpg", alt: "Stair railing refinished with a dark handrail and white spindles" },
+            { src: "/images/projects/kitchen-white-uppers.jpg", alt: "Kitchen refinished from dark espresso to white" },
+            { src: "/images/projects/bathroom-vanity-blue-gray.jpg", alt: "Bathroom vanity refinished in blue gray" },
+            { src: "/images/interior/before-after/cabinets-after.jpg", alt: "Built-in cabinets refinished in white" },
+            { src: "/images/projects/prep-masked-primed-uppers.jpg", alt: "Kitchen fully masked and primed before finish coats" },
+            { src: "/images/projects/prep-zipwall-containment.jpg", alt: "Zip wall containment keeping dust out of the rest of the home" },
           ],
         },
       ]}

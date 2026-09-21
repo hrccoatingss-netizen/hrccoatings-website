@@ -112,7 +112,7 @@ export default function AboutPage() {
                 Today, Hector runs the company alongside his son, <strong className="text-ink">Junior Rivera</strong>, who serves as Co-Owner and Operations Manager. Together, this father-son team personally manages every project from estimate to final walkthrough.
               </p>
               <p>
-                As a faith-based, family-run business, HRCCoatings Inc operates on principles of honesty, quality craftsmanship, and treating every customer&apos;s home or business with the same care they&apos;d give their own. No subcontractors, no middlemen — the people you meet on the estimate are the same people doing the work.
+                As a faith-based, family-run business, HRCCoatings Inc operates on principles of honesty, quality craftsmanship, and treating every customer&apos;s home or business with the same care they&apos;d give their own. No middlemen and no handing your job off to another company. Hector and Junior stay on your project from the estimate to the final walkthrough.
               </p>
             </div>
           </div>

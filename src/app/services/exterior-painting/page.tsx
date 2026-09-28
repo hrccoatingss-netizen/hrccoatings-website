@@ -13,7 +13,7 @@ export default function ExteriorPaintingPage() {
       slug="exterior-painting"
       heroTitle="Exterior Painting"
       heroSubtitle="Enhance Curb Appeal with Professional Exterior Painting"
-      heroImage="/images/commercial/building-angle.jpg"
+      heroImage="/images/projects/spring-valley/sv-exterior-front-wide.jpg"
       overview={`Your home's exterior is its first impression and its primary defense against San Diego's sun, coastal air, and weather. Professional exterior painting not only enhances curb appeal but protects your investment for years to come.
 
 At HRCCoatings Inc, we specialize in comprehensive exterior painting services for all surface types including wood siding, stucco, trim, doors, shutters, and more. We use weather-resistant, premium exterior coatings designed to withstand Southern California's unique climate.
@@ -62,9 +62,23 @@ Our process begins with thorough surface preparation—the key to long-lasting r
             "Expert stucco repair and painting included in every project",
         },
       ]}
+      videos={[
+        {
+          src: "/videos/exterior-finished-house.mp4",
+          poster: "/videos/exterior-finished-house-poster.jpg",
+          title: "Finished exterior, Spring Valley",
+          caption: "Cream stucco, black garage doors and fresh trim on a recent full exterior repaint.",
+        },
+      ]}
       gallerySections={[
         {
           images: [
+            { src: "/images/projects/spring-valley/sv-exterior-front-garage-doors.jpg", alt: "Finished exterior repaint in Spring Valley with black garage doors" },
+            { src: "/images/projects/spring-valley/sv-exterior-entry-doors.jpg", alt: "Repainted entry door and stucco" },
+            { src: "/images/projects/spring-valley/sv-exterior-rear-elevation.jpg", alt: "Rear elevation after exterior painting" },
+            { src: "/images/projects/spring-valley/sv-exterior-deck-wide.jpg", alt: "Refinished deck and railing with a hillside view" },
+            { src: "/images/projects/spring-valley/sv-exterior-deck-boards.jpg", alt: "Deck boards refinished in gray" },
+            { src: "/images/projects/spring-valley/sv-hrc-van-house.jpg", alt: "HRCCoatings van parked at a Spring Valley job site" },
             { src: "/images/commercial/building-front.jpg", alt: "Commercial building exterior repaint in San Diego" },
             { src: "/images/commercial/building-prep.jpg", alt: "Exterior prep and masking before painting" },
             { src: "/images/commercial/building-progress.jpg", alt: "Exterior repaint in progress" },

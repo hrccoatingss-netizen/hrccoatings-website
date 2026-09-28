@@ -65,6 +65,12 @@ From color consultations to final walkthroughs, we handle every detail with care
       ]}
       videos={[
         {
+          src: "/videos/interior-rolling-walls.mp4",
+          poster: "/videos/interior-rolling-walls-poster.jpg",
+          title: "Rolling walls in Spring Valley",
+          caption: "Our crew rolling walls on a recent interior repaint, with the floors covered and everything masked first.",
+        },
+        {
           src: "/videos/cabinet-prep-zipwall-containment.mp4",
           poster: "/videos/cabinet-prep-zipwall-containment-poster.jpg",
           title: "We seal off the work area",
@@ -74,6 +80,8 @@ From color consultations to final walkthroughs, we handle every detail with care
       gallerySections={[
         {
           images: [
+            { src: "/images/projects/spring-valley/sv-interior-rolling-wall2.jpg", alt: "HRCCoatings crew rolling an interior wall in Spring Valley" },
+            { src: "/images/projects/spring-valley/sv-interior-cutting-in.jpg", alt: "Cutting in edges by hand on an interior repaint" },
             { src: "/images/interior/before-after/fireplace-after.jpg", alt: "Fireplace surround repainted in a modern dark finish" },
             { src: "/images/interior/before-after/railing-after.jpg", alt: "Stair railing refinished with a dark handrail and white spindles" },
             { src: "/images/projects/kitchen-white-uppers.jpg", alt: "Kitchen refinished from dark espresso to white" },

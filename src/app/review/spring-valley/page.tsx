@@ -260,6 +260,103 @@ function ClipCard({ c }: { c: Clip }) {
   );
 }
 
+const tiktokQueue: { day: number; file: string; hook: string; caption: string }[] = [
+  {
+    day: 1,
+    file: "MONTAGE-epoxy-transformation.mp4",
+    hook: "Bare concrete to this in one day",
+    caption:
+      "bare slab to a flake floor in one day. garage in spring valley ca #epoxyfloor #garagemakeover #satisfying #sandiego",
+  },
+  {
+    day: 2,
+    file: "epoxy-flake-broadcast.mp4",
+    hook: "Flake leaving the hand",
+    caption:
+      "throwing the flake by hand is the whole job right here #epoxyfloor #satisfying #oddlysatisfying #sandiego",
+  },
+  {
+    day: 3,
+    file: "epoxy-squeegee-spread.mp4",
+    hook: "The squeegee pull",
+    caption: "you get about 20 minutes before this stuff sets. no second chances #epoxyfloor #contractor #satisfying",
+  },
+  {
+    day: 4,
+    file: "epoxy-hero-glide.mp4",
+    hook: "The finished sheen",
+    caption: "this used to be a stained concrete slab #garagemakeover #epoxyfloor #beforeandafter",
+  },
+  {
+    day: 5,
+    file: "epoxy-back-rolling.mp4",
+    hook: "Roller hitting wet base coat",
+    caption: "back rolling so the thickness is even edge to edge #epoxyfloor #howitsmade #satisfying",
+  },
+  {
+    day: 6,
+    file: "epoxy-floor-detail.mp4",
+    hook: "Flake close up",
+    caption: "real chips sealed under a clear coat. not a paint kit from the store #epoxyfloor #garagefloor",
+  },
+  {
+    day: 7,
+    file: "MONTAGE-whole-house.mp4",
+    hook: "One crew. Inside, outside, garage.",
+    caption: "one crew did the inside, the outside and the garage floor #painter #contractor #sandiego",
+  },
+  {
+    day: 8,
+    file: "epoxy-garage-daylight.mp4",
+    hook: "Door opening to daylight",
+    caption: "opening the door on a finished floor never gets old #garagemakeover #epoxyfloor",
+  },
+  {
+    day: 9,
+    file: "hrc-van-on-site.mp4",
+    hook: "The van pulling the eye",
+    caption:
+      "if you see this van in your neighborhood somebody nearby is getting their house painted #sandiego #painter #smallbusiness",
+  },
+];
+
+function TikTokQueue() {
+  return (
+    <section className="mt-16 rounded-2xl border-2 border-navy/20 bg-white p-6">
+      <h2 className="text-2xl font-black uppercase tracking-tight text-ink">TikTok queue</h2>
+      <p className="mt-2 text-[14px] text-ink-soft leading-relaxed">
+        Facebook is already scheduled and runs itself. TikTok has to be posted by hand because no scheduler can attach a
+        trending sound, and a business account can only pull from the Commercial Music Library. Open this page on your
+        phone, tap a clip to download it, upload it in the TikTok app, then tap Sounds and pick something from Trending
+        that drops in the first two seconds. Every clip is cut on motion, so the drop lines up.
+      </p>
+      <p className="mt-2 text-[13px] font-bold text-navy">
+        One a day, same time, nine days. No phone number in the caption, it kills reach.
+      </p>
+      <div className="mt-6 space-y-3">
+        {tiktokQueue.map((t) => (
+          <div key={t.file} className="rounded-xl border border-ink/10 bg-paper/60 p-4">
+            <div className="flex items-baseline gap-3">
+              <span className="rounded-full bg-navy px-2.5 py-1 text-[11px] font-black uppercase tracking-wider text-white">
+                Day {t.day}
+              </span>
+              <p className="text-[14px] font-bold text-ink">{t.hook}</p>
+            </div>
+            <a
+              href={`/social/spring-valley/${t.file}`}
+              download
+              className="mt-2 inline-block font-mono text-[12px] font-bold text-orange underline"
+            >
+              {t.file}
+            </a>
+            <p className="mt-2 text-[14px] text-ink-soft leading-relaxed">{t.caption}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Section({ title, note, clips }: { title: string; note: string; clips: Clip[] }) {
   return (
     <section className="mt-14">
@@ -320,6 +417,8 @@ export default function SpringValleyReviewPage() {
             </li>
           </ul>
         </div>
+
+        <TikTokQueue />
 
         <Section
           title="Montages"

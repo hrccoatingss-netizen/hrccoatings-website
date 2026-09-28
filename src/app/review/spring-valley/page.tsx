@@ -323,15 +323,16 @@ const tiktokQueue: { day: number; file: string; hook: string; caption: string }[
 function TikTokQueue() {
   return (
     <section className="mt-16 rounded-2xl border-2 border-navy/20 bg-white p-6">
-      <h2 className="text-2xl font-black uppercase tracking-tight text-ink">TikTok queue</h2>
+      <h2 className="text-2xl font-black uppercase tracking-tight text-ink">TikTok schedule</h2>
       <p className="mt-2 text-[14px] text-ink-soft leading-relaxed">
-        Facebook is already scheduled and runs itself. TikTok has to be posted by hand because no scheduler can attach a
-        trending sound, and a business account can only pull from the Commercial Music Library. Open this page on your
-        phone, tap a clip to download it, upload it in the TikTok app, then tap Sounds and pick something from Trending
-        that drops in the first two seconds. Every clip is cut on motion, so the drop lines up.
+        All nine are scheduled and will post on their own, one a day at 5 PM from Sep 28 through Oct 5. Each one has a
+        chart sound laid on it, the job tagged in Spring Valley, and TikTok&rsquo;s own music copyright check came back
+        clean on every single one. The clips are muted on purpose so the sound is the only audio, and every cut lands on
+        motion so the beat lines up. Nothing here needs you to touch it.
       </p>
       <p className="mt-2 text-[13px] font-bold text-navy">
-        One a day, same time, nine days. No phone number in the caption, it kills reach.
+        If you want a different sound on any of them, open the post in TikTok Studio and swap it. No phone number in the
+        captions on purpose, it kills reach.
       </p>
       <div className="mt-6 space-y-3">
         {tiktokQueue.map((t) => (
@@ -411,9 +412,9 @@ export default function SpringValleyReviewPage() {
               two weeks.
             </li>
             <li>
-              <Badge d="TikTok" /> <strong>TikTok:</strong> posted by hand in the TikTok app so a trending sound can be
-              added. No scheduler can attach trending audio, and business accounts are limited to the Commercial Music
-              Library, which is why the auto-posted ones stay silent.
+              <Badge d="TikTok" /> <strong>TikTok:</strong> nine posts scheduled straight from TikTok Studio, one a day
+              at 5 PM from Sep 28 through Oct 5, each with a real chart sound on it and the job tagged in Spring Valley.
+              The first one is already live.
             </li>
           </ul>
         </div>

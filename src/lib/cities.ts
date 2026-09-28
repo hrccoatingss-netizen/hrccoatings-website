@@ -21,7 +21,7 @@ export const CITIES: City[] = [
   {
     slug: "chula-vista",
     name: "Chula Vista",
-    heroImage: "/images/commercial/building-front.jpg",
+    heroImage: "/images/projects/spring-valley/sv-exterior-front-garage-doors.jpg",
     intro:
       "From the master-planned neighborhoods of Otay Ranch and EastLake to the established homes near Third Avenue, Chula Vista blends brand-new construction with decades-old properties. Our crews paint interiors and exteriors, repair stucco, and coat garage floors for South Bay homeowners who want results built to last in the local climate.",
     neighborhoods: ["Otay Ranch", "EastLake", "Rancho del Rey", "Bonita", "Terra Nova", "Third Avenue Village"],
@@ -45,7 +45,7 @@ export const CITIES: City[] = [
   {
     slug: "el-cajon",
     name: "El Cajon",
-    heroImage: "/images/commercial/building-angle.jpg",
+    heroImage: "/images/projects/spring-valley/sv-exterior-front-wide.jpg",
     intro:
       "El Cajon's inland valley sees some of the hottest temperatures in the county, which is hard on exterior paint. We help homeowners across Fletcher Hills, Rancho San Diego, and Granite Hills protect their homes with heat-resistant coatings, fresh interior color, and clean stucco repairs.",
     neighborhoods: ["Fletcher Hills", "Rancho San Diego", "Bostonia", "Granite Hills", "Crest"],
@@ -67,9 +67,33 @@ export const CITIES: City[] = [
     ],
   },
   {
+    slug: "spring-valley",
+    name: "Spring Valley",
+    heroImage: "/images/projects/spring-valley/sv-hrc-van-house.jpg",
+    intro:
+      "Spring Valley sits inland in East County, where afternoon sun is hard on stucco, trim, and garage floors. We recently finished a full project here: interior repaint, full exterior, and a flake epoxy garage floor, all with one crew. Casa de Oro, Dictionary Hill, Jamacha, and the hillside streets above Sweetwater are regular stops for us.",
+    neighborhoods: ["Casa de Oro", "Dictionary Hill", "Jamacha", "Bancroft", "Sweetwater"],
+    localFocus:
+      "Spring Valley runs hot and dry inland, so exteriors here need UV resistant coatings and real prep on sun-beaten stucco and wood trim.",
+    extraSections: [
+      {
+        heading: "Interior, exterior, and garage floor in one project",
+        body: "The job we just wrapped in Spring Valley is the kind we like: walls and ceilings rolled inside, the full exterior prepped and coated including the black garage doors and iron railings, the back deck refinished in gray, and the garage slab ground down and finished with a blue gray flake epoxy system. One crew, one schedule, one point of contact, instead of coordinating three different contractors around your family.",
+      },
+      {
+        heading: "Epoxy garage floors in Spring Valley",
+        body: "Garages here take heat, dust, and hot tires. A flake epoxy floor is ground into the slab, base coated, broadcast with color flake, and sealed with a clear topcoat, so it cleans with a hose and does not peel the way a hardware store kit does. It is also the fastest way to make an older garage look finished.",
+      },
+      {
+        heading: "Exterior painting built for East County sun",
+        body: "Inland Spring Valley homes fade faster than coastal ones. We pressure wash, scrape, patch stucco, caulk, and prime before any finish coat, then use premium UV resistant exterior paint. As a licensed, bonded, and insured contractor (CSLB LIC #1158346) we put the prep in writing so you can compare bids honestly.",
+      },
+    ],
+  },
+  {
     slug: "la-mesa",
     name: "La Mesa",
-    heroImage: "/images/projects/kitchen-white-cabinets.jpg",
+    heroImage: "/images/projects/spring-valley/sv-exterior-entry-doors.jpg",
     intro:
       "Known as the Jewel of the Hills, La Mesa is full of character homes, from craftsman bungalows near the Village to mid-century houses around Mount Helix and Lake Murray. We bring those homes back to life with careful prep, crisp lines, and finishes that respect the original architecture.",
     neighborhoods: ["Mount Helix", "La Mesa Village", "Lake Murray", "Grossmont", "Fletcher Hills"],
@@ -119,7 +143,7 @@ export const CITIES: City[] = [
   {
     slug: "santee",
     name: "Santee",
-    heroImage: "/images/interior/before-after/railing-after.jpg",
+    heroImage: "/images/projects/spring-valley/sv-exterior-rear-elevation.jpg",
     intro:
       "Santee is a family-friendly East County community with a mix of established and newer homes around Carlton Hills, Sky Ranch, and Rio Vista. We help local families refresh their interiors and protect their exteriors with reliable, affordable, high-quality work.",
     neighborhoods: ["Carlton Hills", "Sky Ranch", "Rio Vista", "Carlton Oaks", "Mast Park"],

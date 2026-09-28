@@ -13,7 +13,7 @@ export default function EpoxyFlooringPage() {
       slug="epoxy-flooring"
       heroTitle="Epoxy Flooring"
       heroSubtitle="Transform Floors with Durable Epoxy Coatings"
-      heroImage="/images/epoxy/application-hero.jpg"
+      heroImage="/images/projects/spring-valley/sv-epoxy-garage-wide.jpg"
       overview={`Epoxy flooring combines unmatched durability with stunning aesthetics, making it the premium choice for garages, basements, workshops, and commercial spaces. At HRCCoatings Inc, we specialize in professional epoxy floor installations that protect surfaces and elevate spaces.
 
 Our high-quality epoxy coatings create a seamless, attractive finish that resists stains, impacts, chemicals, and moisture. Available in multiple colors and finishes—including solid colors, metallic effects, and decorative flake systems—epoxy flooring transforms ordinary concrete into a showroom-worthy surface.
@@ -66,21 +66,38 @@ The installation process is critical to long-term performance. We meticulously p
             "Extensive experience transforming garage floors throughout San Diego",
         },
       ]}
+      videos={[
+        {
+          src: "/videos/epoxy-hero-glide.mp4",
+          poster: "/videos/epoxy-hero-glide-poster.jpg",
+          title: "The finished floor",
+          caption: "A flake epoxy garage floor we just finished in Spring Valley, shot low across the surface so you can see the texture and the sheen.",
+        },
+        {
+          src: "/videos/epoxy-flake-broadcast.mp4",
+          poster: "/videos/epoxy-flake-broadcast-poster.jpg",
+          title: "Flake goes on by hand",
+          caption: "Color flake is broadcast by hand across the wet base coat, edge to edge, until the slab is fully covered.",
+        },
+      ]}
       gallerySections={[
         {
           label: "Epoxy Flake Systems",
           images: [
-            { src: "/images/epoxy/garage-full.jpg", alt: "Epoxy flake garage floor - full view" },
-            { src: "/images/epoxy/garage-angle.jpg", alt: "Epoxy flake garage floor - angle" },
-            { src: "/images/epoxy/floor-closeup.jpg", alt: "Epoxy flake floor closeup" },
+            { src: "/images/projects/spring-valley/sv-epoxy-garage-wide.jpg", alt: "Finished blue gray flake epoxy garage floor in Spring Valley" },
+            { src: "/images/projects/spring-valley/sv-epoxy-garage-door-open.jpg", alt: "Flake epoxy garage floor with the garage door open" },
+            { src: "/images/projects/spring-valley/sv-epoxy-floor-closeup.jpg", alt: "Close up of the flake epoxy floor texture" },
+            { src: "/images/projects/spring-valley/sv-epoxy-floor-sheen.jpg", alt: "Clear coat sheen across a finished epoxy floor" },
+            { src: "/images/projects/spring-valley/sv-epoxy-garage-from-driveway.jpg", alt: "Finished epoxy garage floor seen from the driveway" },
+            { src: "/images/projects/spring-valley/sv-epoxy-before-bare-concrete.jpg", alt: "Bare concrete and grinder before the epoxy floor went down" },
           ],
         },
         {
-          label: "Epoxy Metallic Systems",
+          label: "How The Floor Goes Down",
           images: [
-            { src: "/images/epoxy/metallic-1.jpg", alt: "Metallic epoxy floor 1" },
-            { src: "/images/epoxy/metallic-2.jpg", alt: "Metallic epoxy floor 2" },
-            { src: "/images/epoxy/metallic-3.jpg", alt: "Metallic epoxy floor 3" },
+            { src: "/images/projects/spring-valley/sv-epoxy-squeegee.jpg", alt: "Base coat spread with a squeegee before flake" },
+            { src: "/images/projects/spring-valley/sv-epoxy-flake-broadcast.jpg", alt: "Broadcasting color flake by hand across the wet base coat" },
+            { src: "/images/projects/spring-valley/sv-epoxy-roller-pole.jpg", alt: "Back rolling the coating with a pole roller" },
           ],
         },
       ]}

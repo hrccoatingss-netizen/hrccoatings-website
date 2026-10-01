@@ -197,7 +197,7 @@ export default function ThankYouPage() {
               src="/images/team-photo.jpg"
               alt="Hector and Junior Rivera, the father and son team behind HRCCoatings"
               fill
-              className="object-cover"
+              className="object-cover object-[50%_30%]"
               sizes="(max-width: 640px) 100vw, 50vw"
             />
           </div>

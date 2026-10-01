@@ -730,7 +730,7 @@ export default function Home() {
                   src="/images/team-photo.jpg"
                   alt="Hector and Junior Rivera, HRCCoatings Inc team"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-[50%_30%]"
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
               </div>

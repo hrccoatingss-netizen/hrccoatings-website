@@ -45,7 +45,7 @@ export default function AboutPage() {
             alt="Hector and Junior Rivera - HRCCoatings Inc founders"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-[50%_28%]"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/65 to-ink/30" />
